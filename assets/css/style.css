@@ -28,7 +28,9 @@
   body {
     background-color: var(--color-bg-canvas);
     color: var(--color-text-dark);
-    @apply transition-colors duration-300 ease-in-out antialiased;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
 
@@ -203,4 +205,50 @@ input::placeholder, textarea::placeholder {
 [data-theme="dark"] textarea::placeholder {
   color: var(--color-text-muted) !important;
   opacity: 0.9 !important;
+}
+
+/* ==========================================================================
+   MOBILE FULL-SCREEN OVERLAY MENU REDESIGN STYLES
+   ========================================================================== */
+
+/* Fade-in staggered slide up animation for link elements */
+@keyframes mobileLinkSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply sequential animations when menu is actively open */
+#mobile-menu-drawer:not(.hidden) nav a {
+  animation: mobileLinkSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Precise Stagger Delays */
+#mobile-menu-drawer:not(.hidden) nav a:nth-child(1) { animation-delay: 100ms; }
+#mobile-menu-drawer:not(.hidden) nav a:nth-child(2) { animation-delay: 150ms; }
+#mobile-menu-drawer:not(.hidden) nav a:nth-child(3) { animation-delay: 200ms; }
+#mobile-menu-drawer:not(.hidden) nav a:nth-child(4) { animation-delay: 250ms; }
+#mobile-menu-drawer:not(.hidden) nav a:nth-child(5) { animation-delay: 300ms; }
+#mobile-menu-drawer:not(.hidden) nav a:nth-child(6) { animation-delay: 350ms; }
+
+/* Stagger delay for bottom editorial info block */
+#mobile-menu-drawer:not(.hidden) .mt-auto {
+  animation: mobileLinkSlideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 450ms;
+}
+
+/* Opaque Solid Background Overrides for Mobile Toggle Menu */
+#mobile-menu-content {
+  background-color: #f1ede2 !important; /* Warm light cream canvas */
+  border-left: 1px solid #ded8cb !important;
+}
+
+[data-theme="dark"] #mobile-menu-content {
+  background-color: #1c1e1f !important; /* Dark room slate canvas */
+  border-left: 1px solid #33383a !important;
 }

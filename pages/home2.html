@@ -56,40 +56,69 @@
     </div>
   </div>
 
-  <!-- Mobile Drawer Overlay and Container -->
-  <div id="mobile-menu-drawer" class="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
-    <div class="absolute right-0 top-0 h-full w-4/5 max-w-sm bg-[var(--color-bg-canvas)] shadow-2xl p-8 flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-out" id="mobile-menu-content">
+  <!-- Mobile Full-Screen Overlay and Container -->
+  <div id="mobile-menu-drawer" class="fixed inset-0 z-50 bg-black/40 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
+    <div class="absolute inset-0 h-full w-full shadow-2xl p-6 sm:p-8 flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-out bg-[#f1ede2] dark:bg-[#1c1e1f] border-l border-[#ded8cb] dark:border-[#33383a]" id="mobile-menu-content">
+      
+      <!-- Top Brand Header Row -->
       <div>
         <div class="flex items-center justify-between mb-8 pb-4 border-b border-[var(--color-border)]">
           <a href="../index.html" class="flex items-center hover:opacity-85 transition-opacity focus:outline-none rounded px-1 gap-2.5">
             <img src="../assets/images/brand-logo.png" alt="VINTCAM" class="h-8 w-auto object-contain dark:invert transition-all duration-300" />
             <span class="font-display text-xl tracking-widest text-[var(--color-text-dark)] uppercase">VINTCAM</span>
           </a>
-          <button onclick="toggleMobileMenu()" class="p-2 rounded-full hover:bg-[var(--color-bg-card)] transition-colors flex items-center justify-center" aria-label="Close menu">
-            <svg class="h-6 w-6 text-[var(--color-text-dark)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          
+          <!-- Spinning circular close button -->
+          <button onclick="toggleMobileMenu()" class="p-2.5 border border-[var(--color-border)] rounded-full hover:bg-[var(--color-bg-card)] transition-all flex items-center justify-center group" aria-label="Close menu">
+            <svg class="h-5 w-5 text-[var(--color-text-dark)] transition-transform duration-300 group-hover:rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
-        <nav class="flex flex-col gap-5 text-base font-bold tracking-wide">
-          <a href="../index.html" class="mobile-nav-link hover:text-amber-600 transition-colors py-1">Home</a>
-          <a href="./home2.html" class="mobile-nav-link hover:text-amber-600 transition-colors py-1">Home 2</a>
-          <a href="./about.html" class="mobile-nav-link hover:text-amber-600 transition-colors py-1">About</a>
-          <a href="./blog.html" class="mobile-nav-link hover:text-amber-600 transition-colors py-1">Blog</a>
-          <a href="./services-products.html" class="mobile-nav-link hover:text-amber-600 transition-colors py-1">Service</a>
-          <a href="./contact.html" class="mobile-nav-link hover:text-amber-600 transition-colors py-1">Contact</a>
+        
+        <!-- Large Numbered Editorial Navigation -->
+        <nav class="flex flex-col gap-6 pt-4">
+          <a href="../index.html" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
+            <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">01.</span>
+            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Home</span>
+          </a>
+          <a href="./home2.html" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
+            <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">02.</span>
+            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Home 2</span>
+          </a>
+          <a href="./about.html" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
+            <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">03.</span>
+            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">About</span>
+          </a>
+          <a href="./blog.html" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
+            <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">04.</span>
+            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Blog</span>
+          </a>
+          <a href="./services-products.html" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
+            <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">05.</span>
+            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Service</span>
+          </a>
+          <a href="./contact.html" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
+            <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">06.</span>
+            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Contact</span>
+          </a>
         </nav>
       </div>
-      <div class="border-t border-[var(--color-border)] pt-6 flex flex-col gap-4">
-        <div class="flex items-center justify-between px-2 mb-2">
-          <div>
-            <p class="text-[10px] uppercase font-bold tracking-wider text-amber-600">Guest User</p>
-            <p class="text-xs text-[var(--color-text-muted)]">guest@vintcam.com</p>
-          </div>
+
+      <!-- Bottom Editorial Brand Card & Contact info -->
+      <div class="mt-auto pt-8 border-t border-[var(--color-border)] grid grid-cols-2 gap-4">
+        <div>
+          <p class="text-[10px] uppercase font-bold tracking-widest text-amber-600 dark:text-amber-500 mb-1">NYC Headquarters</p>
+          <p class="text-xs text-[var(--color-text-dark)] font-semibold">142 Mercer St</p>
+          <p class="text-[11px] text-[var(--color-text-muted)]">Soho, New York</p>
         </div>
-        <a href="./home2.html" class="w-full text-center py-2.5 border border-[var(--color-border)] text-[var(--color-text-dark)] text-xs font-bold uppercase tracking-wider rounded-xl hover:bg-[var(--color-bg-card)] transition-colors">Admin Dashboard</a>
-        <a href="#" class="w-full text-center py-2.5 bg-[var(--color-text-dark)] text-[var(--color-bg-canvas)] text-xs font-bold uppercase tracking-wider rounded-xl hover:opacity-90 transition-opacity">Signup / Login</a>
+        <div class="text-right">
+          <p class="text-[10px] uppercase font-bold tracking-widest text-amber-600 dark:text-amber-500 mb-1">Connect Desk</p>
+          <p class="text-xs text-[var(--color-text-dark)] font-semibold">registry@vintcam.com</p>
+          <p class="text-[11px] text-[var(--color-text-muted)]">@vint.cam on instagram</p>
+        </div>
       </div>
+
     </div>
   </div>
 </header>
@@ -290,9 +319,11 @@
     <!-- Brand Info Section -->
     <div class="lg:col-span-4 flex flex-col justify-between gap-6">
       <div>
-        <a href="../index.html" class="inline-block mb-4 hover:opacity-85 transition-opacity focus:outline-none rounded px-1">
-          <img src="../assets/images/brand-logo.png" alt="VINTCAM" class="h-10 w-auto object-contain dark:invert transition-all duration-300" />
-        </a>
+         <!-- Brand Logo -->
+    <a href="../index.html" class="hover:opacity-85 transition-opacity focus:outline-none focus:ring-2 focus:ring-amber-500 rounded px-1 flex items-center gap-3">
+      <img src="../assets/images/brand-logo.png" alt="VINTCAM" class="h-10 w-auto object-contain dark:invert transition-all duration-300" />
+      <span class="font-display text-2xl tracking-widest text-[var(--color-text-dark)] uppercase">VINTCAM</span>
+    </a>
         <p class="text-xs leading-relaxed max-w-sm text-[var(--color-text-muted)]">
           Preserving design history and optomechanical excellence. We source, meticulously calibrate, and fully warrant master analog gear and cold-stored format emulsions for contemporary artists.
         </p>

@@ -56,40 +56,69 @@
     </div>
   </div>
 
-  <!-- Mobile Drawer Overlay and Container -->
-  <div id="mobile-menu-drawer" class="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
-    <div class="absolute right-0 top-0 h-full w-4/5 max-w-sm bg-[var(--color-bg-canvas)] shadow-2xl p-8 flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-out" id="mobile-menu-content">
+  <!-- Mobile Full-Screen Overlay and Container -->
+  <div id="mobile-menu-drawer" class="fixed inset-0 z-50 bg-black/40 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
+    <div class="absolute inset-0 h-full w-full shadow-2xl p-6 sm:p-8 flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-out bg-[#f1ede2] dark:bg-[#1c1e1f] border-l border-[#ded8cb] dark:border-[#33383a]" id="mobile-menu-content">
+      
+      <!-- Top Brand Header Row -->
       <div>
         <div class="flex items-center justify-between mb-8 pb-4 border-b border-[var(--color-border)]">
           <a href="../index.html" class="flex items-center hover:opacity-85 transition-opacity focus:outline-none rounded px-1 gap-2.5">
             <img src="../assets/images/brand-logo.png" alt="VINTCAM" class="h-8 w-auto object-contain dark:invert transition-all duration-300" />
             <span class="font-display text-xl tracking-widest text-[var(--color-text-dark)] uppercase">VINTCAM</span>
           </a>
-          <button onclick="toggleMobileMenu()" class="p-2 rounded-full hover:bg-[var(--color-bg-card)] transition-colors flex items-center justify-center" aria-label="Close menu">
-            <svg class="h-6 w-6 text-[var(--color-text-dark)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          
+          <!-- Spinning circular close button -->
+          <button onclick="toggleMobileMenu()" class="p-2.5 border border-[var(--color-border)] rounded-full hover:bg-[var(--color-bg-card)] transition-all flex items-center justify-center group" aria-label="Close menu">
+            <svg class="h-5 w-5 text-[var(--color-text-dark)] transition-transform duration-300 group-hover:rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
-        <nav class="flex flex-col gap-5 text-base font-bold tracking-wide">
-          <a href="../index.html" class="mobile-nav-link hover:text-amber-600 transition-colors py-1">Home</a>
-          <a href="./home2.html" class="mobile-nav-link hover:text-amber-600 transition-colors py-1">Home 2</a>
-          <a href="./about.html" class="mobile-nav-link hover:text-amber-600 transition-colors py-1">About</a>
-          <a href="./blog.html" class="mobile-nav-link hover:text-amber-600 transition-colors py-1">Blog</a>
-          <a href="./services-products.html" class="mobile-nav-link hover:text-amber-600 transition-colors py-1">Service</a>
-          <a href="./contact.html" class="mobile-nav-link hover:text-amber-600 transition-colors py-1">Contact</a>
+        
+        <!-- Large Numbered Editorial Navigation -->
+        <nav class="flex flex-col gap-6 pt-4">
+          <a href="../index.html" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
+            <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">01.</span>
+            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Home</span>
+          </a>
+          <a href="./home2.html" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
+            <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">02.</span>
+            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Home 2</span>
+          </a>
+          <a href="./about.html" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
+            <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">03.</span>
+            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">About</span>
+          </a>
+          <a href="./blog.html" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
+            <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">04.</span>
+            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Blog</span>
+          </a>
+          <a href="./services-products.html" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
+            <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">05.</span>
+            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Service</span>
+          </a>
+          <a href="./contact.html" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
+            <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">06.</span>
+            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Contact</span>
+          </a>
         </nav>
       </div>
-      <div class="border-t border-[var(--color-border)] pt-6 flex flex-col gap-4">
-        <div class="flex items-center justify-between px-2 mb-2">
-          <div>
-            <p class="text-[10px] uppercase font-bold tracking-wider text-amber-600">Guest User</p>
-            <p class="text-xs text-[var(--color-text-muted)]">guest@vintcam.com</p>
-          </div>
+
+      <!-- Bottom Editorial Brand Card & Contact info -->
+      <div class="mt-auto pt-8 border-t border-[var(--color-border)] grid grid-cols-2 gap-4">
+        <div>
+          <p class="text-[10px] uppercase font-bold tracking-widest text-amber-600 dark:text-amber-500 mb-1">NYC Headquarters</p>
+          <p class="text-xs text-[var(--color-text-dark)] font-semibold">142 Mercer St</p>
+          <p class="text-[11px] text-[var(--color-text-muted)]">Soho, New York</p>
         </div>
-        <a href="./home2.html" class="w-full text-center py-2.5 border border-[var(--color-border)] text-[var(--color-text-dark)] text-xs font-bold uppercase tracking-wider rounded-xl hover:bg-[var(--color-bg-card)] transition-colors">Admin Dashboard</a>
-        <a href="#" class="w-full text-center py-2.5 bg-[var(--color-text-dark)] text-[var(--color-bg-canvas)] text-xs font-bold uppercase tracking-wider rounded-xl hover:opacity-90 transition-opacity">Signup / Login</a>
+        <div class="text-right">
+          <p class="text-[10px] uppercase font-bold tracking-widest text-amber-600 dark:text-amber-500 mb-1">Connect Desk</p>
+          <p class="text-xs text-[var(--color-text-dark)] font-semibold">registry@vintcam.com</p>
+          <p class="text-[11px] text-[var(--color-text-muted)]">@vint.cam on instagram</p>
+        </div>
       </div>
+
     </div>
   </div>
 </header>
@@ -102,71 +131,43 @@
       </p>
     </section>
 
-    <section class="p-6 border-b flex flex-wrap gap-4 items-center justify-between" style="border-color: var(--color-border); background-color: var(--color-bg-card);">
-      <div class="flex flex-wrap gap-3 text-xs font-bold">
-        <button class="px-4 py-2 bg-black text-white dark:bg-white dark:text-black rounded">All Categories</button>
-        <button class="px-4 py-2 border rounded hover:bg-black/5" style="border-color: var(--color-border);">Rangefinders</button>
-        <button class="px-4 py-2 border rounded hover:bg-black/5" style="border-color: var(--color-border);">Medium Format</button>
-        <button class="px-4 py-2 border rounded hover:bg-black/5" style="border-color: var(--color-border);">Film Rolls</button>
-        <button class="px-4 py-2 border rounded hover:bg-black/5" style="border-color: var(--color-border);">Lab Services</button>
+    <section class="p-6 border-b flex flex-wrap gap-4 items-center justify-between transition-colors duration-300" style="border-color: var(--color-border); background-color: var(--color-bg-card);">
+      <div id="category-filters" class="flex flex-wrap gap-3 text-xs font-bold">
+        <button data-category="All" class="active px-4 py-2 bg-black text-white dark:bg-white dark:text-black rounded transition-all duration-300">All Categories</button>
+        <button data-category="Rangefinders" class="px-4 py-2 border rounded hover:bg-black/5 transition-all duration-300" style="border-color: var(--color-border);">Rangefinders</button>
+        <button data-category="Medium Format" class="px-4 py-2 border rounded hover:bg-black/5 transition-all duration-300" style="border-color: var(--color-border);">Medium Format</button>
+        <button data-category="Film Rolls" class="px-4 py-2 border rounded hover:bg-black/5 transition-all duration-300" style="border-color: var(--color-border);">Film Rolls</button>
+        <button data-category="Lab Services" class="px-4 py-2 border rounded hover:bg-black/5 transition-all duration-300" style="border-color: var(--color-border);">Lab Services</button>
       </div>
-      <div class="flex items-center gap-2 text-xs">
-        <label class="font-bold uppercase tracking-wider text-[10px]" style="color: var(--color-text-muted);">Sort By:</label>
-        <select class="p-2 bg-[var(--color-bg-canvas)] border rounded outline-none" style="border-color: var(--color-border);">
-          <option>Price: High to Low</option>
-          <option>Batch Expiration Window</option>
-          <option>Brand Manufacture</option>
-        </select>
+      
+      <div class="flex items-center gap-4 flex-wrap text-xs">
+        <!-- Active Results Counter -->
+        <span id="results-counter" class="font-bold text-[10px] uppercase tracking-wider text-amber-600 dark:text-amber-500 transition-colors duration-300">Showing 7 items</span>
+        
+        <!-- Live Search Bar -->
+        <div class="relative flex items-center">
+          <input type="text" id="search-input" placeholder="Search vault..." class="p-2 pl-8 bg-[var(--color-bg-canvas)] border rounded-lg outline-none focus:border-[var(--color-text-dark)] transition-all w-40 sm:w-48 text-[var(--color-text-dark)]" style="border-color: var(--color-border);" />
+          <svg class="w-3.5 h-3.5 absolute left-2.5 text-neutral-400" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+        </div>
+
+        <!-- Sort By Dropdown -->
+        <div class="flex items-center gap-2">
+          <label class="font-bold uppercase tracking-wider text-[10px]" style="color: var(--color-text-muted);">Sort By:</label>
+          <select id="sort-select" class="p-2 bg-[var(--color-bg-canvas)] border rounded-lg outline-none cursor-pointer text-[var(--color-text-dark)]" style="border-color: var(--color-border);">
+            <option value="price-desc">Price: High to Low</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="expiration">Batch Expiration Window</option>
+            <option value="brand">Brand Manufacture</option>
+          </select>
+        </div>
       </div>
     </section>
 
-    <section class="p-8 sm:p-12 grid grid-cols-1 md:grid-cols-3 gap-8 border-b" style="border-color: var(--color-border);">
-      
-      <div class="p-4 border rounded-2xl flex flex-col justify-between group" style="background-color: var(--color-bg-card); border-color: var(--color-border);">
-        <div class="w-full h-56 bg-neutral-100 rounded-xl overflow-hidden relative mb-4">
-          <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=500" alt="Nikon F3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-          <span class="absolute top-3 left-3 text-[9px] font-bold bg-black text-white px-2 py-0.5 tracking-wider uppercase rounded">Mechanical Restored</span>
-        </div>
-        <div>
-          <div class="flex justify-between items-start mb-2">
-            <h3 class="font-display text-xl tracking-wide uppercase">Nikon F3 HP SLR Body</h3>
-            <span class="font-bold text-sm">$650</span>
-          </div>
-          <p class="text-xs mb-4" style="color: var(--color-text-muted);">Equipped with High-Eyepoint DE-3 finder prism system. Light meters calibrated accurately.</p>
-          <a href="./service-detail.html"><button class="w-full py-2 bg-black text-white dark:bg-white dark:text-black font-semibold text-xs rounded uppercase tracking-wider">View Item</button></a>
-        </div>
-      </div>
-
-      <div class="p-4 border rounded-2xl flex flex-col justify-between group" style="background-color: var(--color-bg-card); border-color: var(--color-border);">
-        <div class="w-full h-56 bg-neutral-100 rounded-xl overflow-hidden relative mb-4">
-          <img src="https://images.unsplash.com/photo-1527443154391-507e9dc6c5cc?auto=format&fit=crop&q=80&w=500" alt="Kodak Tri-X" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-          <span class="absolute top-3 left-3 text-[9px] font-bold bg-blue-600 text-white px-2 py-0.5 tracking-wider uppercase rounded">Cold-Stored</span>
-        </div>
-        <div>
-          <div class="flex justify-between items-start mb-2">
-            <h3 class="font-display text-xl tracking-wide uppercase">Kodak Tri-X 400 (5-Pack)</h3>
-            <span class="font-bold text-sm">$64</span>
-          </div>
-          <p class="text-xs mb-4" style="color: var(--color-text-muted);">Traditional panchromatic B&W stock. Batch lot optimized for broad contrast flexibility handles.</p>
-          <a href="./service2.html"><button class="w-full py-2 bg-black text-white dark:bg-white dark:text-black font-semibold text-xs rounded uppercase tracking-wider">View Item</button></a>
-        </div>
-      </div>
-
-      <div class="p-4 border rounded-2xl flex flex-col justify-between group" style="background-color: var(--color-bg-card); border-color: var(--color-border);">
-        <div class="w-full h-56 bg-neutral-100 rounded-xl overflow-hidden relative mb-4">
-          <img src="https://images.unsplash.com/photo-1495707902641-75cac588d2e9?auto=format&fit=crop&q=80&w=500" alt="Leica M" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-          <span class="absolute top-3 left-3 text-[9px] font-bold bg-amber-600 text-white px-2 py-0.5 tracking-wider uppercase rounded">Rare Collectible</span>
-        </div>
-        <div>
-          <div class="flex justify-between items-start mb-2">
-            <h3 class="font-display text-xl tracking-wide uppercase">Leica M4 Chrome Chassis</h3>
-            <span class="font-bold text-sm">$1,950</span>
-          </div>
-          <p class="text-xs mb-4" style="color: var(--color-text-muted);">Beautiful 1968 production run. Complete structural evaluation certified fully functioning.</p>
-          <a href="./service3.html"><button class="w-full py-2 bg-black text-white dark:bg-white dark:text-black font-semibold text-xs rounded uppercase tracking-wider">View Item</button></a>
-        </div>
-      </div>
-
+    <!-- Interactive Products Grid with Staggered Transition Support -->
+    <section id="products-grid" class="p-8 sm:p-12 grid grid-cols-1 md:grid-cols-3 gap-8 border-b min-h-[400px]" style="border-color: var(--color-border);">
+      <!-- Rendered dynamically by the Vintcam JS Engine -->
     </section>
 
     <section class="p-8 sm:p-12 lg:p-16 border-b" style="border-color: var(--color-border);">
@@ -213,9 +214,11 @@
     <!-- Brand Info Section -->
     <div class="lg:col-span-4 flex flex-col justify-between gap-6">
       <div>
-        <a href="../index.html" class="inline-block mb-4 hover:opacity-85 transition-opacity focus:outline-none rounded px-1">
-          <img src="../assets/images/brand-logo.png" alt="VINTCAM" class="h-10 w-auto object-contain dark:invert transition-all duration-300" />
-        </a>
+         <!-- Brand Logo -->
+    <a href="../index.html" class="hover:opacity-85 transition-opacity focus:outline-none focus:ring-2 focus:ring-amber-500 rounded px-1 flex items-center gap-3">
+      <img src="../assets/images/brand-logo.png" alt="VINTCAM" class="h-10 w-auto object-contain dark:invert transition-all duration-300" />
+      <span class="font-display text-2xl tracking-widest text-[var(--color-text-dark)] uppercase">VINTCAM</span>
+    </a>
         <p class="text-xs leading-relaxed max-w-sm text-[var(--color-text-muted)]">
           Preserving design history and optomechanical excellence. We source, meticulously calibrate, and fully warrant master analog gear and cold-stored format emulsions for contemporary artists.
         </p>
@@ -295,5 +298,293 @@
   </main>
 
   <script src="../assets/js/main.js"></script>
+  
+  <!-- Premium Interactive Products Filter Engine -->
+  <style>
+    .product-card {
+      opacity: 0;
+      transform: translateY(20px) scale(0.98);
+      transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .product-card.fade-in {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    .product-card.fade-out {
+      opacity: 0;
+      transform: translateY(15px) scale(0.97);
+    }
+  </style>
+
+  <script>
+    // Premium Interactive Product Catalog Database
+    const productsData = [
+      {
+        name: "Hasselblad 500C/M Planar 80mm",
+        brand: "Hasselblad",
+        category: "Medium Format",
+        price: 2450,
+        tag: "Studio Certified",
+        tagBg: "bg-emerald-700",
+        image: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&q=80&w=500",
+        description: "Classic medium format icon. Includes clean Carl Zeiss Planar 80mm f/2.8 lens and A12 back.",
+        link: "./service-detail.html",
+        expiration: null,
+        expirationMonths: 9999
+      },
+      {
+        name: "Leica M4 Chrome Chassis",
+        brand: "Leica",
+        category: "Rangefinders",
+        price: 1950,
+        tag: "Rare Collectible",
+        tagBg: "bg-amber-600",
+        image: "https://images.unsplash.com/photo-1495707902641-75cac588d2e9?auto=format&fit=crop&q=80&w=500",
+        description: "Beautiful 1968 production run. Complete structural evaluation certified fully functioning.",
+        link: "./service3.html",
+        expiration: null,
+        expirationMonths: 9999
+      },
+      {
+        name: "Nikon F3 HP SLR Body",
+        brand: "Nikon",
+        category: "Medium Format",
+        price: 650,
+        tag: "Mechanical Restored",
+        tagBg: "bg-black",
+        image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=500",
+        description: "Equipped with High-Eyepoint DE-3 finder prism system. Light meters calibrated accurately.",
+        link: "./service-detail.html",
+        expiration: null,
+        expirationMonths: 9999
+      },
+      {
+        name: "Standard Shutter Calibration & CLA",
+        brand: "Vintcam Guild",
+        category: "Lab Services",
+        price: 180,
+        tag: "Guild Service",
+        tagBg: "bg-purple-600",
+        image: "https://images.unsplash.com/photo-1452780212940-6f5c0d14d848?auto=format&fit=crop&q=80&w=500",
+        description: "Complete strip down of mechanical assembly, clean gears with ultrasonic waves, and timing realignment verification.",
+        link: "./booking.html",
+        expiration: null,
+        expirationMonths: 9999
+      },
+      {
+        name: "Kodak Tri-X 400 (5-Pack)",
+        brand: "Kodak",
+        category: "Film Rolls",
+        price: 64,
+        tag: "Cold-Stored",
+        tagBg: "bg-blue-600",
+        image: "https://images.unsplash.com/photo-1527443154391-507e9dc6c5cc?auto=format&fit=crop&q=80&w=500",
+        description: "Traditional panchromatic B&W stock. Batch lot optimized for broad contrast flexibility handles.",
+        link: "./service2.html",
+        expiration: "2028-12 (31 mos)",
+        expirationMonths: 31
+      },
+      {
+        name: "Fujifilm Superia X-TRA 400 (3-Pack)",
+        brand: "Fujifilm",
+        category: "Film Rolls",
+        price: 48,
+        tag: "Fresh Stock",
+        tagBg: "bg-rose-600",
+        image: "https://images.unsplash.com/photo-1590073844006-33379778ae09?auto=format&fit=crop&q=80&w=500",
+        description: "Vibrant color negative film. Outstanding color reproduction under varied lighting conditions.",
+        link: "./service2.html",
+        expiration: "2027-06 (13 mos)",
+        expirationMonths: 13
+      },
+      {
+        name: "E-6 / C-41 Push-Pull Development",
+        brand: "Vintcam Guild",
+        category: "Lab Services",
+        price: 24,
+        tag: "Guild Service",
+        tagBg: "bg-purple-600",
+        image: "https://images.unsplash.com/photo-1569003339405-ea396a5a8a90?auto=format&fit=crop&q=80&w=500",
+        description: "High accuracy processing curves for sensitive colour slide or negative films with precise density readings.",
+        link: "./booking.html",
+        expiration: null,
+        expirationMonths: 9999
+      }
+    ];
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initFiltersEngine();
+    });
+
+    function initFiltersEngine() {
+      const grid = document.getElementById('products-grid');
+      const searchInput = document.getElementById('search-input');
+      const sortSelect = document.getElementById('sort-select');
+      const buttons = document.querySelectorAll('#category-filters button');
+
+      if (!grid || !searchInput || !sortSelect) return;
+
+      // Render items immediately on first load
+      applyFiltersAndSort(true);
+
+      // Category Click Handlers
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Remove active styles from all buttons
+          buttons.forEach(b => {
+            b.classList.remove('active', 'bg-black', 'text-white', 'dark:bg-white', 'dark:text-black', 'rounded');
+            b.classList.add('border', 'hover:bg-black/5');
+            b.style.borderColor = 'var(--color-border)';
+          });
+
+          // Add active styles to clicked button
+          btn.classList.add('active', 'bg-black', 'text-white', 'dark:bg-white', 'dark:text-black', 'rounded');
+          btn.classList.remove('border', 'hover:bg-black/5');
+          btn.style.borderColor = 'transparent';
+
+          applyFiltersAndSort();
+        });
+      });
+
+      // Search Input Handler
+      searchInput.addEventListener('input', () => {
+        applyFiltersAndSort();
+      });
+
+      // Sort Select Handler
+      sortSelect.addEventListener('change', () => {
+        applyFiltersAndSort();
+      });
+    }
+
+    function applyFiltersAndSort(immediate = false) {
+      const grid = document.getElementById('products-grid');
+      const activeBtn = document.querySelector('#category-filters button.active');
+      const selectedCategory = activeBtn ? activeBtn.getAttribute('data-category') : 'All';
+      const searchQuery = document.getElementById('search-input').value.toLowerCase().trim();
+      const sortBy = document.getElementById('sort-select').value;
+
+      if (!grid) return;
+
+      // 1. Filtering Logic
+      const filtered = productsData.filter(item => {
+        const matchesCategory = (selectedCategory === 'All' || item.category === selectedCategory);
+        const matchesSearch = (
+          item.name.toLowerCase().includes(searchQuery) ||
+          item.brand.toLowerCase().includes(searchQuery) ||
+          item.description.toLowerCase().includes(searchQuery) ||
+          item.category.toLowerCase().includes(searchQuery)
+        );
+        return matchesCategory && matchesSearch;
+      });
+
+      // 2. Sorting Logic
+      if (sortBy === 'price-desc') {
+        filtered.sort((a, b) => b.price - a.price);
+      } else if (sortBy === 'price-asc') {
+        filtered.sort((a, b) => a.price - b.price);
+      } else if (sortBy === 'brand') {
+        filtered.sort((a, b) => a.brand.localeCompare(b.brand));
+      } else if (sortBy === 'expiration') {
+        // Closest expiration first; items with no expiration placed at the bottom
+        filtered.sort((a, b) => a.expirationMonths - b.expirationMonths);
+      }
+
+      // Update Active Count
+      const counter = document.getElementById('results-counter');
+      if (counter) {
+        counter.textContent = `Showing ${filtered.length} item${filtered.length === 1 ? '' : 's'}`;
+      }
+
+      // 3. Render Cards
+      if (immediate) {
+        renderProducts(filtered);
+      } else {
+        const currentCards = grid.querySelectorAll('.product-card');
+        if (currentCards.length > 0) {
+          currentCards.forEach(card => {
+            card.classList.remove('fade-in');
+            card.classList.add('fade-out');
+          });
+          // Wait for fade-out transition before replacing content
+          setTimeout(() => {
+            renderProducts(filtered);
+          }, 250);
+        } else {
+          renderProducts(filtered);
+        }
+      }
+    }
+
+    function renderProducts(items) {
+      const grid = document.getElementById('products-grid');
+      if (!grid) return;
+
+      grid.innerHTML = '';
+
+      if (items.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full py-16 text-center text-[var(--color-text-muted)] flex flex-col items-center justify-center fade-out opacity-0 transition-all duration-300" id="empty-state">
+            <svg class="w-12 h-12 mb-4 opacity-50 text-[var(--color-text-muted)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+            </svg>
+            <p class="font-display text-lg uppercase tracking-wider text-[var(--color-text-dark)]">No items found in vaults</p>
+            <p class="text-xs mt-1 text-[var(--color-text-muted)]">Try adjusting your category selection or refining search keywords.</p>
+          </div>
+        `;
+        const emptyState = document.getElementById('empty-state');
+        setTimeout(() => {
+          emptyState.classList.remove('fade-out', 'opacity-0');
+          emptyState.classList.add('fade-in', 'opacity-100');
+        }, 50);
+        return;
+      }
+
+      items.forEach((item, index) => {
+        const card = document.createElement('div');
+        card.className = "product-card p-4 border rounded-2xl flex flex-col justify-between group";
+        card.style.backgroundColor = "var(--color-bg-card)";
+        card.style.borderColor = "var(--color-border)";
+        
+        // Add subtle staggered delays for beautiful sequential entry!
+        card.style.transitionDelay = `${index * 40}ms`;
+
+        const expirationTag = item.expiration ? `
+          <span class="absolute bottom-3 right-3 text-[9px] font-bold bg-neutral-900/80 text-neutral-100 px-2 py-0.5 tracking-wider uppercase rounded backdrop-blur-xs">
+            Exp: ${item.expiration}
+          </span>
+        ` : '';
+
+        card.innerHTML = `
+          <div class="w-full h-56 bg-neutral-100 dark:bg-neutral-800 rounded-xl overflow-hidden relative mb-4">
+            <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-3 left-3 text-[9px] font-bold ${item.tagBg} text-white px-2 py-0.5 tracking-wider uppercase rounded">${item.tag}</span>
+            ${expirationTag}
+          </div>
+          <div class="flex flex-col flex-1 justify-between">
+            <div>
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-display text-xl tracking-wide uppercase text-[var(--color-text-dark)] leading-tight mr-2">${item.name}</h3>
+                <span class="font-bold text-sm text-[var(--color-text-dark)]">$${item.price}</span>
+              </div>
+              <p class="text-xs mb-4 leading-relaxed" style="color: var(--color-text-muted);">${item.description}</p>
+            </div>
+            <a href="${item.link}">
+              <button class="w-full py-2 bg-black text-white dark:bg-white dark:text-black font-semibold text-xs rounded uppercase tracking-wider hover:opacity-85 active:scale-98 transition-all duration-300">
+                ${item.category === 'Lab Services' ? 'Book Service &rarr;' : 'View Item Detail'}
+              </button>
+            </a>
+          </div>
+        `;
+
+        grid.appendChild(card);
+
+        // Force reflow and add entry animation class
+        setTimeout(() => {
+          card.classList.add('fade-in');
+        }, 30);
+      });
+    }
+  </script>
 </body>
 </html>
