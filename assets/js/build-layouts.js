@@ -8,10 +8,11 @@ const HEADER_TEMPLATE = `
 <header class="sticky top-0 z-50 w-full transition-all duration-300 backdrop-blur-md bg-[var(--color-bg-canvas)]/80 border-b border-[var(--color-border)] shadow-sm">
   <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
     <!-- Brand Logo -->
-    <a href="ROOT_PATHindex.html" class="hover:opacity-85 transition-opacity focus:outline-none focus:ring-2 focus:ring-amber-500 rounded px-1 flex items-center">
+    <a href="ROOT_PATHindex.html" class="hover:opacity-85 transition-opacity focus:outline-none focus:ring-2 focus:ring-amber-500 rounded px-1 flex items-center gap-3">
       <img src="ROOT_PATHassets/images/brand-logo.png" alt="VINTCAM" class="h-10 w-auto object-contain dark:invert transition-all duration-300" />
+      <span class="font-display text-2xl tracking-widest text-[var(--color-text-dark)] uppercase">VINTCAM</span>
     </a>
-
+    
     <!-- Desktop Navigation Links -->
     <nav class="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wide" id="desktop-nav">
       <a href="ROOT_PATHindex.html" class="nav-link relative py-1">Home</a>
@@ -48,8 +49,9 @@ const HEADER_TEMPLATE = `
     <div class="absolute right-0 top-0 h-full w-4/5 max-w-sm bg-[var(--color-bg-canvas)] shadow-2xl p-8 flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-out" id="mobile-menu-content">
       <div>
         <div class="flex items-center justify-between mb-8 pb-4 border-b border-[var(--color-border)]">
-          <a href="ROOT_PATHindex.html" class="flex items-center hover:opacity-85 transition-opacity focus:outline-none rounded px-1">
+          <a href="ROOT_PATHindex.html" class="flex items-center hover:opacity-85 transition-opacity focus:outline-none rounded px-1 gap-2.5">
             <img src="ROOT_PATHassets/images/brand-logo.png" alt="VINTCAM" class="h-8 w-auto object-contain dark:invert transition-all duration-300" />
+            <span class="font-display text-xl tracking-widest text-[var(--color-text-dark)] uppercase">VINTCAM</span>
           </a>
           <button onclick="toggleMobileMenu()" class="p-2 rounded-full hover:bg-[var(--color-bg-card)] transition-colors flex items-center justify-center" aria-label="Close menu">
             <svg class="h-6 w-6 text-[var(--color-text-dark)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -88,7 +90,7 @@ const FOOTER_TEMPLATE = `
     <div class="lg:col-span-4 flex flex-col justify-between gap-6">
       <div>
         <a href="ROOT_PATHindex.html" class="inline-block mb-4 hover:opacity-85 transition-opacity focus:outline-none rounded px-1">
-          <img src="ROOT_PATHassets/images/brand-logo.png" alt="VINTCAM" class="h-10 w-auto object-contain dark:invert transition-all duration-300" />
+          <img src="ROOT_PATHassets/images/brand-logo.png" alt="VINTCAM" class="h-10 w-auto object-contain dark:invert transition-all duration-300" /><span class="font-display text-2xl tracking-widest text-[var(--color-text-dark)] uppercase">VINTCAM</span>
         </a>
         <p class="text-xs leading-relaxed max-w-sm text-[var(--color-text-muted)]">
           Preserving design history and optomechanical excellence. We source, meticulously calibrate, and fully warrant master analog gear and cold-stored format emulsions for contemporary artists.
