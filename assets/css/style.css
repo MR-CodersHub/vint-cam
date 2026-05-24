@@ -61,20 +61,18 @@
     height: 14px;
   } 
 
-  /* Premium Responsive Sticky Header Glassmorphism */
+  /* Premium Responsive Sticky Header Solid Styling */
   .header-scrolled {
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    background-color: rgba(241, 237, 226, 0.85) !important;
+    background-color: var(--color-bg-canvas) !important;
     box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.03);
-    border-bottom-color: rgba(222, 216, 203, 0.8);
+    border-bottom-color: var(--color-border);
     height: 4.5rem !important;
   }
 
   [data-theme="dark"] .header-scrolled {
-    background-color: rgba(28, 30, 31, 0.85) !important;
+    background-color: var(--color-bg-canvas) !important;
     box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.25);
-    border-bottom-color: rgba(51, 56, 58, 0.8);
+    border-bottom-color: var(--color-border);
   }
 
   /* Elegant Active Underline Indicator */

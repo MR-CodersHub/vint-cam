@@ -5,7 +5,7 @@ const WORKSPACE_DIR = path.resolve(__dirname, '../../');
 const PAGES_DIR = path.resolve(WORKSPACE_DIR, 'pages');
 
 const HEADER_TEMPLATE = `
-<header class="sticky top-0 z-50 w-full transition-all duration-300 backdrop-blur-md bg-[var(--color-bg-canvas)]/80 border-b border-[var(--color-border)] shadow-sm">
+<header class="sticky top-0 z-50 w-full transition-all duration-300 bg-[var(--color-bg-canvas)] border-b border-[var(--color-border)] shadow-sm">
   <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
     <!-- Brand Logo -->
     <a href="ROOT_PATHindex.html" class="hover:opacity-85 transition-opacity focus:outline-none focus:ring-2 focus:ring-amber-500 rounded px-1 flex items-center gap-3">
