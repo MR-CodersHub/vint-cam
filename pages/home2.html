@@ -37,6 +37,15 @@
 
     <!-- Right-side Actions -->
     <div class="flex items-center gap-6">
+      <!-- Shopping Cart Toggler Button -->
+      <button onclick="toggleCartDrawer()" class="cart-btn p-2 rounded-full hover:bg-[var(--color-bg-card)] border border-transparent hover:border-[var(--color-border)] transition-all relative group flex items-center justify-center animate-cart-badge" aria-label="Open shopping cart">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[var(--color-text-dark)] transition-transform duration-300 group-hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+        </svg>
+        <!-- Active Item Count Indicator Badge -->
+        <span id="cart-badge" class="absolute -top-1 -right-1 bg-amber-600 text-white text-[9px] font-bold rounded-full w-4 h-4 flex items-center justify-center scale-0 transition-transform duration-300">0</span>
+      </button>
+
       <!-- Theme Switcher Button -->
       <button onclick="toggleTheme()" class="theme-btn p-2 rounded-full hover:bg-[var(--color-bg-card)] border border-transparent hover:border-[var(--color-border)] transition-all relative group flex items-center justify-center" aria-label="Toggle dark/light mode">
         <svg xmlns="http://www.w3.org/2000/svg" id="theme-sun-path" class="h-5 w-5 theme-toggle-icon hidden text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -126,6 +135,51 @@
           <p class="text-xs text-[var(--color-text-dark)] font-semibold">registry@vintcam.com</p>
           <p class="text-[11px] text-[var(--color-text-muted)]">@vint.cam on instagram</p>
         </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Shopping Cart Drawer Overlay -->
+  <div id="cart-drawer" class="fixed inset-0 z-50 bg-black/40 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
+    <div class="absolute inset-y-0 right-0 h-full w-full max-w-md shadow-2xl p-6 sm:p-8 flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-out border-l transition-colors duration-300" style="background-color: var(--color-bg-canvas); border-color: var(--color-border); color: var(--color-text-dark);" id="cart-drawer-content">
+      
+      <!-- Top Cart Header Row -->
+      <div>
+        <div class="flex items-center justify-between mb-6 pb-4 border-b border-[var(--color-border)]">
+          <div class="flex items-center gap-2.5">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-amber-600 dark:text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+            </svg>
+            <span class="font-display text-2xl uppercase tracking-widest text-[var(--color-text-dark)]">Your Vault Cart</span>
+          </div>
+          
+          <!-- Spinning circular close button -->
+          <button onclick="toggleCartDrawer()" class="p-2.5 border border-[var(--color-border)] rounded-full hover:bg-[var(--color-bg-card)] transition-all flex items-center justify-center group" aria-label="Close cart">
+            <svg class="h-5 w-5 text-[var(--color-text-dark)] transition-transform duration-300 group-hover:rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        
+        <!-- Cart Items List Container -->
+        <div id="cart-items-container" class="flex flex-col gap-4 overflow-y-auto max-h-[calc(100vh-280px)] pr-2">
+          <!-- Dynamic Cart Items Rendered Here -->
+        </div>
+      </div>
+
+      <!-- Bottom Summary & Checkout -->
+      <div class="mt-auto pt-6 border-t border-[var(--color-border)] flex flex-col gap-4">
+        <div class="flex justify-between items-center text-sm font-semibold">
+          <span style="color: var(--color-text-muted);">Subtotal</span>
+          <span id="cart-subtotal" class="text-lg font-bold text-[var(--color-text-dark)]">$0.00</span>
+        </div>
+        <p class="text-[11px] leading-relaxed" style="color: var(--color-text-muted);">
+          * Logistics and insurance for sensitive chemical lots are calculated at checkout vault.
+        </p>
+        <button onclick="checkoutCart()" class="w-full py-3.5 bg-black text-white dark:bg-white dark:text-black font-semibold text-xs tracking-wider uppercase rounded-xl hover:opacity-90 active:scale-98 transition-all flex items-center justify-center gap-2">
+          Proceed to Secure Checkout &rarr;
+        </button>
       </div>
 
     </div>
@@ -269,7 +323,7 @@
           </div>
           <div class="flex justify-between items-center mt-6 pt-3 border-t" style="border-color: var(--color-border);">
             <span class="font-bold text-xs">$12.95</span>
-            <button class="px-3 py-1 bg-neutral-200 dark:bg-neutral-700 text-[10px] uppercase font-bold rounded hover:opacity-80 transition-opacity">Add</button>
+            <button onclick="addToCart('LOT-DEV404', 'Kodak D-76 Developer (1 Gal)', 12.95, 'Classic powder mix offering full shadow detail tracking metrics.', 'Kodak'); animateAddButton(this)" class="px-3 py-1 bg-neutral-200 dark:bg-neutral-700 text-[10px] uppercase font-bold rounded hover:opacity-80 transition-opacity">Add</button>
           </div>
         </div>
         <div class="p-4 border rounded-xl flex flex-col justify-between" style="border-color: var(--color-border); background-color: var(--color-bg-card);">
@@ -280,7 +334,7 @@
           </div>
           <div class="flex justify-between items-center mt-6 pt-3 border-t" style="border-color: var(--color-border);">
             <span class="font-bold text-xs">$18.50</span>
-            <button class="px-3 py-1 bg-neutral-200 dark:bg-neutral-700 text-[10px] uppercase font-bold rounded hover:opacity-80 transition-opacity">Add</button>
+            <button onclick="addToCart('LOT-FIX202', 'Ilford Rapid Fixer (500ml)', 18.50, 'Non-hardening liquid concentrate fixer for films and papers.', 'Ilford'); animateAddButton(this)" class="px-3 py-1 bg-neutral-200 dark:bg-neutral-700 text-[10px] uppercase font-bold rounded hover:opacity-80 transition-opacity">Add</button>
           </div>
         </div>
         <div class="p-4 border rounded-xl flex flex-col justify-between" style="border-color: var(--color-border); background-color: var(--color-bg-card);">
@@ -291,7 +345,7 @@
           </div>
           <div class="flex justify-between items-center mt-6 pt-3 border-t" style="border-color: var(--color-border);">
             <span class="font-bold text-xs">$42.00</span>
-            <button class="px-3 py-1 bg-neutral-200 dark:bg-neutral-700 text-[10px] uppercase font-bold rounded hover:opacity-80 transition-opacity">Add</button>
+            <button onclick="addToCart('LOT-TNK991', 'Paterson Universal Film Tank', 42.00, 'Includes two adjustable auto-load reels for 35mm or 120 processing.', 'Paterson'); animateAddButton(this)" class="px-3 py-1 bg-neutral-200 dark:bg-neutral-700 text-[10px] uppercase font-bold rounded hover:opacity-80 transition-opacity">Add</button>
           </div>
         </div>
         <div class="p-4 border rounded-xl flex flex-col justify-between" style="border-color: var(--color-border); background-color: var(--color-bg-card);">
@@ -302,7 +356,7 @@
           </div>
           <div class="flex justify-between items-center mt-6 pt-3 border-t" style="border-color: var(--color-border);">
             <span class="font-bold text-xs">$35.00</span>
-            <button class="px-3 py-1 bg-neutral-200 dark:bg-neutral-700 text-[10px] uppercase font-bold rounded hover:opacity-80 transition-opacity">Add</button>
+            <button onclick="addToCart('LOT-PPR771', 'Fomaspeed Variant Glossy (8x10)', 35.00, 'Multi-grade resin coated black and white photographic printing paper.', 'Foma'); animateAddButton(this)" class="px-3 py-1 bg-neutral-200 dark:bg-neutral-700 text-[10px] uppercase font-bold rounded hover:opacity-80 transition-opacity">Add</button>
           </div>
         </div>
       </div>
