@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VINTCAM — Premium Vintage Photography & Restoration</title>
+  <title>Vintage Camera, Lens & Film Photography Store — VINTCAM</title>
   <link rel="icon" type="image/png" href="./assets/images/brand-logo.png">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,10 +28,10 @@
     <!-- Desktop Navigation Links -->
     <nav class="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wide" id="desktop-nav">
       <a href="./index.html" class="nav-link relative py-1">Home</a>
-      <a href="pages/home2.html" class="nav-link relative py-1">Home 2</a>
+      <a href="pages/home2.html" class="nav-link relative py-1">Store</a>
+      <a href="pages/services-products.html" class="nav-link relative py-1">Catalog</a>
       <a href="pages/about.html" class="nav-link relative py-1">About</a>
       <a href="pages/blog.html" class="nav-link relative py-1">Blog</a>
-      <a href="pages/services-products.html" class="nav-link relative py-1">Service</a>
       <a href="pages/contact.html" class="nav-link relative py-1">Contact</a>
     </nav>
 
@@ -45,7 +45,7 @@
         <!-- Active Item Count Indicator Badge -->
         <span id="cart-badge" class="absolute -top-1 -right-1 bg-amber-600 text-white text-[9px] font-bold rounded-full w-4 h-4 flex items-center justify-center scale-0 transition-transform duration-300">0</span>
       </button>
-
+ 
       <!-- Theme Switcher Button -->
       <button onclick="toggleTheme()" class="theme-btn p-2 rounded-full hover:bg-[var(--color-bg-card)] border border-transparent hover:border-[var(--color-border)] transition-all relative group flex items-center justify-center" aria-label="Toggle dark/light mode">
         <svg xmlns="http://www.w3.org/2000/svg" id="theme-sun-path" class="h-5 w-5 theme-toggle-icon hidden text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -55,7 +55,14 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
         </svg>
       </button>
-
+ 
+      <!-- RTL Layout Switcher Button -->
+      <button onclick="toggleRTL()" class="rtl-btn p-2 rounded-full hover:bg-[var(--color-bg-card)] border border-transparent hover:border-[var(--color-border)] transition-all relative group flex items-center justify-center" aria-label="Toggle layout direction">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[var(--color-text-dark)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M3 10h18M3 15h12M3 20h18" />
+        </svg>
+      </button>
+ 
       <!-- Hamburger Menu Button (Mobile) -->
       <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-full hover:bg-[var(--color-bg-card)] transition-colors flex items-center justify-center" aria-label="Open navigation menu">
         <svg id="hamburger-icon" class="h-6 w-6 text-[var(--color-text-dark)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -64,7 +71,7 @@
       </button>
     </div>
   </div>
-
+ 
   <style>
     #mobile-menu-content {
       background-color: #f1ede2 !important;
@@ -73,7 +80,7 @@
       background-color: #1c1e1f !important;
     }
   </style>
-
+ 
   <!-- Mobile Full-Screen Overlay and Container -->
   <div id="mobile-menu-drawer" class="fixed inset-0 z-50 bg-black/40 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
     <div class="absolute inset-0 h-full w-full shadow-2xl p-6 sm:p-8 flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-out bg-[#f1ede2] dark:bg-[#1c1e1f] border-l border-[#ded8cb] dark:border-[#33383a]" id="mobile-menu-content">
@@ -100,21 +107,21 @@
             <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">01.</span>
             <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Home</span>
           </a>
-          <a href="pages/home2.html" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
+          <a href="pages/home2.html" onclick="toggleMobileMenu()" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
             <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">02.</span>
-            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Home 2</span>
+            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Store</span>
+          </a>
+          <a href="pages/services-products.html" onclick="toggleMobileMenu()" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
+            <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">03.</span>
+            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Catalog</span>
           </a>
           <a href="pages/about.html" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
-            <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">03.</span>
+            <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">04.</span>
             <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">About</span>
           </a>
           <a href="pages/blog.html" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
-            <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">04.</span>
-            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Blog</span>
-          </a>
-          <a href="pages/services-products.html" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
             <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">05.</span>
-            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Service</span>
+            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Blog</span>
           </a>
           <a href="pages/contact.html" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
             <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">06.</span>
@@ -184,164 +191,341 @@
 
     </div>
   </div>
-</header>
-
+</header>    <!-- Store Hero Section -->
     <section class="grid grid-cols-1 lg:grid-cols-12 border-b" style="border-color: var(--color-border);">
+      <!-- Hero Left: Text & CTA Actions -->
       <div class="lg:col-span-7 p-8 sm:p-12 lg:p-16 flex flex-col justify-between relative min-h-[580px]" style="background-color: var(--color-bg-card);">
         <div class="absolute top-8 left-8 frame-corner-tl"></div>
         <div class="absolute bottom-8 right-8 frame-corner-br"></div>
         
         <div class="my-auto max-w-xl pl-4">
-          <h1 class="font-display text-5xl sm:text-6xl md:text-7xl uppercase leading-[0.95] mb-8">
-            CAPTURE HAPPY <br>
-            <span class="relative inline-block text-amber-600 dark:text-amber-500">MEMORIES</span> FOR THE <br> FUTURE <span class="text-2xl inline-block align-middle ml-2">✦</span>
+          <span class="text-xs uppercase font-bold tracking-widest text-amber-600 dark:text-amber-500 mb-4 block">✦ Restored Analog Classics & Film Stockist</span>
+          <h1 class="font-display text-5xl sm:text-6xl md:text-7xl uppercase leading-[0.95] mb-6">
+            Restored gear & <br>
+            <span class="relative inline-block text-amber-600 dark:text-amber-500">cold-stored</span> <br>
+            emulsions
           </h1>
+          <p class="text-sm leading-relaxed mb-8" style="color: var(--color-text-muted);">
+            VINTCAM is a premier vintage camera store and film photography specialist. We source, overhaul, and warrant certified mechanical bodies, lenses, fresh and rare expired film stocks, and professional darkroom chemistry supplies.
+          </p>
+          
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 border-t border-dashed" style="border-color: var(--color-border);">
             <div>
-              <h3 class="font-display text-lg tracking-wider mb-1">Still Photography</h3>
-              <p class="text-xs leading-relaxed" style="color: var(--color-text-muted);">Hand-curated, precision restored analog mechanics built to last generations.</p>
+              <h3 class="font-display text-lg tracking-wider mb-1">Analog Retail Vault</h3>
+              <p class="text-xs leading-relaxed" style="color: var(--color-text-muted);">Fully disassembled, cleaned, and timing-calibrated mechanical bodies and vintage primes with a 6-month warranty.</p>
             </div>
             <div>
-              <h3 class="font-display text-lg tracking-wider mb-1">Cinematography</h3>
-              <p class="text-xs leading-relaxed" style="color: var(--color-text-muted);">Rare 8mm, Super 8, and 16mm motion picture formats fully tested for creatives.</p>
+              <h3 class="font-display text-lg tracking-wider mb-1">Cold-Stored Emulsions</h3>
+              <p class="text-xs leading-relaxed" style="color: var(--color-text-muted);">Nitrogen-protected fridge lots cataloged strictly by batch expiration date windows and traditional darkroom chemistry.</p>
             </div>
           </div>
+          
           <div class="flex flex-wrap items-center gap-4 mt-10">
-            <a href="./pages/services-products.html"><button class="px-6 py-3 bg-black text-white dark:bg-white dark:text-black font-semibold text-xs tracking-wider rounded uppercase hover:opacity-90 transition-opacity">Explore Vault</button></a>
-            <a href="./pages/about.html"><button class="px-5 py-3 border font-semibold text-xs tracking-wider rounded uppercase flex items-center gap-2 transition-colors hover:bg-black/5" style="border-color: var(--color-text-dark);">Get to Know Us</button></a>
+            <a href="#restored-cameras" class="px-6 py-3.5 bg-black text-white dark:bg-white dark:text-black font-semibold text-xs tracking-wider rounded-xl uppercase hover:opacity-90 active:scale-98 transition-all">Shop Restored Cameras</a>
+            <a href="#lens-inventory" class="px-5 py-3.5 border font-semibold text-xs tracking-wider rounded-xl uppercase flex items-center gap-2 transition-colors hover:bg-black/5 dark:hover:bg-white/5" style="border-color: var(--color-text-dark); color: var(--color-text-dark);">Browse Lenses</a>
+            <a href="#appraisal-desk" class="text-xs font-bold uppercase tracking-wider border-b border-amber-600 dark:border-amber-500 pb-1 text-amber-600 dark:text-amber-500 hover:opacity-85 transition-opacity">Value Your Gear (Trade-In) &rarr;</a>
           </div>
         </div>
       </div>
       
+      <!-- Hero Right: Premium Store Visuals -->
       <div class="lg:col-span-5 grid grid-rows-3 min-h-[580px]">
         <div class="p-8 sm:p-12 flex flex-col justify-center border-b lg:border-b-0" style="border-color: var(--color-border);">
-          <span class="font-display text-xl text-amber-600">#01 EST. NYC</span>
-          <h2 class="font-display text-2xl tracking-wider uppercase mt-1">Preserving Light and Chemistry</h2>
-          <p class="text-xs max-w-xs mt-2 leading-relaxed" style="color: var(--color-text-muted);">We repair, clean, and warrant premium classic cameras so you can shoot with absolute absolute confidence.</p>
+          <span class="font-display text-xl text-amber-600 dark:text-amber-500">EST. NYC</span>
+          <h2 class="font-display text-2xl tracking-wider uppercase mt-1">Certified Retail Vault</h2>
+          <p class="text-xs max-w-xs mt-2 leading-relaxed" style="color: var(--color-text-muted);">Every restored vintage camera body we catalog features a certified 6-month mechanical guarantee covering timing accuracy.</p>
         </div>
-        <div class="row-span-2 relative flex items-end justify-end overflow-hidden" style="background-color: var(--color-accent-yellow);">
-          <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=800" alt="Vintage SLR Camera" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
-          <div class="w-full absolute bottom-0 left-0 bg-white/90 dark:bg-black/90 backdrop-blur-sm py-4 px-6 flex items-center justify-around text-xs font-bold tracking-widest uppercase z-10">
-            <span>Leica</span><span>Hasselblad</span><span>Olympus</span>
+        <div class="row-span-2 relative flex items-end justify-end overflow-hidden bg-neutral-900">
+          <img src="https://images.unsplash.com/photo-1510127034890-ba27508e9f1c?auto=format&fit=crop&q=80&w=800" alt="Vintage Camera Store Showcase Display" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-103" />
+          <div class="absolute inset-0 bg-black/10 dark:bg-black/30 pointer-events-none"></div>
+          <div class="w-full absolute bottom-0 left-0 bg-white/95 dark:bg-black/95 backdrop-blur-sm py-4 px-6 flex items-center justify-around text-xs font-bold tracking-widest uppercase z-10 border-t" style="border-color: var(--color-border);">
+            <span>Leica</span><span>Hasselblad</span><span>Nikon</span><span>Rollei</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 p-8 md:p-12 border-b" style="border-color: var(--color-border);">
-      <div class="flex gap-4">
-        <div class="text-amber-600 font-display text-2xl">01</div>
-        <div>
-          <h3 class="font-display tracking-wide uppercase text-base">Ultrasonic Cleaning</h3>
-          <p class="text-xs mt-1 leading-relaxed" style="color: var(--color-text-muted);">Every optical component is completely stripped, cleaned, and re-lubricated.</p>
+    <!-- Restored Film Cameras Showcase -->
+    <section id="restored-cameras" class="p-8 sm:p-12 lg:p-16 border-b transition-colors duration-300" style="border-color: var(--color-border); background-color: var(--color-bg-canvas);">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+          <div>
+            <span class="text-xs uppercase font-bold tracking-widest text-amber-600 dark:text-amber-500">Restored Film Cameras</span>
+            <h2 class="font-display text-4xl sm:text-5xl uppercase mt-2">Certified Analog Bodies</h2>
+          </div>
+          <p class="text-xs max-w-sm leading-relaxed mt-4 md:mt-0" style="color: var(--color-text-muted);">
+            Each restored analog body is completely dismantled, cleaned, calibrated, and carries a 6-month warranty.
+          </p>
         </div>
-      </div>
-      <div class="flex gap-4">
-        <div class="text-amber-600 font-display text-2xl">02</div>
-        <div>
-          <h3 class="font-display tracking-wide uppercase text-base">Shutter Diagnostics</h3>
-          <p class="text-xs mt-1 leading-relaxed" style="color: var(--color-text-muted);">Laser-tested shutter curtains calibrated precisely up to 1/4000s speeds.</p>
-        </div>
-      </div>
-      <div class="flex gap-4">
-        <div class="text-amber-600 font-display text-2xl">03</div>
-        <div>
-          <h3 class="font-display tracking-wide uppercase text-base">Light Seal Rebuilds</h3>
-          <p class="text-xs mt-1 leading-relaxed" style="color: var(--color-text-muted);">Fresh high-density Japanese foam seals installed on all film back doors.</p>
-        </div>
-      </div>
-      <div class="flex gap-4">
-        <div class="text-amber-600 font-display text-2xl">04</div>
-        <div>
-          <h3 class="font-display tracking-wide uppercase text-base">Global Express Logistics</h3>
-          <p class="text-xs mt-1 leading-relaxed" style="color: var(--color-text-muted);">Temperature-controlled custom secure shipping coordinates for delicate gear.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Camera 1 -->
+          <div class="group relative flex flex-col justify-between p-4 border rounded-2xl transition-all hover:shadow-lg bg-[var(--color-bg-card)]" style="border-color: var(--color-border);">
+            <div class="w-full h-64 rounded-xl overflow-hidden mb-4 bg-neutral-100 relative">
+              <img src="https://images.unsplash.com/photo-1560264245-1dbfb9782b8b?auto=format&fit=crop&q=80&w=600" alt="Leica M6 Rangefinder" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103" />
+              <span class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-black text-white dark:bg-white dark:text-black">Mint / Calibrated</span>
+            </div>
+            <div>
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-display text-xl tracking-wide uppercase">Leica M6 Titanium</h3>
+                <span class="font-bold text-sm text-[var(--color-text-dark)]">$3,100.00</span>
+              </div>
+              <p class="text-xs mb-4" style="color: var(--color-text-muted);">Titanium finish edition. Internal light meter fully balanced to modern 1.5v battery parameters.</p>
+              <button onclick="addToCart('LCA-M6-TI', 'Leica M6 Titanium', 3100.00, 'Titanium finish mechanical rangefinder.', 'Leica'); animateAddButton(this)" class="w-full py-2.5 text-xs font-semibold bg-black text-white dark:bg-white dark:text-black rounded-xl uppercase tracking-wider hover:opacity-90 transition-opacity">Acquire Model</button>
+            </div>
+          </div>
+          <!-- Camera 2 -->
+          <div class="group relative flex flex-col justify-between p-4 border rounded-2xl transition-all hover:shadow-lg bg-[var(--color-bg-card)]" style="border-color: var(--color-border);">
+            <div class="w-full h-64 rounded-xl overflow-hidden mb-4 bg-neutral-100 relative">
+              <img src="https://images.unsplash.com/photo-1495707902641-75cac588d2e9?auto=format&fit=crop&q=80&w=600" alt="Nikon FM2 SLR" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103" />
+              <span class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-amber-600 text-white">Excellent++ Grade</span>
+            </div>
+            <div>
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-display text-xl tracking-wide uppercase">Nikon FM2 Titanium</h3>
+                <span class="font-bold text-sm text-[var(--color-text-dark)]">$520.00</span>
+              </div>
+              <p class="text-xs mb-4" style="color: var(--color-text-muted);">Honeycomb pattern vertical shutter. Calibrated to true 1/4000s speed index tolerance.</p>
+              <button onclick="addToCart('NIK-FM2-TI', 'Nikon FM2 Titanium', 520.00, 'Honeycomb shutter mechanical SLR.', 'Nikon'); animateAddButton(this)" class="w-full py-2.5 text-xs font-semibold bg-black text-white dark:bg-white dark:text-black rounded-xl uppercase tracking-wider hover:opacity-90 transition-opacity">Acquire Model</button>
+            </div>
+          </div>
+          <!-- Camera 3 -->
+          <div class="group relative flex flex-col justify-between p-4 border rounded-2xl transition-all hover:shadow-lg bg-[var(--color-bg-card)]" style="border-color: var(--color-border);">
+            <div class="w-full h-64 rounded-xl overflow-hidden mb-4 bg-neutral-100 relative">
+              <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=600" alt="Rolleiflex 2.8F TLR" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103" />
+              <span class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-black text-white dark:bg-white dark:text-black">Mint / Serviced</span>
+            </div>
+            <div>
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-display text-xl tracking-wide uppercase">Rolleiflex 2.8F TLR</h3>
+                <span class="font-bold text-sm text-[var(--color-text-dark)]">$1,850.00</span>
+              </div>
+              <p class="text-xs mb-4" style="color: var(--color-text-muted);">Twin-lens reflex classic featuring Carl Zeiss Planar 80mm f/2.8 lens and a bright screen update.</p>
+              <button onclick="addToCart('ROL-TLR-28F', 'Rolleiflex 2.8F TLR', 1850.00, 'Twin lens reflex featuring Carl Zeiss optics.', 'Rollei'); animateAddButton(this)" class="w-full py-2.5 text-xs font-semibold bg-black text-white dark:bg-white dark:text-black rounded-xl uppercase tracking-wider hover:opacity-90 transition-opacity">Acquire Model</button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="p-8 sm:p-12 lg:p-16 border-b" style="border-color: var(--color-border);">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
-        <div>
-          <span class="text-xs uppercase font-bold tracking-widest text-amber-600">The Collection Archive</span>
-          <h2 class="font-display text-4xl sm:text-5xl uppercase mt-2">Restored Masterpieces Ready For Use</h2>
+    <!-- Lens Inventory Showcase -->
+    <section id="lens-inventory" class="p-8 sm:p-12 lg:p-16 border-b transition-colors duration-300" style="border-color: var(--color-border); background-color: var(--color-bg-card);">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+          <div>
+            <span class="text-xs uppercase font-bold tracking-widest text-amber-600 dark:text-amber-500">Lens Inventory</span>
+            <h2 class="font-display text-4xl sm:text-5xl uppercase mt-2">Calibrated Prime Optics</h2>
+          </div>
+          <p class="text-xs max-w-sm leading-relaxed mt-4 md:mt-0" style="color: var(--color-text-muted);">
+            Fully serviced vintage primes. Diaphragm blades degreased and focus helicoids re-greased to ultra-smooth standards.
+          </p>
         </div>
-        <a href="#" class="text-xs font-bold uppercase tracking-wider border-b pb-1 mt-4 md:mt-0 inline-block hover:opacity-75 transition-opacity" style="border-color: var(--color-text-dark);">View All 140+ Models &rarr;</a>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Lens 1 -->
+          <div class="group relative flex flex-col justify-between p-4 border rounded-2xl transition-all hover:shadow-lg bg-[var(--color-bg-canvas)]" style="border-color: var(--color-border);">
+            <div class="w-full h-64 rounded-xl overflow-hidden mb-4 bg-neutral-100 relative">
+              <img src="https://images.unsplash.com/photo-1617005082133-548c4dd27f35?auto=format&fit=crop&q=80&w=500" alt="Carl Zeiss Planar 50mm" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103" />
+              <span class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-black text-white dark:bg-white dark:text-black">M42 Screw Mount</span>
+            </div>
+            <div>
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-display text-xl tracking-wide uppercase">Zeiss Planar 50mm f/1.4 ZS</h3>
+                <span class="font-bold text-sm text-[var(--color-text-dark)]">$450.00</span>
+              </div>
+              <p class="text-xs mb-4" style="color: var(--color-text-muted);">Superb portrait resolving power. Smooth helicoid focusing ring with zero play or backlash.</p>
+              <button onclick="addToCart('ZSS-PL50-14', 'Zeiss Planar 50mm f/1.4', 450.00, 'Fast portrait prime lens.', 'Zeiss'); animateAddButton(this)" class="w-full py-2.5 text-xs font-semibold bg-black text-white dark:bg-white dark:text-black rounded-xl uppercase tracking-wider hover:opacity-90 transition-opacity">Acquire Lens</button>
+            </div>
+          </div>
+          <!-- Lens 2 -->
+          <div class="group relative flex flex-col justify-between p-4 border rounded-2xl transition-all hover:shadow-lg bg-[var(--color-bg-canvas)]" style="border-color: var(--color-border);">
+            <div class="w-full h-64 rounded-xl overflow-hidden mb-4 bg-neutral-100 relative">
+              <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&q=80&w=500" alt="Leica Summicron-M 35mm" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103" />
+              <span class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-amber-600 text-white">Leica M Mount</span>
+            </div>
+            <div>
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-display text-xl tracking-wide uppercase">Summicron-M 35mm f/2 ASPH</h3>
+                <span class="font-bold text-sm text-[var(--color-text-dark)]">$2,150.00</span>
+              </div>
+              <p class="text-xs mb-4" style="color: var(--color-text-muted);">Pristine glass, zero haze or micro-scratches. Includes original rectangular metal hood.</p>
+              <button onclick="addToCart('LCA-SC35-20', 'Summicron-M 35mm f/2', 2150.00, 'Ultra-sharp M mount street prime.', 'Leica'); animateAddButton(this)" class="w-full py-2.5 text-xs font-semibold bg-black text-white dark:bg-white dark:text-black rounded-xl uppercase tracking-wider hover:opacity-90 transition-opacity">Acquire Lens</button>
+            </div>
+          </div>
+          <!-- Lens 3 -->
+          <div class="group relative flex flex-col justify-between p-4 border rounded-2xl transition-all hover:shadow-lg bg-[var(--color-bg-canvas)]" style="border-color: var(--color-border);">
+            <div class="w-full h-64 rounded-xl overflow-hidden mb-4 bg-neutral-100 relative">
+              <img src="https://images.unsplash.com/photo-1527443154391-507e9dc6c5cc?auto=format&fit=crop&q=80&w=500" alt="Canon FD 55mm" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103" />
+              <span class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-black text-white dark:bg-white dark:text-black">Canon FD Mount</span>
+            </div>
+            <div>
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-display text-xl tracking-wide uppercase">Canon FD 55mm f/1.2 S.S.C.</h3>
+                <span class="font-bold text-sm text-[var(--color-text-dark)]">$380.00</span>
+              </div>
+              <p class="text-xs mb-4" style="color: var(--color-text-muted);">Vintage fast glass. Famous for signature bokeh. Diaphragm blades snappy and bone-dry.</p>
+              <button onclick="addToCart('CAN-FD55-12', 'Canon FD 55mm f/1.2 S.S.C.', 380.00, 'Fast portrait lens with S.S.C. coating.', 'Canon'); animateAddButton(this)" class="w-full py-2.5 text-xs font-semibold bg-black text-white dark:bg-white dark:text-black rounded-xl uppercase tracking-wider hover:opacity-90 transition-opacity">Acquire Lens</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Film Fridge Registry: Film stock by expiration date -->
+    <section id="fridge" class="p-8 sm:p-12 lg:p-16 border-b transition-colors duration-300" style="border-color: var(--color-border); background-color: var(--color-bg-canvas);">
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-8 text-center md:text-left">
+          <span class="text-xs uppercase font-bold tracking-widest text-amber-600 dark:text-amber-500">Live Emulsion Stockist</span>
+          <h2 class="font-display text-3xl uppercase mt-1">Live Film Fridge Master Registry</h2>
+          <p class="text-xs" style="color: var(--color-text-muted);">Real-time monitoring of sensitive emulsions cataloged strictly by vintage expiration date windows.</p>
+        </div>
+        
+        <div class="w-full overflow-x-auto border rounded-xl" style="border-color: var(--color-border); background-color: var(--color-bg-card);">
+          <table class="w-full text-left text-xs border-collapse">
+            <thead>
+              <tr class="uppercase text-[10px] font-bold border-b tracking-wider bg-neutral-100/50 dark:bg-neutral-800/50" style="border-color: var(--color-border);">
+                <th class="p-4">Emulsion / Stock Name</th>
+                <th class="p-4">Format</th>
+                <th class="p-4">ISO Index</th>
+                <th class="p-4">Batch Expiration</th>
+                <th class="p-4">Storage State</th>
+                <th class="p-4 text-right">Unit Pricing</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y" style="border-color: var(--color-border);">
+              <tr>
+                <td class="p-4 font-semibold">Kodak Aerochrome III (Rare)</td>
+                <td class="p-4">120 Medium</td>
+                <td class="p-4">400 (IR)</td>
+                <td class="p-4 text-red-600 dark:text-red-400 font-bold">Oct 2011 (Expired)</td>
+                <td class="p-4"><span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 text-[10px] font-bold dark:bg-blue-950/40 dark:text-blue-400">Deep Frozen</span></td>
+                <td class="p-4 text-right font-bold">$78.00</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-semibold">Fujifilm Superia X-TRA</td>
+                <td class="p-4">35mm Roll</td>
+                <td class="p-4">400</td>
+                <td class="p-4">Dec 2027 (Fresh)</td>
+                <td class="p-4"><span class="px-2 py-0.5 rounded bg-green-100 text-green-800 text-[10px] font-bold dark:bg-green-950/40 dark:text-green-400">Cold Stored</span></td>
+                <td class="p-4 text-right font-bold">$14.50</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-semibold">Ilford Delta 3200 Professional</td>
+                <td class="p-4">35mm Roll</td>
+                <td class="p-4">3200</td>
+                <td class="p-4">Jul 2028 (Fresh)</td>
+                <td class="p-4"><span class="px-2 py-0.5 rounded bg-green-100 text-green-800 text-[10px] font-bold dark:bg-green-950/40 dark:text-green-400">Cold Stored</span></td>
+                <td class="p-4 text-right font-bold">$16.20</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Darkroom Supplies & Chemistry -->
+    <section id="darkroom" class="p-8 sm:p-12 lg:p-16 border-b transition-colors duration-300" style="border-color: var(--color-border); background-color: var(--color-bg-card);">
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-10 text-center md:text-left">
+          <span class="text-xs uppercase font-bold tracking-widest text-amber-600 dark:text-amber-500">Darkroom Essentials</span>
+          <h2 class="font-display text-3xl uppercase tracking-wide">Chemicals & Darkroom Apparatus</h2>
+          <p class="text-xs mt-1" style="color: var(--color-text-muted);">All chemistry lots are batch-verified internally for stable development curves.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="p-4 border rounded-xl flex flex-col justify-between" style="border-color: var(--color-border); background-color: var(--color-bg-canvas);">
+            <div>
+              <span class="text-[10px] font-mono tracking-tight text-amber-600 block mb-1">LOT-DEV404</span>
+              <h3 class="font-semibold text-sm">Kodak D-76 Developer (1 Gal)</h3>
+              <p class="text-xs mt-1" style="color: var(--color-text-muted);">Classic powder mix offering full shadow detail tracking metrics.</p>
+            </div>
+            <div class="flex justify-between items-center mt-6 pt-3 border-t" style="border-color: var(--color-border);">
+              <span class="font-bold text-xs">$12.95</span>
+              <button onclick="addToCart('LOT-DEV404', 'Kodak D-76 Developer (1 Gal)', 12.95, 'Classic powder mix offering full shadow detail tracking metrics.', 'Kodak'); animateAddButton(this)" class="px-3 py-1.5 bg-black text-white dark:bg-white dark:text-black text-[10px] uppercase font-bold rounded-lg hover:opacity-80 transition-opacity">Add</button>
+            </div>
+          </div>
+          <div class="p-4 border rounded-xl flex flex-col justify-between" style="border-color: var(--color-border); background-color: var(--color-bg-canvas);">
+            <div>
+              <span class="text-[10px] font-mono tracking-tight text-amber-600 block mb-1">LOT-FIX202</span>
+              <h3 class="font-semibold text-sm">Ilford Rapid Fixer (500ml)</h3>
+              <p class="text-xs mt-1" style="color: var(--color-text-muted);">Non-hardening liquid concentrate fixer for films and papers.</p>
+            </div>
+            <div class="flex justify-between items-center mt-6 pt-3 border-t" style="border-color: var(--color-border);">
+              <span class="font-bold text-xs">$18.50</span>
+              <button onclick="addToCart('LOT-FIX202', 'Ilford Rapid Fixer (500ml)', 18.50, 'Non-hardening liquid concentrate fixer for films and papers.', 'Ilford'); animateAddButton(this)" class="px-3 py-1.5 bg-black text-white dark:bg-white dark:text-black text-[10px] uppercase font-bold rounded-lg hover:opacity-80 transition-opacity">Add</button>
+            </div>
+          </div>
+          <div class="p-4 border rounded-xl flex flex-col justify-between" style="border-color: var(--color-border); background-color: var(--color-bg-canvas);">
+            <div>
+              <span class="text-[10px] font-mono tracking-tight text-amber-600 block mb-1">LOT-TNK991</span>
+              <h3 class="font-semibold text-sm">Paterson Universal Film Tank</h3>
+              <p class="text-xs mt-1" style="color: var(--color-text-muted);">Includes two adjustable auto-load reels for 35mm or 120 processing.</p>
+            </div>
+            <div class="flex justify-between items-center mt-6 pt-3 border-t" style="border-color: var(--color-border);">
+              <span class="font-bold text-xs">$42.00</span>
+              <button onclick="addToCart('LOT-TNK991', 'Paterson Universal Film Tank', 42.00, 'Includes two adjustable auto-load reels for 35mm or 120 processing.', 'Paterson'); animateAddButton(this)" class="px-3 py-1.5 bg-black text-white dark:bg-white dark:text-black text-[10px] uppercase font-bold rounded-lg hover:opacity-80 transition-opacity">Add</button>
+            </div>
+          </div>
+          <div class="p-4 border rounded-xl flex flex-col justify-between" style="border-color: var(--color-border); background-color: var(--color-bg-canvas);">
+            <div>
+              <span class="text-[10px] font-mono tracking-tight text-amber-600 block mb-1">LOT-PPR771</span>
+              <h3 class="font-semibold text-sm">Fomaspeed Variant Glossy (8x10)</h3>
+              <p class="text-xs mt-1" style="color: var(--color-text-muted);">Multi-grade resin coated black and white photographic printing paper.</p>
+            </div>
+            <div class="flex justify-between items-center mt-6 pt-3 border-t" style="border-color: var(--color-border);">
+              <span class="font-bold text-xs">$35.00</span>
+              <button onclick="addToCart('LOT-PPR771', 'Fomaspeed Variant Glossy (8x10)', 35.00, 'Multi-grade resin coated black and white photographic printing paper.', 'Foma'); animateAddButton(this)" class="px-3 py-1.5 bg-black text-white dark:bg-white dark:text-black text-[10px] uppercase font-bold rounded-lg hover:opacity-80 transition-opacity">Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trade-In Program with Appraisal Form -->
+    <section id="appraisal-desk" class="p-8 sm:p-12 lg:p-16 border-b grid grid-cols-1 lg:grid-cols-12 gap-12 transition-colors duration-300" style="background-color: var(--color-bg-canvas); border-color: var(--color-border);">
+      <div class="lg:col-span-5">
+        <span class="text-xs uppercase font-bold tracking-widest text-amber-600 dark:text-amber-500">Physical Trade-In Protocol</span>
+        <h2 class="font-display text-4xl uppercase mt-2 mb-4">Instant Appraisal Evaluation Engine</h2>
+        <p class="text-xs leading-relaxed mb-6" style="color: var(--color-text-muted);">
+          Ready to part with your heirloom cameras or upgrade your lenses? Supply the structural parameters via our instant appraisal portal interface. Our team will verify your metrics live upon target delivery tracking.
+        </p>
+        <div class="p-4 border rounded-xl bg-[var(--color-bg-card)] border-dashed" style="border-color: var(--color-border);">
+          <h4 class="font-display uppercase text-sm mb-1">Guaranteed Matrix Range</h4>
+          <p class="text-[11px]" style="color: var(--color-text-muted);">Approved submissions receive an explicit, locked payout option valid for 14 operational days.</p>
+        </div>
       </div>
       
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="group relative flex flex-col justify-between p-4 border rounded-2xl transition-all hover:shadow-lg" style="background-color: var(--color-bg-card); border-color: var(--color-border);">
-          <div class="w-full h-64 rounded-xl overflow-hidden mb-4 bg-neutral-100 relative">
-            <img src="https://images.unsplash.com/photo-1495707902641-75cac588d2e9?auto=format&fit=crop&q=80&w=600" alt="Rangefinder Camera" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-            <span class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-black text-white">Mint Condition</span>
+      <div class="lg:col-span-7">
+        <form class="grid grid-cols-1 sm:grid-cols-2 gap-4" onsubmit="event.preventDefault(); alert('Evaluation submitted. Expected validation quote target window: 4 hours.');">
+          <div>
+            <label class="block text-[10px] uppercase font-bold mb-2 tracking-wide">Brand Manufacture</label>
+            <select class="w-full p-3 bg-[var(--color-bg-card)] border rounded text-xs outline-none focus:border-black dark:focus:border-white" style="border-color: var(--color-border); color: var(--color-text-dark);">
+              <option>Leica / Minolta</option>
+              <option>Hasselblad System</option>
+              <option>Canon / Nikon SLR</option>
+              <option>Other Rare Formats</option>
+            </select>
           </div>
           <div>
-            <div class="flex justify-between items-start mb-2">
-              <h3 class="font-display text-xl tracking-wide uppercase">Leica M3 Rangefinder</h3>
-              <span class="font-bold text-sm">$2,450</span>
-            </div>
-            <p class="text-xs mb-4" style="color: var(--color-text-muted);">Dual-stroke mechanical beauty paired with an immaculate viewfinder assembly.</p>
-            <a href="./pages/booking.html"><button class="w-full py-2.5 text-xs font-semibold border rounded uppercase hover:bg-black hover:text-white transition-colors" style="border-color: var(--color-text-dark);">Acquire Model</button></a>
+            <label class="block text-[10px] uppercase font-bold mb-2 tracking-wide">Model Designation</label>
+            <input type="text" placeholder="e.g. Rangefinder M6" required class="w-full p-3 bg-[var(--color-bg-card)] border rounded text-xs outline-none focus:border-black dark:focus:border-white" style="border-color: var(--color-border); color: var(--color-text-dark);" />
           </div>
-        </div>
-        <div class="group relative flex flex-col justify-between p-4 border rounded-2xl transition-all hover:shadow-lg" style="background-color: var(--color-bg-card); border-color: var(--color-border);">
-          <div class="w-full h-64 rounded-xl overflow-hidden mb-4 bg-neutral-100 relative">
-            <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=500" alt="Medium Format" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-            <span class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-amber-600 text-white">Excellent++</span>
+          <div class="sm:col-span-2">
+            <label class="block text-[10px] uppercase font-bold mb-2 tracking-wide">Optical / Mechanical Condition Profile</label>
+            <select class="w-full p-3 bg-[var(--color-bg-card)] border rounded text-xs outline-none focus:border-black dark:focus:border-white" style="border-color: var(--color-border); color: var(--color-text-dark);">
+              <option>Mint (Flawless, fully operational mechanics)</option>
+              <option>Excellent++ (Minor brassing exterior surfaces)</option>
+              <option>Tested / User (Operational, requires seal rebuilds)</option>
+              <option>Spares / Non-Functional (Seized shutter curtains)</option>
+            </select>
           </div>
-          <div>
-            <div class="flex justify-between items-start mb-2">
-              <h3 class="font-display text-xl tracking-wide uppercase">Hasselblad 500C/M</h3>
-              <span class="font-bold text-sm">$3,200</span>
-            </div>
-            <p class="text-xs mb-4" style="color: var(--color-text-muted);">Medium format legends. Includes 80mm f/2.8 Planar T* lens and A12 magazine back.</p>
-            <a href="./pages/booking.html"><button class="w-full py-2.5 text-xs font-semibold border rounded uppercase hover:bg-black hover:text-white transition-colors" style="border-color: var(--color-text-dark);">Acquire Model</button></a>
+          <div class="sm:col-span-2">
+            <label class="block text-[10px] uppercase font-bold mb-2 tracking-wide">Detailed Structural Defects / History</label>
+            <textarea rows="3" placeholder="Please outline any fungus, dust element parameters, or lens scratches..." class="w-full p-3 bg-[var(--color-bg-card)] border rounded text-xs outline-none focus:border-black dark:focus:border-white resize-none" style="border-color: var(--color-border); color: var(--color-text-dark);"></textarea>
           </div>
-        </div>
-        <div class="group relative flex flex-col justify-between p-4 border rounded-2xl transition-all hover:shadow-lg" style="background-color: var(--color-bg-card); border-color: var(--color-border);">
-          <div class="w-full h-64 rounded-xl overflow-hidden mb-4 bg-neutral-100 relative">
-            <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&q=80&w=600" alt="SLR Camera" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-            <span class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-black text-white">Fully Restored</span>
+          <div class="sm:col-span-2 mt-2">
+            <button type="submit" class="w-full py-3.5 bg-black text-white dark:bg-white dark:text-black font-semibold text-xs tracking-wider uppercase rounded hover:opacity-90 active:scale-98 transition-all">Submit Appraisal Evaluation Profile</button>
           </div>
-          <div>
-            <div class="flex justify-between items-start mb-2">
-              <h3 class="font-display text-xl tracking-wide uppercase">Olympus OM-1 MD</h3>
-              <span class="font-bold text-sm">$480</span>
-            </div>
-            <p class="text-xs mb-4" style="color: var(--color-text-muted);">Incredibly compact full-frame SLR mechanics with pristine internal light meters.</p>
-            <a href="./pages/booking.html"><button class="w-full py-2.5 text-xs font-semibold border rounded uppercase hover:bg-black hover:text-white transition-colors" style="border-color: var(--color-text-dark);">Acquire Model</button></a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="grid grid-cols-1 lg:grid-cols-12 border-b" style="border-color: var(--color-border);">
-      <div class="lg:col-span-5 p-8 sm:p-12 lg:p-16 flex flex-col justify-center bg-zinc-900 text-neutral-100">
-        <span class="text-xs tracking-widest text-amber-500 uppercase font-bold">The Calibration Lab</span>
-        <h2 class="font-display text-4xl uppercase mt-2 mb-6">Where Mechanical Time Stands Still</h2>
-        <p class="text-xs leading-relaxed mb-6 text-neutral-400">Every single shutter blade is inspected down to the micro-millimeter under high magnification. We don't just sell vintage equipment; we preserve active components of design history.</p>
-        <blockquote class="border-l-2 border-amber-500 pl-4 py-1 italic text-sm text-neutral-300 font-serif-ital mb-8">
-          "The tactile click of a fully mechanical shutter dial is an unreplicable standard in digital workflows."
-        </blockquote>
-        <div>
-          <a href="./pages/contact.html" class="inline-block py-3 px-6 bg-amber-500 text-black font-semibold text-xs tracking-wider uppercase rounded hover:bg-amber-400 transition-colors">Book a Repair Evaluation</a>
-        </div>
-      </div>
-      <div class="lg:col-span-7 h-96 lg:h-auto min-h-[450px] relative">
-        <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&q=80&w=1200" alt="Repair Bench Work" class="w-full h-full object-cover" />
-      </div>
-    </section>
-
-    <section class="p-8 sm:p-12 lg:p-20 text-center relative overflow-hidden" style="background-color: var(--color-bg-card);">
-      <div class="max-w-2xl mx-auto relative z-10">
-        <span class="text-xs font-bold uppercase tracking-widest text-amber-600">The Inner Circle Dispatch</span>
-        <h2 class="font-display text-4xl sm:text-5xl uppercase mt-3 mb-4">Never Miss a Cold-Stored Film Drop</h2>
-        <p class="text-xs leading-relaxed mb-8 max-w-md mx-auto" style="color: var(--color-text-muted);">Get notified instantly when rare expired format stock batches, master collection cameras, and precision developer mixtures arrive in our vault fridge.</p>
-        
-        <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-          <div class="flex-1">
-            <input type="email" placeholder="Enter your email address" required class="w-full px-4 py-3 bg-[var(--color-bg-canvas)] border border-[var(--color-border)] rounded text-xs outline-none focus:border-black font-ui" />
-          </div>
-          <button type="submit" class="px-6 py-3 bg-black text-white dark:bg-white dark:text-black text-xs font-bold tracking-wider uppercase rounded hover:opacity-90 transition-opacity">Subscribe</button>
         </form>
       </div>
     </section>
@@ -392,12 +576,11 @@
     <div class="lg:col-span-2">
       <h4 class="font-display uppercase text-sm tracking-wider mb-6 text-amber-600 dark:text-amber-500">Quick Links</h4>
       <ul class="flex flex-col gap-4 text-xs font-semibold">
-        <li><a href="./index.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)] hover:text-amber-600">Home</a></li>
-        <li><a href="pages/home2.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)] hover:text-amber-600">Home 2</a></li>
-        <li><a href="pages/about.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)] hover:text-amber-600">About Our Guild</a></li>
-        <li><a href="pages/blog.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)] hover:text-amber-600">The Silver Journal</a></li>
-        <li><a href="pages/services-products.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)] hover:text-amber-600">Our Services</a></li>
-        <li><a href="pages/contact.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)] hover:text-amber-600">Contact Desk</a></li>
+        <li><a href="./index.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)]">Home</a></li>
+        <li><a href="./index.html#appraisal-desk" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)]">Trade-In Appraisal</a></li>
+        <li><a href="pages/about.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)]">About Our Store</a></li>
+        <li><a href="pages/blog.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)]">The Silver Journal</a></li>
+        <li><a href="pages/contact.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)]">Contact Desk</a></li>
       </ul>
     </div>
 

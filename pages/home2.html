@@ -28,10 +28,10 @@
     <!-- Desktop Navigation Links -->
     <nav class="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wide" id="desktop-nav">
       <a href="../index.html" class="nav-link relative py-1">Home</a>
-      <a href="./home2.html" class="nav-link relative py-1">Home 2</a>
+      <a href="./home2.html" class="nav-link relative py-1">Store</a>
+      <a href="./services-products.html" class="nav-link relative py-1">Catalog</a>
       <a href="./about.html" class="nav-link relative py-1">About</a>
       <a href="./blog.html" class="nav-link relative py-1">Blog</a>
-      <a href="./services-products.html" class="nav-link relative py-1">Service</a>
       <a href="./contact.html" class="nav-link relative py-1">Contact</a>
     </nav>
 
@@ -45,7 +45,7 @@
         <!-- Active Item Count Indicator Badge -->
         <span id="cart-badge" class="absolute -top-1 -right-1 bg-amber-600 text-white text-[9px] font-bold rounded-full w-4 h-4 flex items-center justify-center scale-0 transition-transform duration-300">0</span>
       </button>
-
+ 
       <!-- Theme Switcher Button -->
       <button onclick="toggleTheme()" class="theme-btn p-2 rounded-full hover:bg-[var(--color-bg-card)] border border-transparent hover:border-[var(--color-border)] transition-all relative group flex items-center justify-center" aria-label="Toggle dark/light mode">
         <svg xmlns="http://www.w3.org/2000/svg" id="theme-sun-path" class="h-5 w-5 theme-toggle-icon hidden text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -55,7 +55,14 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
         </svg>
       </button>
-
+ 
+      <!-- RTL Layout Switcher Button -->
+      <button onclick="toggleRTL()" class="rtl-btn p-2 rounded-full hover:bg-[var(--color-bg-card)] border border-transparent hover:border-[var(--color-border)] transition-all relative group flex items-center justify-center" aria-label="Toggle layout direction">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[var(--color-text-dark)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M3 10h18M3 15h12M3 20h18" />
+        </svg>
+      </button>
+ 
       <!-- Hamburger Menu Button (Mobile) -->
       <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-full hover:bg-[var(--color-bg-card)] transition-colors flex items-center justify-center" aria-label="Open navigation menu">
         <svg id="hamburger-icon" class="h-6 w-6 text-[var(--color-text-dark)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -64,7 +71,7 @@
       </button>
     </div>
   </div>
-
+ 
   <style>
     #mobile-menu-content {
       background-color: #f1ede2 !important;
@@ -73,7 +80,7 @@
       background-color: #1c1e1f !important;
     }
   </style>
-
+ 
   <!-- Mobile Full-Screen Overlay and Container -->
   <div id="mobile-menu-drawer" class="fixed inset-0 z-50 bg-black/40 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
     <div class="absolute inset-0 h-full w-full shadow-2xl p-6 sm:p-8 flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-out bg-[#f1ede2] dark:bg-[#1c1e1f] border-l border-[#ded8cb] dark:border-[#33383a]" id="mobile-menu-content">
@@ -100,21 +107,21 @@
             <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">01.</span>
             <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Home</span>
           </a>
-          <a href="./home2.html" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
+          <a href="./home2.html" onclick="toggleMobileMenu()" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
             <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">02.</span>
-            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Home 2</span>
+            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Store</span>
+          </a>
+          <a href="./services-products.html" onclick="toggleMobileMenu()" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
+            <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">03.</span>
+            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Catalog</span>
           </a>
           <a href="./about.html" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
-            <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">03.</span>
+            <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">04.</span>
             <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">About</span>
           </a>
           <a href="./blog.html" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
-            <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">04.</span>
-            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Blog</span>
-          </a>
-          <a href="./services-products.html" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
             <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">05.</span>
-            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Service</span>
+            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Blog</span>
           </a>
           <a href="./contact.html" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
             <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">06.</span>
@@ -260,24 +267,209 @@
       </div>
     </section>
 
-    <section id="appraisal-desk" class="p-8 sm:p-12 lg:p-16 border-b grid grid-cols-1 lg:grid-cols-12 gap-12" style="background-color: var(--color-bg-card); border-color: var(--color-border);">
+    <!-- Restored Film Cameras Showcase -->
+    <section id="restored-cameras" class="p-8 sm:p-12 lg:p-16 border-b transition-colors duration-300" style="border-color: var(--color-border); background-color: var(--color-bg-card);">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+          <div>
+            <span class="text-xs uppercase font-bold tracking-widest text-amber-600 dark:text-amber-500">Restored Film Cameras</span>
+            <h2 class="font-display text-4xl sm:text-5xl uppercase mt-2">Certified Analog Bodies</h2>
+          </div>
+          <p class="text-xs max-w-sm leading-relaxed mt-4 md:mt-0" style="color: var(--color-text-muted);">
+            Each restored analog body is completely dismantled, cleaned, calibrated, and carries a 6-month warranty.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Camera 1 -->
+          <div class="group relative flex flex-col justify-between p-4 border rounded-2xl transition-all hover:shadow-lg bg-[var(--color-bg-canvas)]" style="border-color: var(--color-border);">
+            <div class="w-full h-64 rounded-xl overflow-hidden mb-4 bg-neutral-100 relative">
+              <img src="https://images.unsplash.com/photo-1560264245-1dbfb9782b8b?auto=format&fit=crop&q=80&w=600" alt="Leica M6 Rangefinder" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103" />
+              <span class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-black text-white dark:bg-white dark:text-black">Mint / Calibrated</span>
+            </div>
+            <div>
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-display text-xl tracking-wide uppercase text-[var(--color-text-dark)]">Leica M6 Titanium</h3>
+                <span class="font-bold text-sm text-[var(--color-text-dark)]">$3,100.00</span>
+              </div>
+              <p class="text-xs mb-4" style="color: var(--color-text-muted);">Titanium finish edition. Internal light meter fully balanced to modern 1.5v battery parameters.</p>
+              <button onclick="addToCart('LCA-M6-TI', 'Leica M6 Titanium', 3100.00, 'Titanium finish mechanical rangefinder.', 'Leica'); animateAddButton(this)" class="w-full py-2.5 text-xs font-semibold bg-black text-white dark:bg-white dark:text-black rounded-xl uppercase tracking-wider hover:opacity-90 transition-opacity">Acquire Model</button>
+            </div>
+          </div>
+          <!-- Camera 2 -->
+          <div class="group relative flex flex-col justify-between p-4 border rounded-2xl transition-all hover:shadow-lg bg-[var(--color-bg-canvas)]" style="border-color: var(--color-border);">
+            <div class="w-full h-64 rounded-xl overflow-hidden mb-4 bg-neutral-100 relative">
+              <img src="https://images.unsplash.com/photo-1495707902641-75cac588d2e9?auto=format&fit=crop&q=80&w=600" alt="Nikon FM2 SLR" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103" />
+              <span class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-amber-600 text-white">Excellent++ Grade</span>
+            </div>
+            <div>
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-display text-xl tracking-wide uppercase text-[var(--color-text-dark)]">Nikon FM2 Titanium</h3>
+                <span class="font-bold text-sm text-[var(--color-text-dark)]">$520.00</span>
+              </div>
+              <p class="text-xs mb-4" style="color: var(--color-text-muted);">Honeycomb pattern vertical shutter. Calibrated to true 1/4000s speed index tolerance.</p>
+              <button onclick="addToCart('NIK-FM2-TI', 'Nikon FM2 Titanium', 520.00, 'Honeycomb shutter mechanical SLR.', 'Nikon'); animateAddButton(this)" class="w-full py-2.5 text-xs font-semibold bg-black text-white dark:bg-white dark:text-black rounded-xl uppercase tracking-wider hover:opacity-90 transition-opacity">Acquire Model</button>
+            </div>
+          </div>
+          <!-- Camera 3 -->
+          <div class="group relative flex flex-col justify-between p-4 border rounded-2xl transition-all hover:shadow-lg bg-[var(--color-bg-canvas)]" style="border-color: var(--color-border);">
+            <div class="w-full h-64 rounded-xl overflow-hidden mb-4 bg-neutral-100 relative">
+              <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=600" alt="Rolleiflex 2.8F TLR" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103" />
+              <span class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-black text-white dark:bg-white dark:text-black">Mint / Serviced</span>
+            </div>
+            <div>
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-display text-xl tracking-wide uppercase text-[var(--color-text-dark)]">Rolleiflex 2.8F TLR</h3>
+                <span class="font-bold text-sm text-[var(--color-text-dark)]">$1,850.00</span>
+              </div>
+              <p class="text-xs mb-4" style="color: var(--color-text-muted);">Twin-lens reflex classic featuring Carl Zeiss Planar 80mm f/2.8 lens and a bright screen update.</p>
+              <button onclick="addToCart('ROL-TLR-28F', 'Rolleiflex 2.8F TLR', 1850.00, 'Twin lens reflex featuring Carl Zeiss optics.', 'Rollei'); animateAddButton(this)" class="w-full py-2.5 text-xs font-semibold bg-black text-white dark:bg-white dark:text-black rounded-xl uppercase tracking-wider hover:opacity-90 transition-opacity">Acquire Model</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lens Inventory Showcase -->
+    <section id="lens-inventory" class="p-8 sm:p-12 lg:p-16 border-b transition-colors duration-300" style="border-color: var(--color-border); background-color: var(--color-bg-canvas);">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+          <div>
+            <span class="text-xs uppercase font-bold tracking-widest text-amber-600 dark:text-amber-500">Lens Inventory</span>
+            <h2 class="font-display text-4xl sm:text-5xl uppercase mt-2">Calibrated Prime Optics</h2>
+          </div>
+          <p class="text-xs max-w-sm leading-relaxed mt-4 md:mt-0" style="color: var(--color-text-muted);">
+            Fully serviced vintage primes. Diaphragm blades degreased and focus helicoids re-greased to ultra-smooth standards.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Lens 1 -->
+          <div class="group relative flex flex-col justify-between p-4 border rounded-2xl transition-all hover:shadow-lg bg-[var(--color-bg-card)]" style="border-color: var(--color-border);">
+            <div class="w-full h-64 rounded-xl overflow-hidden mb-4 bg-neutral-100 relative">
+              <img src="https://images.unsplash.com/photo-1617005082133-548c4dd27f35?auto=format&fit=crop&q=80&w=500" alt="Carl Zeiss Planar 50mm" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103" />
+              <span class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-black text-white dark:bg-white dark:text-black">M42 Screw Mount</span>
+            </div>
+            <div>
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-display text-xl tracking-wide uppercase text-[var(--color-text-dark)]">Zeiss Planar 50mm f/1.4 ZS</h3>
+                <span class="font-bold text-sm text-[var(--color-text-dark)]">$450.00</span>
+              </div>
+              <p class="text-xs mb-4" style="color: var(--color-text-muted);">Superb portrait resolving power. Smooth helicoid focusing ring with zero play or backlash.</p>
+              <button onclick="addToCart('ZSS-PL50-14', 'Zeiss Planar 50mm f/1.4', 450.00, 'Fast portrait prime lens.', 'Zeiss'); animateAddButton(this)" class="w-full py-2.5 text-xs font-semibold bg-black text-white dark:bg-white dark:text-black rounded-xl uppercase tracking-wider hover:opacity-90 transition-opacity">Acquire Lens</button>
+            </div>
+          </div>
+          <!-- Lens 2 -->
+          <div class="group relative flex flex-col justify-between p-4 border rounded-2xl transition-all hover:shadow-lg bg-[var(--color-bg-card)]" style="border-color: var(--color-border);">
+            <div class="w-full h-64 rounded-xl overflow-hidden mb-4 bg-neutral-100 relative">
+              <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&q=80&w=500" alt="Leica Summicron-M 35mm" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103" />
+              <span class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-amber-600 text-white">Leica M Mount</span>
+            </div>
+            <div>
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-display text-xl tracking-wide uppercase text-[var(--color-text-dark)]">Summicron-M 35mm f/2 ASPH</h3>
+                <span class="font-bold text-sm text-[var(--color-text-dark)]">$2,150.00</span>
+              </div>
+              <p class="text-xs mb-4" style="color: var(--color-text-muted);">Pristine glass, zero haze or micro-scratches. Includes original rectangular metal hood.</p>
+              <button onclick="addToCart('LCA-SC35-20', 'Summicron-M 35mm f/2', 2150.00, 'Ultra-sharp M mount street prime.', 'Leica'); animateAddButton(this)" class="w-full py-2.5 text-xs font-semibold bg-black text-white dark:bg-white dark:text-black rounded-xl uppercase tracking-wider hover:opacity-90 transition-opacity">Acquire Lens</button>
+            </div>
+          </div>
+          <!-- Lens 3 -->
+          <div class="group relative flex flex-col justify-between p-4 border rounded-2xl transition-all hover:shadow-lg bg-[var(--color-bg-card)]" style="border-color: var(--color-border);">
+            <div class="w-full h-64 rounded-xl overflow-hidden mb-4 bg-neutral-100 relative">
+              <img src="https://images.unsplash.com/photo-1527443154391-507e9dc6c5cc?auto=format&fit=crop&q=80&w=500" alt="Canon FD 55mm" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103" />
+              <span class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-black text-white dark:bg-white dark:text-black">Canon FD Mount</span>
+            </div>
+            <div>
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-display text-xl tracking-wide uppercase text-[var(--color-text-dark)]">Canon FD 55mm f/1.2 S.S.C.</h3>
+                <span class="font-bold text-sm text-[var(--color-text-dark)]">$380.00</span>
+              </div>
+              <p class="text-xs mb-4" style="color: var(--color-text-muted);">Vintage fast glass. Famous for signature bokeh. Diaphragm blades snappy and bone-dry.</p>
+              <button onclick="addToCart('CAN-FD55-12', 'Canon FD 55mm f/1.2 S.S.C.', 380.00, 'Fast portrait lens with S.S.C. coating.', 'Canon'); animateAddButton(this)" class="w-full py-2.5 text-xs font-semibold bg-black text-white dark:bg-white dark:text-black rounded-xl uppercase tracking-wider hover:opacity-90 transition-opacity">Acquire Lens</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chemicals & Darkroom Apparatus -->
+    <section id="darkroom" class="p-8 sm:p-12 lg:p-16 border-b transition-colors duration-300" style="border-color: var(--color-border); background-color: var(--color-bg-card);">
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-10 text-center md:text-left">
+          <span class="text-xs uppercase font-bold tracking-widest text-amber-600 dark:text-amber-500">Darkroom Essentials</span>
+          <h2 class="font-display text-3xl uppercase tracking-wide">Chemicals & Darkroom Apparatus</h2>
+          <p class="text-xs mt-1" style="color: var(--color-text-muted);">All chemistry lots are batch-verified internally for stable development curves.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="p-4 border rounded-xl flex flex-col justify-between bg-[var(--color-bg-canvas)]" style="border-color: var(--color-border);">
+            <div>
+              <span class="text-[10px] font-mono tracking-tight text-amber-600 block mb-1">LOT-DEV404</span>
+              <h3 class="font-semibold text-sm text-[var(--color-text-dark)]">Kodak D-76 Developer (1 Gal)</h3>
+              <p class="text-xs mt-1" style="color: var(--color-text-muted);">Classic powder mix offering full shadow detail tracking metrics.</p>
+            </div>
+            <div class="flex justify-between items-center mt-6 pt-3 border-t" style="border-color: var(--color-border);">
+              <span class="font-bold text-xs">$12.95</span>
+              <button onclick="addToCart('LOT-DEV404', 'Kodak D-76 Developer (1 Gal)', 12.95, 'Classic powder mix offering full shadow detail tracking metrics.', 'Kodak'); animateAddButton(this)" class="px-3 py-1.5 bg-black text-white dark:bg-white dark:text-black text-[10px] uppercase font-bold rounded-lg hover:opacity-80 transition-opacity">Add</button>
+            </div>
+          </div>
+          <div class="p-4 border rounded-xl flex flex-col justify-between bg-[var(--color-bg-canvas)]" style="border-color: var(--color-border);">
+            <div>
+              <span class="text-[10px] font-mono tracking-tight text-amber-600 block mb-1">LOT-FIX202</span>
+              <h3 class="font-semibold text-sm text-[var(--color-text-dark)]">Ilford Rapid Fixer (500ml)</h3>
+              <p class="text-xs mt-1" style="color: var(--color-text-muted);">Non-hardening liquid concentrate fixer for films and papers.</p>
+            </div>
+            <div class="flex justify-between items-center mt-6 pt-3 border-t" style="border-color: var(--color-border);">
+              <span class="font-bold text-xs">$18.50</span>
+              <button onclick="addToCart('LOT-FIX202', 'Ilford Rapid Fixer (500ml)', 18.50, 'Non-hardening liquid concentrate fixer for films and papers.', 'Ilford'); animateAddButton(this)" class="px-3 py-1.5 bg-black text-white dark:bg-white dark:text-black text-[10px] uppercase font-bold rounded-lg hover:opacity-80 transition-opacity">Add</button>
+            </div>
+          </div>
+          <div class="p-4 border rounded-xl flex flex-col justify-between bg-[var(--color-bg-canvas)]" style="border-color: var(--color-border);">
+            <div>
+              <span class="text-[10px] font-mono tracking-tight text-amber-600 block mb-1">LOT-TNK991</span>
+              <h3 class="font-semibold text-sm text-[var(--color-text-dark)]">Paterson Universal Film Tank</h3>
+              <p class="text-xs mt-1" style="color: var(--color-text-muted);">Includes two adjustable auto-load reels for 35mm or 120 processing.</p>
+            </div>
+            <div class="flex justify-between items-center mt-6 pt-3 border-t" style="border-color: var(--color-border);">
+              <span class="font-bold text-xs">$42.00</span>
+              <button onclick="addToCart('LOT-TNK991', 'Paterson Universal Film Tank', 42.00, 'Includes two adjustable auto-load reels for 35mm or 120 processing.', 'Paterson'); animateAddButton(this)" class="px-3 py-1.5 bg-black text-white dark:bg-white dark:text-black text-[10px] uppercase font-bold rounded-lg hover:opacity-80 transition-opacity">Add</button>
+            </div>
+          </div>
+          <div class="p-4 border rounded-xl flex flex-col justify-between bg-[var(--color-bg-canvas)]" style="border-color: var(--color-border);">
+            <div>
+              <span class="text-[10px] font-mono tracking-tight text-amber-600 block mb-1">LOT-PPR771</span>
+              <h3 class="font-semibold text-sm text-[var(--color-text-dark)]">Fomaspeed Variant Glossy (8x10)</h3>
+              <p class="text-xs mt-1" style="color: var(--color-text-muted);">Multi-grade resin coated black and white photographic printing paper.</p>
+            </div>
+            <div class="flex justify-between items-center mt-6 pt-3 border-t" style="border-color: var(--color-border);">
+              <span class="font-bold text-xs">$35.00</span>
+              <button onclick="addToCart('LOT-PPR771', 'Fomaspeed Variant Glossy (8x10)', 35.00, 'Multi-grade resin coated black and white photographic printing paper.', 'Foma'); animateAddButton(this)" class="px-3 py-1.5 bg-black text-white dark:bg-white dark:text-black text-[10px] uppercase font-bold rounded-lg hover:opacity-80 transition-opacity">Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trade-In Appraisal Form Section -->
+    <section id="appraisal-desk" class="p-8 sm:p-12 lg:p-16 border-b grid grid-cols-1 lg:grid-cols-12 gap-12 transition-colors duration-300" style="background-color: var(--color-bg-canvas); border-color: var(--color-border);">
       <div class="lg:col-span-5">
-        <span class="text-xs uppercase font-bold tracking-widest text-amber-600">Physical Intake Protocol</span>
-        <h2 class="font-display text-4xl uppercase mt-2 mb-4">Instant Evaluation Engine</h2>
+        <span class="text-xs uppercase font-bold tracking-widest text-amber-600 dark:text-amber-500">Physical Trade-In Protocol</span>
+        <h2 class="font-display text-4xl uppercase mt-2 mb-4">Instant Appraisal Evaluation Engine</h2>
         <p class="text-xs leading-relaxed mb-6" style="color: var(--color-text-muted);">
-          Ready to part with your heirloom cameras? Supply the structural information parameters via our instant appraisal portal interface. Our team will verify your metrics live upon target delivery tracking.
+          Ready to part with your heirloom cameras or upgrade your lenses? Supply the structural parameters via our instant appraisal portal interface. Our team will verify your metrics live upon target delivery tracking.
         </p>
-        <div class="p-4 border rounded-xl bg-[var(--color-bg-canvas)] border-dashed" style="border-color: var(--color-border);">
+        <div class="p-4 border rounded-xl bg-[var(--color-bg-card)] border-dashed" style="border-color: var(--color-border);">
           <h4 class="font-display uppercase text-sm mb-1">Guaranteed Matrix Range</h4>
           <p class="text-[11px]" style="color: var(--color-text-muted);">Approved submissions receive an explicit, locked payout option valid for 14 operational days.</p>
         </div>
       </div>
       
       <div class="lg:col-span-7">
-        <form class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <form class="grid grid-cols-1 sm:grid-cols-2 gap-4" onsubmit="event.preventDefault(); alert('Evaluation submitted. Expected validation quote target window: 4 hours.');">
           <div>
             <label class="block text-[10px] uppercase font-bold mb-2 tracking-wide">Brand Manufacture</label>
-            <select class="w-full p-3 bg-[var(--color-bg-canvas)] border rounded text-xs outline-none focus:border-black" style="border-color: var(--color-border);">
+            <select class="w-full p-3 bg-[var(--color-bg-card)] border rounded text-xs outline-none focus:border-black dark:focus:border-white" style="border-color: var(--color-border); color: var(--color-text-dark);">
               <option>Leica / Minolta</option>
               <option>Hasselblad System</option>
               <option>Canon / Nikon SLR</option>
@@ -286,11 +478,11 @@
           </div>
           <div>
             <label class="block text-[10px] uppercase font-bold mb-2 tracking-wide">Model Designation</label>
-            <input type="text" placeholder="e.g. Rangefinder M6" required class="w-full p-3 bg-[var(--color-bg-canvas)] border rounded text-xs outline-none focus:border-black" style="border-color: var(--color-border);" />
+            <input type="text" placeholder="e.g. Rangefinder M6" required class="w-full p-3 bg-[var(--color-bg-card)] border rounded text-xs outline-none focus:border-black dark:focus:border-white" style="border-color: var(--color-border); color: var(--color-text-dark);" />
           </div>
           <div class="sm:col-span-2">
             <label class="block text-[10px] uppercase font-bold mb-2 tracking-wide">Optical / Mechanical Condition Profile</label>
-            <select class="w-full p-3 bg-[var(--color-bg-canvas)] border rounded text-xs outline-none focus:border-black" style="border-color: var(--color-border);">
+            <select class="w-full p-3 bg-[var(--color-bg-card)] border rounded text-xs outline-none focus:border-black dark:focus:border-white" style="border-color: var(--color-border); color: var(--color-text-dark);">
               <option>Mint (Flawless, fully operational mechanics)</option>
               <option>Excellent++ (Minor brassing exterior surfaces)</option>
               <option>Tested / User (Operational, requires seal rebuilds)</option>
@@ -299,81 +491,12 @@
           </div>
           <div class="sm:col-span-2">
             <label class="block text-[10px] uppercase font-bold mb-2 tracking-wide">Detailed Structural Defects / History</label>
-            <textarea rows="3" placeholder="Please outline any fungus, dust element parameters, or lens scratches..." class="w-full p-3 bg-[var(--color-bg-canvas)] border rounded text-xs outline-none focus:border-black resize-none" style="border-color: var(--color-border);"></textarea>
+            <textarea rows="3" placeholder="Please outline any fungus, dust element parameters, or lens scratches..." class="w-full p-3 bg-[var(--color-bg-card)] border rounded text-xs outline-none focus:border-black dark:focus:border-white resize-none" style="border-color: var(--color-border); color: var(--color-text-dark);"></textarea>
           </div>
           <div class="sm:col-span-2 mt-2">
-            <button type="submit" class="w-full py-3 bg-black text-white dark:bg-white dark:text-black font-semibold text-xs tracking-wider uppercase rounded hover:opacity-90 transition-opacity">Submit Appraisal Evaluation Profile</button>
+            <button type="submit" class="w-full py-3.5 bg-black text-white dark:bg-white dark:text-black font-semibold text-xs tracking-wider uppercase rounded hover:opacity-90 active:scale-98 transition-all">Submit Appraisal Evaluation Profile</button>
           </div>
         </form>
-      </div>
-    </section>
-
-    <section class="p-8 sm:p-12 lg:p-16 border-b" style="border-color: var(--color-border);">
-      <div class="mb-10 text-center">
-        <h2 class="font-display text-3xl uppercase tracking-wide">Chemicals & Darkroom Apparatus</h2>
-        <p class="text-xs max-w-md mx-auto mt-1" style="color: var(--color-text-muted);">All chemistry lots are batch-verified internally for stable development curves.</p>
-      </div>
-      
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="p-4 border rounded-xl flex flex-col justify-between" style="border-color: var(--color-border); background-color: var(--color-bg-card);">
-          <div>
-            <span class="text-[10px] font-mono tracking-tight text-amber-600 block mb-1">LOT-DEV404</span>
-            <h3 class="font-semibold text-sm">Kodak D-76 Developer (1 Gal)</h3>
-            <p class="text-xs mt-1" style="color: var(--color-text-muted);">Classic powder mix offering full shadow detail tracking metrics.</p>
-          </div>
-          <div class="flex justify-between items-center mt-6 pt-3 border-t" style="border-color: var(--color-border);">
-            <span class="font-bold text-xs">$12.95</span>
-            <button onclick="addToCart('LOT-DEV404', 'Kodak D-76 Developer (1 Gal)', 12.95, 'Classic powder mix offering full shadow detail tracking metrics.', 'Kodak'); animateAddButton(this)" class="px-3 py-1 bg-neutral-200 dark:bg-neutral-700 text-[10px] uppercase font-bold rounded hover:opacity-80 transition-opacity">Add</button>
-          </div>
-        </div>
-        <div class="p-4 border rounded-xl flex flex-col justify-between" style="border-color: var(--color-border); background-color: var(--color-bg-card);">
-          <div>
-            <span class="text-[10px] font-mono tracking-tight text-amber-600 block mb-1">LOT-FIX202</span>
-            <h3 class="font-semibold text-sm">Ilford Rapid Fixer (500ml)</h3>
-            <p class="text-xs mt-1" style="color: var(--color-text-muted);">Non-hardening liquid concentrate fixer for films and papers.</p>
-          </div>
-          <div class="flex justify-between items-center mt-6 pt-3 border-t" style="border-color: var(--color-border);">
-            <span class="font-bold text-xs">$18.50</span>
-            <button onclick="addToCart('LOT-FIX202', 'Ilford Rapid Fixer (500ml)', 18.50, 'Non-hardening liquid concentrate fixer for films and papers.', 'Ilford'); animateAddButton(this)" class="px-3 py-1 bg-neutral-200 dark:bg-neutral-700 text-[10px] uppercase font-bold rounded hover:opacity-80 transition-opacity">Add</button>
-          </div>
-        </div>
-        <div class="p-4 border rounded-xl flex flex-col justify-between" style="border-color: var(--color-border); background-color: var(--color-bg-card);">
-          <div>
-            <span class="text-[10px] font-mono tracking-tight text-amber-600 block mb-1">LOT-TNK991</span>
-            <h3 class="font-semibold text-sm">Paterson Universal Film Tank</h3>
-            <p class="text-xs mt-1" style="color: var(--color-text-muted);">Includes two adjustable auto-load reels for 35mm or 120 processing.</p>
-          </div>
-          <div class="flex justify-between items-center mt-6 pt-3 border-t" style="border-color: var(--color-border);">
-            <span class="font-bold text-xs">$42.00</span>
-            <button onclick="addToCart('LOT-TNK991', 'Paterson Universal Film Tank', 42.00, 'Includes two adjustable auto-load reels for 35mm or 120 processing.', 'Paterson'); animateAddButton(this)" class="px-3 py-1 bg-neutral-200 dark:bg-neutral-700 text-[10px] uppercase font-bold rounded hover:opacity-80 transition-opacity">Add</button>
-          </div>
-        </div>
-        <div class="p-4 border rounded-xl flex flex-col justify-between" style="border-color: var(--color-border); background-color: var(--color-bg-card);">
-          <div>
-            <span class="text-[10px] font-mono tracking-tight text-amber-600 block mb-1">LOT-PPR771</span>
-            <h3 class="font-semibold text-sm">Fomaspeed Variant Glossy (8x10)</h3>
-            <p class="text-xs mt-1" style="color: var(--color-text-muted);">Multi-grade resin coated black and white photographic printing paper.</p>
-          </div>
-          <div class="flex justify-between items-center mt-6 pt-3 border-t" style="border-color: var(--color-border);">
-            <span class="font-bold text-xs">$35.00</span>
-            <button onclick="addToCart('LOT-PPR771', 'Fomaspeed Variant Glossy (8x10)', 35.00, 'Multi-grade resin coated black and white photographic printing paper.', 'Foma'); animateAddButton(this)" class="px-3 py-1 bg-neutral-200 dark:bg-neutral-700 text-[10px] uppercase font-bold rounded hover:opacity-80 transition-opacity">Add</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="p-8 sm:p-12 lg:p-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left" style="background-color: var(--color-bg-canvas);">
-      <div>
-        <h4 class="font-display uppercase text-lg tracking-wider text-amber-600">Lab Batch Operations</h4>
-        <p class="text-xs mt-2 leading-relaxed" style="color: var(--color-text-muted);">All dynamic chemistry and development workflows adhere strictly to standard C-41, E-6, and true traditional black & white mechanical optimization matrixes.</p>
-      </div>
-      <div>
-        <h4 class="font-display uppercase text-lg tracking-wider text-amber-600">Secure Vault Shipments</h4>
-        <p class="text-xs mt-2 leading-relaxed" style="color: var(--color-text-muted);">We wrap every vintage camera frame in moisture-vapor barriers and robust high-impact protective foam shells to eliminate cross-transit vibration hazards.</p>
-      </div>
-      <div>
-        <h4 class="font-display uppercase text-lg tracking-wider text-amber-600">Warranty Infrastructure</h4>
-        <p class="text-xs mt-2 leading-relaxed" style="color: var(--color-text-muted);">Every piece of equipment leaving our NYC calibration shop features a certified 6-month structural performance warranty covering shutter and meter accuracy parameters.</p>
       </div>
     </section>
 
@@ -423,12 +546,11 @@
     <div class="lg:col-span-2">
       <h4 class="font-display uppercase text-sm tracking-wider mb-6 text-amber-600 dark:text-amber-500">Quick Links</h4>
       <ul class="flex flex-col gap-4 text-xs font-semibold">
-        <li><a href="../index.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)] hover:text-amber-600">Home</a></li>
-        <li><a href="./home2.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)] hover:text-amber-600">Home 2</a></li>
-        <li><a href="./about.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)] hover:text-amber-600">About Our Guild</a></li>
-        <li><a href="./blog.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)] hover:text-amber-600">The Silver Journal</a></li>
-        <li><a href="./services-products.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)] hover:text-amber-600">Our Services</a></li>
-        <li><a href="./contact.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)] hover:text-amber-600">Contact Desk</a></li>
+        <li><a href="../index.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)]">Home</a></li>
+        <li><a href="../index.html#appraisal-desk" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)]">Trade-In Appraisal</a></li>
+        <li><a href="./about.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)]">About Our Store</a></li>
+        <li><a href="./blog.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)]">The Silver Journal</a></li>
+        <li><a href="./contact.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)]">Contact Desk</a></li>
       </ul>
     </div>
 

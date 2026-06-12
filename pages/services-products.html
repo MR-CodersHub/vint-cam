@@ -28,10 +28,10 @@
     <!-- Desktop Navigation Links -->
     <nav class="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wide" id="desktop-nav">
       <a href="../index.html" class="nav-link relative py-1">Home</a>
-      <a href="./home2.html" class="nav-link relative py-1">Home 2</a>
+      <a href="./home2.html" class="nav-link relative py-1">Store</a>
+      <a href="./services-products.html" class="nav-link relative py-1">Catalog</a>
       <a href="./about.html" class="nav-link relative py-1">About</a>
       <a href="./blog.html" class="nav-link relative py-1">Blog</a>
-      <a href="./services-products.html" class="nav-link relative py-1">Service</a>
       <a href="./contact.html" class="nav-link relative py-1">Contact</a>
     </nav>
 
@@ -45,7 +45,7 @@
         <!-- Active Item Count Indicator Badge -->
         <span id="cart-badge" class="absolute -top-1 -right-1 bg-amber-600 text-white text-[9px] font-bold rounded-full w-4 h-4 flex items-center justify-center scale-0 transition-transform duration-300">0</span>
       </button>
-
+ 
       <!-- Theme Switcher Button -->
       <button onclick="toggleTheme()" class="theme-btn p-2 rounded-full hover:bg-[var(--color-bg-card)] border border-transparent hover:border-[var(--color-border)] transition-all relative group flex items-center justify-center" aria-label="Toggle dark/light mode">
         <svg xmlns="http://www.w3.org/2000/svg" id="theme-sun-path" class="h-5 w-5 theme-toggle-icon hidden text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -55,7 +55,14 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
         </svg>
       </button>
-
+ 
+      <!-- RTL Layout Switcher Button -->
+      <button onclick="toggleRTL()" class="rtl-btn p-2 rounded-full hover:bg-[var(--color-bg-card)] border border-transparent hover:border-[var(--color-border)] transition-all relative group flex items-center justify-center" aria-label="Toggle layout direction">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[var(--color-text-dark)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M3 10h18M3 15h12M3 20h18" />
+        </svg>
+      </button>
+ 
       <!-- Hamburger Menu Button (Mobile) -->
       <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-full hover:bg-[var(--color-bg-card)] transition-colors flex items-center justify-center" aria-label="Open navigation menu">
         <svg id="hamburger-icon" class="h-6 w-6 text-[var(--color-text-dark)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -64,7 +71,7 @@
       </button>
     </div>
   </div>
-
+ 
   <style>
     #mobile-menu-content {
       background-color: #f1ede2 !important;
@@ -73,7 +80,7 @@
       background-color: #1c1e1f !important;
     }
   </style>
-
+ 
   <!-- Mobile Full-Screen Overlay and Container -->
   <div id="mobile-menu-drawer" class="fixed inset-0 z-50 bg-black/40 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
     <div class="absolute inset-0 h-full w-full shadow-2xl p-6 sm:p-8 flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-out bg-[#f1ede2] dark:bg-[#1c1e1f] border-l border-[#ded8cb] dark:border-[#33383a]" id="mobile-menu-content">
@@ -100,21 +107,21 @@
             <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">01.</span>
             <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Home</span>
           </a>
-          <a href="./home2.html" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
+          <a href="./home2.html" onclick="toggleMobileMenu()" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
             <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">02.</span>
-            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Home 2</span>
+            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Store</span>
+          </a>
+          <a href="./services-products.html" onclick="toggleMobileMenu()" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
+            <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">03.</span>
+            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Catalog</span>
           </a>
           <a href="./about.html" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
-            <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">03.</span>
+            <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">04.</span>
             <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">About</span>
           </a>
           <a href="./blog.html" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
-            <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">04.</span>
-            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Blog</span>
-          </a>
-          <a href="./services-products.html" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
             <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">05.</span>
-            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Service</span>
+            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Blog</span>
           </a>
           <a href="./contact.html" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
             <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">06.</span>
@@ -185,91 +192,225 @@
     </div>
   </div>
 </header>
-
-    <section class="p-8 sm:p-12 lg:p-16 border-b bg-stone-900 text-neutral-100">
-      <span class="text-xs uppercase font-bold tracking-widest text-amber-500">The Stock Masterlist</span>
-      <h1 class="font-display text-4xl sm:text-5xl md:text-6xl uppercase tracking-wide mt-2">Certified Restored Gear & Logistics</h1>
-      <p class="text-xs sm:text-sm text-neutral-400 mt-2 max-w-xl leading-relaxed">
-        Browse verified, serialized premium camera models, custom chemical developer batches, and dynamic lab processing programs.
-      </p>
+<section class="p-8 sm:p-12 lg:p-16 border-b text-center flex flex-col items-center justify-center" style="background-color: var(--color-bg-card);">
+      <span class="text-xs font-bold uppercase tracking-widest text-amber-600">The Stock Masterlist</span>
+      <h1 class="font-display text-5xl sm:text-6xl uppercase mt-2 mb-4">Certified Restored Gear & Logistics</h1>
+      <p class="text-xs sm:text-sm max-w-xl mx-auto leading-relaxed" style="color: var(--color-text-muted);">Browse verified, serialized premium camera models, custom chemical developer batches, and dynamic lab processing programs.</p>
     </section>
+    
+    <!-- Interactive Product Catalog Grid (Merged Section 2) -->
+    <section id="catalog-section" class="border-b transition-colors duration-300" style="border-color: var(--color-border); background-color: var(--color-bg-canvas);">
+      <div class="p-6 border-b flex flex-wrap gap-4 items-center justify-between transition-colors duration-300" style="border-color: var(--color-border); background-color: var(--color-bg-card);">
+        <div id="category-filters" class="flex flex-wrap gap-3 text-xs font-bold">
+          <button data-category="All" class="active px-4 py-2 bg-black text-white dark:bg-white dark:text-black rounded transition-all duration-300">All Categories</button>
+          <button data-category="Rangefinders" class="px-4 py-2 border rounded hover:bg-black/5 transition-all duration-300" style="border-color: var(--color-border);">Rangefinders</button>
+          <button data-category="Medium Format" class="px-4 py-2 border rounded hover:bg-black/5 transition-all duration-300" style="border-color: var(--color-border);">Medium Format</button>
+          <button data-category="Film Rolls" class="px-4 py-2 border rounded hover:bg-black/5 transition-all duration-300" style="border-color: var(--color-border);">Film Rolls</button>
+          <button data-category="Lab Services" class="px-4 py-2 border rounded hover:bg-black/5 transition-all duration-300" style="border-color: var(--color-border);">Lab Services</button>
+        </div>
+        
+        <div class="flex items-center gap-4 flex-wrap text-xs">
+          <!-- Active Results Counter -->
+          <span id="results-counter" class="font-bold text-[10px] uppercase tracking-wider text-amber-600 dark:text-amber-500 transition-colors duration-300">Showing 7 items</span>
+          
+          <!-- Live Search Bar -->
+          <div class="relative flex items-center">
+            <input type="text" id="search-input" placeholder="Search vault..." class="p-2 pl-8 bg-[var(--color-bg-canvas)] border rounded-lg outline-none focus:border-[var(--color-text-dark)] transition-all w-40 sm:w-48 text-[var(--color-text-dark)]" style="border-color: var(--color-border);" />
+            <svg class="w-3.5 h-3.5 absolute left-2.5 text-neutral-400" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+          </div>
 
-    <section class="p-6 border-b flex flex-wrap gap-4 items-center justify-between transition-colors duration-300" style="border-color: var(--color-border); background-color: var(--color-bg-card);">
-      <div id="category-filters" class="flex flex-wrap gap-3 text-xs font-bold">
-        <button data-category="All" class="active px-4 py-2 bg-black text-white dark:bg-white dark:text-black rounded transition-all duration-300">All Categories</button>
-        <button data-category="Rangefinders" class="px-4 py-2 border rounded hover:bg-black/5 transition-all duration-300" style="border-color: var(--color-border);">Rangefinders</button>
-        <button data-category="Medium Format" class="px-4 py-2 border rounded hover:bg-black/5 transition-all duration-300" style="border-color: var(--color-border);">Medium Format</button>
-        <button data-category="Film Rolls" class="px-4 py-2 border rounded hover:bg-black/5 transition-all duration-300" style="border-color: var(--color-border);">Film Rolls</button>
-        <button data-category="Lab Services" class="px-4 py-2 border rounded hover:bg-black/5 transition-all duration-300" style="border-color: var(--color-border);">Lab Services</button>
+          <!-- Sort By Dropdown -->
+          <div class="flex items-center gap-2">
+            <label class="font-bold uppercase tracking-wider text-[10px]" style="color: var(--color-text-muted);">Sort By:</label>
+            <select id="sort-select" class="p-2 bg-[var(--color-bg-canvas)] border rounded-lg outline-none cursor-pointer text-[var(--color-text-dark)]" style="border-color: var(--color-border);">
+              <option value="price-desc">Price: High to Low</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="expiration">Batch Expiration Window</option>
+              <option value="brand">Brand Manufacture</option>
+            </select>
+          </div>
+        </div>
       </div>
       
-      <div class="flex items-center gap-4 flex-wrap text-xs">
-        <!-- Active Results Counter -->
-        <span id="results-counter" class="font-bold text-[10px] uppercase tracking-wider text-amber-600 dark:text-amber-500 transition-colors duration-300">Showing 7 items</span>
-        
-        <!-- Live Search Bar -->
-        <div class="relative flex items-center">
-          <input type="text" id="search-input" placeholder="Search vault..." class="p-2 pl-8 bg-[var(--color-bg-canvas)] border rounded-lg outline-none focus:border-[var(--color-text-dark)] transition-all w-40 sm:w-48 text-[var(--color-text-dark)]" style="border-color: var(--color-border);" />
-          <svg class="w-3.5 h-3.5 absolute left-2.5 text-neutral-400" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-          </svg>
-        </div>
-
-        <!-- Sort By Dropdown -->
-        <div class="flex items-center gap-2">
-          <label class="font-bold uppercase tracking-wider text-[10px]" style="color: var(--color-text-muted);">Sort By:</label>
-          <select id="sort-select" class="p-2 bg-[var(--color-bg-canvas)] border rounded-lg outline-none cursor-pointer text-[var(--color-text-dark)]" style="border-color: var(--color-border);">
-            <option value="price-desc">Price: High to Low</option>
-            <option value="price-asc">Price: Low to High</option>
-            <option value="expiration">Batch Expiration Window</option>
-            <option value="brand">Brand Manufacture</option>
-          </select>
-        </div>
+      <!-- Interactive Products Grid with Staggered Transition Support -->
+      <div id="products-grid" class="p-8 sm:p-12 grid grid-cols-1 md:grid-cols-3 gap-8 min-h-[400px]">
+        <!-- Rendered dynamically by the Vintcam JS Engine -->
       </div>
     </section>
 
-    <!-- Interactive Products Grid with Staggered Transition Support -->
-    <section id="products-grid" class="p-8 sm:p-12 grid grid-cols-1 md:grid-cols-3 gap-8 border-b min-h-[400px]" style="border-color: var(--color-border);">
-      <!-- Rendered dynamically by the Vintcam JS Engine -->
-    </section>
-
-    <section class="p-8 sm:p-12 lg:p-16 border-b" style="border-color: var(--color-border);">
+    <!-- Technical Service Sheet (Section 3) -->
+    <section class="p-8 sm:p-12 lg:p-16 border-b transition-colors duration-300" style="border-color: var(--color-border); background-color: var(--color-bg-card);">
       <div class="mb-10">
         <span class="text-xs font-bold uppercase tracking-widest text-amber-600">The Technical Service Sheet</span>
         <h2 class="font-display text-3xl uppercase mt-1">Lab Work & Maintenance Packages</h2>
       </div>
       <div class="space-y-4">
-        <div class="p-6 border rounded-xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 transition-colors hover:bg-[var(--color-bg-card)]" style="border-color: var(--color-border);">
+        <div class="p-6 border rounded-xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 transition-colors bg-[var(--color-bg-canvas)] hover:bg-[var(--color-bg-card)]" style="border-color: var(--color-border);">
           <div>
             <h3 class="font-display text-xl uppercase tracking-wide">Standard Shutter Calibration & CLA</h3>
             <p class="text-xs mt-1 max-w-xl" style="color: var(--color-text-muted);">Complete strip down of mechanical assembly, clean gears with ultrasonic waves, and timing realignment verification.</p>
           </div>
           <div class="flex items-center gap-6 w-full sm:w-auto justify-between sm:justify-end">
             <span class="font-bold text-sm">$180</span>
-            <a href="./booking.html"><button class="px-4 py-2 border rounded font-semibold text-xs uppercase tracking-wider hover:bg-black hover:text-white transition-colors" style="border-color: var(--color-text-dark);">Book Service</button></a>
+            <a href="./booking.html"><button class="px-4 py-2 border rounded font-semibold text-xs uppercase tracking-wider hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors text-[var(--color-text-dark)]" style="border-color: var(--color-text-dark);">Book Service</button></a>
           </div>
         </div>
-        <div class="p-6 border rounded-xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 transition-colors hover:bg-[var(--color-bg-card)]" style="border-color: var(--color-border);">
+        <div class="p-6 border rounded-xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 transition-colors bg-[var(--color-bg-canvas)] hover:bg-[var(--color-bg-card)]" style="border-color: var(--color-border);">
           <div>
             <h3 class="font-display text-xl uppercase tracking-wide">E-6 / C-41 Push-Pull Development</h3>
             <p class="text-xs mt-1 max-w-xl" style="color: var(--color-text-muted);">High accuracy processing curves for sensitive colour slide or negative films with precise density readings.</p>
           </div>
           <div class="flex items-center gap-6 w-full sm:w-auto justify-between sm:justify-end">
             <span class="font-bold text-sm">$24<span class="text-[10px] font-normal">/roll</span></span>
-            <a href="./booking.html"><button class="px-4 py-2 border rounded font-semibold text-xs uppercase tracking-wider hover:bg-black hover:text-white transition-colors" style="border-color: var(--color-text-dark);">Book Service</button></a>
+            <a href="./booking.html"><button class="px-4 py-2 border rounded font-semibold text-xs uppercase tracking-wider hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors text-[var(--color-text-dark)]" style="border-color: var(--color-text-dark);">Book Service</button></a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="p-8 sm:p-12 lg:p-16 text-center" style="background-color: var(--color-accent-yellow);">
+    <!-- Trade-In Appraisal CTA (Section 4) -->
+    <section class="p-8 sm:p-12 lg:p-16 text-center border-b" style="background-color: var(--color-accent-yellow); border-color: var(--color-border);">
       <div class="max-w-xl mx-auto">
-        <h2 class="font-display text-3xl sm:text-4xl text-black uppercase tracking-wide">Have Heirloom Gear Collecting Dust?</h2>
+        <h2 class="font-display text-3xl sm:text-4xl text-stone-900 uppercase tracking-wide">Have Heirloom Gear Collecting Dust?</h2>
         <p class="text-xs text-stone-800 mt-2 mb-6 max-w-sm mx-auto leading-relaxed">
           We trade modern digital systems or cache payouts instantly for classic mechanical bodies. Get evaluated instantly by our appraiser technicians.
         </p>
-        <a href="home2.html#appraisal-desk" class="inline-block px-6 py-3 bg-black text-white text-xs font-bold uppercase tracking-wider rounded shadow hover:opacity-90 transition-opacity">Launch Evaluation Dashboard &rarr;</a>
+        <a href="home2.html#appraisal-desk" class="inline-block px-6 py-3.5 bg-black text-white font-semibold text-xs tracking-wider uppercase rounded-xl shadow hover:opacity-90 active:scale-98 transition-all">Launch Evaluation Dashboard &rarr;</a>
       </div>
+    </section>
+
+    <!-- Quality Curation Protocol Section (Section 5) -->
+    <section class="p-8 sm:p-12 lg:p-16 border-b transition-colors duration-300" style="border-color: var(--color-border); background-color: var(--color-bg-card);">
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-12 text-center">
+          <span class="text-xs uppercase font-bold tracking-widest text-amber-600 dark:text-amber-500">Optomechanical Rigor</span>
+          <h2 class="font-display text-4xl uppercase mt-2">Quality Curation Protocol</h2>
+          <p class="text-xs max-w-md mx-auto mt-1" style="color: var(--color-text-muted);">How we source, inspect, calibrate, and warranty every single item in our inventory.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Step 1 -->
+          <div class="p-6 border rounded-xl bg-[var(--color-bg-canvas)] flex flex-col justify-between h-full" style="border-color: var(--color-border);">
+            <div>
+              <div class="w-10 h-10 rounded-full bg-amber-600/10 text-amber-600 flex items-center justify-center font-display text-xl mb-4">01</div>
+              <h3 class="font-display text-lg uppercase tracking-wide mb-2 text-[var(--color-text-dark)]">Acquisition & Intake</h3>
+              <p class="text-xs leading-relaxed" style="color: var(--color-text-muted);">
+                We acquire cameras from verified estates and guilds. Every incoming unit undergoes optoelectrical shutter speed tolerance diagnostics.
+              </p>
+            </div>
+          </div>
+          <!-- Step 2 -->
+          <div class="p-6 border rounded-xl bg-[var(--color-bg-canvas)] flex flex-col justify-between h-full" style="border-color: var(--color-border);">
+            <div>
+              <div class="w-10 h-10 rounded-full bg-amber-600/10 text-amber-600 flex items-center justify-center font-display text-xl mb-4">02</div>
+              <h3 class="font-display text-lg uppercase tracking-wide mb-2 text-[var(--color-text-dark)]">Mechanical CLA</h3>
+              <p class="text-xs leading-relaxed" style="color: var(--color-text-muted);">
+                Dismantled to the chassis. Gears are ultrasonic-cleaned, shutter curtains adjusted, and focus helicoids re-lubricated with high-grade synthetics.
+              </p>
+            </div>
+          </div>
+          <!-- Step 3 -->
+          <div class="p-6 border rounded-xl bg-[var(--color-bg-canvas)] flex flex-col justify-between h-full" style="border-color: var(--color-border);">
+            <div>
+              <div class="w-10 h-10 rounded-full bg-amber-600/10 text-amber-600 flex items-center justify-center font-display text-xl mb-4">03</div>
+              <h3 class="font-display text-lg uppercase tracking-wide mb-2 text-[var(--color-text-dark)]">Optic Calibration</h3>
+              <p class="text-xs leading-relaxed" style="color: var(--color-text-muted);">
+                Lenses are collimated to infinity targets. Aperture blades are degreased. Rangefinder prisms are manually aligned for exact focusing parameters.
+              </p>
+            </div>
+          </div>
+          <!-- Step 4 -->
+          <div class="p-6 border rounded-xl bg-[var(--color-bg-canvas)] flex flex-col justify-between h-full" style="border-color: var(--color-border);">
+            <div>
+              <div class="w-10 h-10 rounded-full bg-amber-600/10 text-amber-600 flex items-center justify-center font-display text-xl mb-4">04</div>
+              <h3 class="font-display text-lg uppercase tracking-wide mb-2 text-[var(--color-text-dark)]">Vault Dispatch</h3>
+              <p class="text-xs leading-relaxed" style="color: var(--color-text-muted);">
+                Units are vacuum-sealed in nitrogen barriers and cold-stored. Shipped in high-impact protective custom packaging with a 6-month warranty.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section (Section 6) -->
+    <section class="p-8 sm:p-12 lg:p-16 border-b transition-colors duration-300" style="border-color: var(--color-border); background-color: var(--color-bg-canvas);">
+      <div class="max-w-3xl mx-auto">
+        <div class="mb-12 text-center">
+          <span class="text-xs uppercase font-bold tracking-widest text-amber-600 dark:text-amber-500">Common Queries</span>
+          <h2 class="font-display text-4xl uppercase mt-2">Products & Services FAQ</h2>
+          <p class="text-xs mt-1" style="color: var(--color-text-muted);">Answers to key structural operations, mechanical guarantees, and chemical logistics.</p>
+        </div>
+        
+        <div class="space-y-4 font-ui" id="faq-accordion">
+          <!-- FAQ Item 1 -->
+          <div class="border rounded-xl bg-[var(--color-bg-card)] transition-colors overflow-hidden" style="border-color: var(--color-border);">
+            <button class="w-full p-5 flex justify-between items-center text-left focus:outline-none" onclick="toggleFaqItem(this)">
+              <span class="font-display uppercase text-md tracking-wider text-[var(--color-text-dark)]">What is VINTCAM's mechanical warranty?</span>
+              <svg class="w-4 h-4 text-[var(--color-text-dark)] transform transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="faq-answer px-5 pb-5 text-xs leading-relaxed hidden" style="color: var(--color-text-muted);">
+              All restored cameras and calibrated lenses purchased from our NYC vault are backed by a certified 6-month structural performance warranty covering shutter timing accuracy and selenium/silicon light meter precision.
+            </div>
+          </div>
+          <!-- FAQ Item 2 -->
+          <div class="border rounded-xl bg-[var(--color-bg-card)] transition-colors overflow-hidden" style="border-color: var(--color-border);">
+            <button class="w-full p-5 flex justify-between items-center text-left focus:outline-none" onclick="toggleFaqItem(this)">
+              <span class="font-display uppercase text-md tracking-wider text-[var(--color-text-dark)]">How does the trade-in appraisal process work?</span>
+              <svg class="w-4 h-4 text-[var(--color-text-dark)] transform transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="faq-answer px-5 pb-5 text-xs leading-relaxed hidden" style="color: var(--color-text-muted);">
+              Simply fill out our digital evaluation form with details regarding your equipment's physical, optical, and mechanical state. We provide a pre-appraised cash/trade value. Once you ship it and our technicians confirm the metrics, we finalize payouts instantly.
+            </div>
+          </div>
+          <!-- FAQ Item 3 -->
+          <div class="border rounded-xl bg-[var(--color-bg-card)] transition-colors overflow-hidden" style="border-color: var(--color-border);">
+            <button class="w-full p-5 flex justify-between items-center text-left focus:outline-none" onclick="toggleFaqItem(this)">
+              <span class="font-display uppercase text-md tracking-wider text-[var(--color-text-dark)]">How is expired film stock tested?</span>
+              <svg class="w-4 h-4 text-[var(--color-text-dark)] transform transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="faq-answer px-5 pb-5 text-xs leading-relaxed hidden" style="color: var(--color-text-muted);">
+              We roll-test samples of each emulsion batch using calibrated cameras under daylight and artificial lamps. Based on visual results, we recommend speed index adjustments (e.g. overexposing by +1 or +2 stops) labeled clearly on every lot container.
+            </div>
+          </div>
+          <!-- FAQ Item 4 -->
+          <div class="border rounded-xl bg-[var(--color-bg-card)] transition-colors overflow-hidden" style="border-color: var(--color-border);">
+            <button class="w-full p-5 flex justify-between items-center text-left focus:outline-none" onclick="toggleFaqItem(this)">
+              <span class="font-display uppercase text-md tracking-wider text-[var(--color-text-dark)]">Can I book laboratory walk-ins?</span>
+              <svg class="w-4 h-4 text-[var(--color-text-dark)] transform transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="faq-answer px-5 pb-5 text-xs leading-relaxed hidden" style="color: var(--color-text-muted);">
+              Yes! You can drop off your camera gear for standard cleaning, light seal replacement, or detailed optical diagnostics directly at our Soho office in NYC. Please schedule an intake appointment using our booking portal to minimize processing wait times.
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <script>
+        function toggleFaqItem(button) {
+          const content = button.nextElementSibling;
+          const svg = button.querySelector('svg');
+          const isHidden = content.classList.contains('hidden');
+          
+          if (isHidden) {
+            content.classList.remove('hidden');
+            svg.classList.add('rotate-180');
+          } else {
+            content.classList.add('hidden');
+            svg.classList.remove('rotate-180');
+          }
+        }
+      </script>
     </section>
 
     <footer class="bg-[var(--color-bg-card)] border-t border-[var(--color-border)] mt-auto transition-colors duration-300">
@@ -318,12 +459,11 @@
     <div class="lg:col-span-2">
       <h4 class="font-display uppercase text-sm tracking-wider mb-6 text-amber-600 dark:text-amber-500">Quick Links</h4>
       <ul class="flex flex-col gap-4 text-xs font-semibold">
-        <li><a href="../index.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)] hover:text-amber-600">Home</a></li>
-        <li><a href="./home2.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)] hover:text-amber-600">Home 2</a></li>
-        <li><a href="./about.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)] hover:text-amber-600">About Our Guild</a></li>
-        <li><a href="./blog.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)] hover:text-amber-600">The Silver Journal</a></li>
-        <li><a href="./services-products.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)] hover:text-amber-600">Our Services</a></li>
-        <li><a href="./contact.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)] hover:text-amber-600">Contact Desk</a></li>
+        <li><a href="../index.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)]">Home</a></li>
+        <li><a href="../index.html#appraisal-desk" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)]">Trade-In Appraisal</a></li>
+        <li><a href="./about.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)]">About Our Store</a></li>
+        <li><a href="./blog.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)]">The Silver Journal</a></li>
+        <li><a href="./contact.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)]">Contact Desk</a></li>
       </ul>
     </div>
 
@@ -459,20 +599,7 @@
         link: "./service2.html",
         expiration: "2027-06 (13 mos)",
         expirationMonths: 13
-      },
-      {
-        name: "E-6 / C-41 Push-Pull Development",
-        brand: "Vintcam Guild",
-        category: "Lab Services",
-        price: 24,
-        tag: "Guild Service",
-        tagBg: "bg-purple-600",
-        image: "https://images.unsplash.com/photo-1569003339405-ea396a5a8a90?auto=format&fit=crop&q=80&w=500",
-        description: "High accuracy processing curves for sensitive colour slide or negative films with precise density readings.",
-        link: "./booking.html",
-        expiration: null,
-        expirationMonths: 9999
-      }
+      }  
     ];
 
     document.addEventListener('DOMContentLoaded', () => {

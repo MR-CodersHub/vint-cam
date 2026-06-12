@@ -60,14 +60,34 @@ function updateThemeIcon(theme) {
 }
 
 /**
- * Checks for RTL (Right-to-Left) layouts to handle alignment changes
+ * Checks for RTL (Right-to-Left) layouts and sets state from localStorage
  */
 function checkLayoutDirection() {
-  const isRTL = document.documentElement.getAttribute('dir') === 'rtl';
-  if (isRTL) {
+  const savedDir = localStorage.getItem('vintcam_dir') || 'ltr';
+  document.documentElement.setAttribute('dir', savedDir);
+  if (savedDir === 'rtl') {
     document.body.classList.add('rtl-layout');
+  } else {
+    document.body.classList.remove('rtl-layout');
   }
 }
+
+/**
+ * Toggles the layout direction (LTR <=> RTL) and persists to localStorage
+ */
+window.toggleRTL = function() {
+  const currentDir = document.documentElement.getAttribute('dir') || 'ltr';
+  const targetDir = currentDir === 'rtl' ? 'ltr' : 'rtl';
+  document.documentElement.setAttribute('dir', targetDir);
+  localStorage.setItem('vintcam_dir', targetDir);
+  
+  if (targetDir === 'rtl') {
+    document.body.classList.add('rtl-layout');
+  } else {
+    document.body.classList.remove('rtl-layout');
+  }
+  window.dispatchEvent(new Event('dirchange'));
+};
 
 /**
  * Sticky Glassmorphism Header Dynamics

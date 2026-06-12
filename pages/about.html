@@ -28,10 +28,10 @@
     <!-- Desktop Navigation Links -->
     <nav class="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wide" id="desktop-nav">
       <a href="../index.html" class="nav-link relative py-1">Home</a>
-      <a href="./home2.html" class="nav-link relative py-1">Home 2</a>
+      <a href="./home2.html" class="nav-link relative py-1">Store</a>
+      <a href="./services-products.html" class="nav-link relative py-1">Catalog</a>
       <a href="./about.html" class="nav-link relative py-1">About</a>
       <a href="./blog.html" class="nav-link relative py-1">Blog</a>
-      <a href="./services-products.html" class="nav-link relative py-1">Service</a>
       <a href="./contact.html" class="nav-link relative py-1">Contact</a>
     </nav>
 
@@ -45,7 +45,7 @@
         <!-- Active Item Count Indicator Badge -->
         <span id="cart-badge" class="absolute -top-1 -right-1 bg-amber-600 text-white text-[9px] font-bold rounded-full w-4 h-4 flex items-center justify-center scale-0 transition-transform duration-300">0</span>
       </button>
-
+ 
       <!-- Theme Switcher Button -->
       <button onclick="toggleTheme()" class="theme-btn p-2 rounded-full hover:bg-[var(--color-bg-card)] border border-transparent hover:border-[var(--color-border)] transition-all relative group flex items-center justify-center" aria-label="Toggle dark/light mode">
         <svg xmlns="http://www.w3.org/2000/svg" id="theme-sun-path" class="h-5 w-5 theme-toggle-icon hidden text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -55,7 +55,14 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
         </svg>
       </button>
-
+ 
+      <!-- RTL Layout Switcher Button -->
+      <button onclick="toggleRTL()" class="rtl-btn p-2 rounded-full hover:bg-[var(--color-bg-card)] border border-transparent hover:border-[var(--color-border)] transition-all relative group flex items-center justify-center" aria-label="Toggle layout direction">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[var(--color-text-dark)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M3 10h18M3 15h12M3 20h18" />
+        </svg>
+      </button>
+ 
       <!-- Hamburger Menu Button (Mobile) -->
       <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-full hover:bg-[var(--color-bg-card)] transition-colors flex items-center justify-center" aria-label="Open navigation menu">
         <svg id="hamburger-icon" class="h-6 w-6 text-[var(--color-text-dark)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -64,7 +71,7 @@
       </button>
     </div>
   </div>
-
+ 
   <style>
     #mobile-menu-content {
       background-color: #f1ede2 !important;
@@ -73,7 +80,7 @@
       background-color: #1c1e1f !important;
     }
   </style>
-
+ 
   <!-- Mobile Full-Screen Overlay and Container -->
   <div id="mobile-menu-drawer" class="fixed inset-0 z-50 bg-black/40 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
     <div class="absolute inset-0 h-full w-full shadow-2xl p-6 sm:p-8 flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-out bg-[#f1ede2] dark:bg-[#1c1e1f] border-l border-[#ded8cb] dark:border-[#33383a]" id="mobile-menu-content">
@@ -100,21 +107,21 @@
             <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">01.</span>
             <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Home</span>
           </a>
-          <a href="./home2.html" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
+          <a href="./home2.html" onclick="toggleMobileMenu()" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
             <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">02.</span>
-            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Home 2</span>
+            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Store</span>
+          </a>
+          <a href="./services-products.html" onclick="toggleMobileMenu()" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
+            <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">03.</span>
+            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Catalog</span>
           </a>
           <a href="./about.html" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
-            <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">03.</span>
+            <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">04.</span>
             <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">About</span>
           </a>
           <a href="./blog.html" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
-            <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">04.</span>
-            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Blog</span>
-          </a>
-          <a href="./services-products.html" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
             <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">05.</span>
-            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Service</span>
+            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Blog</span>
           </a>
           <a href="./contact.html" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
             <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">06.</span>
@@ -186,12 +193,12 @@
   </div>
 </header>
 
-    <section class="px-8 py-16 md:py-24 max-w-4xl border-b" style="border-color: var(--color-border);">
+    <section class="px-8 py-16 md:py-24 max-w-4xl border-b mx-auto text-center flex flex-col items-center justify-center" style="border-color: var(--color-border);">
       <span class="text-xs font-bold uppercase tracking-widest text-amber-600 block mb-3">Our Core Philosophy</span>
       <h1 class="font-display text-5xl sm:text-6xl md:text-7xl uppercase leading-[0.95] mb-6">
         Keeping the mechanical <br><span class="font-serif-ital lowercase text-amber-600 dark:text-amber-400">soul</span> of photography alive.
       </h1>
-      <p class="text-sm sm:text-base leading-relaxed max-w-2xl" style="color: var(--color-text-muted);">
+      <p class="text-sm sm:text-base leading-relaxed max-w-2xl mx-auto" style="color: var(--color-text-muted);">
         In an era of disposable digital files, we build a physical sanctuary for slow, intentional imagery. We believe that turning a precision gear, setting a split-image rangefinder patch, and chemical synthesis offer an unmatched artistic experience.
       </p>
     </section>
@@ -204,7 +211,7 @@
         <div class="border-l-2 pl-6 relative" style="border-color: var(--color-text-dark);">
           <div class="absolute -left-[7px] top-1 w-3 h-3 rounded-full bg-amber-600"></div>
           <span class="font-display text-xl text-amber-600">2012 — The Workbench Origins</span>
-          <p class="text-xs mt-2 leading-relaxed" style="color: var(--color-text-muted);">Started as a single camera repair bench in Brooklyn, rebuilding custom leaf-shutters for local street photographers using discarded spare component lots.</p>
+          <p class="text-xs mt-2 leading-relaxed" style="color: var(--color-text-muted);">Started as a small collection of vintage cameras in Brooklyn, sourcing rare mechanical models for local street photographers looking for authentic analog gear.</p>
         </div>
         <div class="border-l-2 pl-6 relative" style="border-color: var(--color-text-dark);">
           <div class="absolute -left-[7px] top-1 w-3 h-3 rounded-full bg-amber-600"></div>
@@ -213,8 +220,8 @@
         </div>
         <div class="border-l-2 pl-6 relative" style="border-color: var(--color-text-dark);">
           <div class="absolute -left-[7px] top-1 w-3 h-3 rounded-full bg-amber-600"></div>
-          <span class="font-display text-xl text-amber-600">2026 — The Modern Calibration Hub</span>
-          <p class="text-xs mt-2 leading-relaxed" style="color: var(--color-text-muted);">Now operating a premier mechanical restoration shop, certifying vintage optical equipment with modern multi-year guarantees.</p>
+          <span class="font-display text-xl text-amber-600">2026 — The Premier Store & Vault</span>
+          <p class="text-xs mt-2 leading-relaxed" style="color: var(--color-text-muted);">Now operating a premier vintage retail boutique, offering certified, fully-tested analog gear and fresh cold-stored emulsions with a 6-month store warranty.</p>
         </div>
       </div>
     </section>
@@ -222,7 +229,7 @@
     <section class="grid grid-cols-2 lg:grid-cols-4 gap-[1px] border-b text-center bg-[var(--color-border)]" style="border-color: var(--color-border);">
       <div class="p-8 bg-[var(--color-bg-card)]">
         <span class="font-display text-4xl sm:text-5xl text-amber-600 block">12k+</span>
-        <span class="text-[10px] uppercase font-bold tracking-widest mt-1 block" style="color: var(--color-text-muted);">Cameras Calibrated</span>
+        <span class="text-[10px] uppercase font-bold tracking-widest mt-1 block" style="color: var(--color-text-muted);">Cameras Sold</span>
       </div>
       <div class="p-8 bg-[var(--color-bg-card)]">
         <span class="font-display text-4xl sm:text-5xl text-amber-600 block">85+</span>
@@ -230,7 +237,7 @@
       </div>
       <div class="p-8 bg-[var(--color-bg-card)]">
         <span class="font-display text-4xl sm:text-5xl text-amber-600 block">100%</span>
-        <span class="text-[10px] uppercase font-bold tracking-widest mt-1 block" style="color: var(--color-text-muted);">Mechanical Testing</span>
+        <span class="text-[10px] uppercase font-bold tracking-widest mt-1 block" style="color: var(--color-text-muted);">Quality Tested</span>
       </div>
       <div class="p-8 bg-[var(--color-bg-card)]">
         <span class="font-display text-4xl sm:text-5xl text-amber-600 block">6 Mos</span>
@@ -240,21 +247,21 @@
 
     <section class="p-8 sm:p-12 lg:p-16 border-b" style="border-color: var(--color-border);">
       <div class="mb-12">
-        <span class="text-xs font-bold uppercase tracking-widest text-amber-600">The Calibration Bench</span>
+        <span class="text-xs font-bold uppercase tracking-widest text-amber-600">The Boutique Specialists</span>
         <h2 class="font-display text-3xl uppercase mt-1">Master Craftspeople</h2>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
         <div>
           <div class="h-80 w-full bg-neutral-200 mb-4 rounded-xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-300">
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=500" alt="Master Technician" class="w-full h-full object-cover" />
+            <img src="../assets/images/dp1.jpg" alt="Master Technician" class="w-full h-full object-contain" />
           </div>
           <h3 class="font-display text-xl uppercase tracking-wide">Elena Rostova</h3>
-          <span class="text-[10px] uppercase font-bold tracking-wider text-amber-600">Lead Rangefinder Horologist</span>
-          <p class="text-xs mt-2" style="color: var(--color-text-muted);">14 years specializing in German optomechanical assemblies and focal-plane curtain calibration setups.</p>
+          <span class="text-[10px] uppercase font-bold tracking-wider text-amber-600">Lead Rangefinder Specialist</span>
+          <p class="text-xs mt-2" style="color: var(--color-text-muted);">14 years specializing in sourcing and verifying classic German mechanical cameras and rangefinder precision.</p>
         </div>
         <div>
           <div class="h-80 w-full bg-neutral-200 mb-4 rounded-xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-300">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=500" alt="Chemist" class="w-full h-full object-cover" />
+            <img src="../assets/images/dp2.jpg" alt="Chemist" class="w-full h-full object-contain" />
           </div>
           <h3 class="font-display text-xl uppercase tracking-wide">Marcus Vance</h3>
           <span class="text-[10px] uppercase font-bold tracking-wider text-amber-600">Emulsion & Chemistry Archivist</span>
@@ -262,11 +269,11 @@
         </div>
         <div>
           <div class="h-80 w-full bg-neutral-200 mb-4 rounded-xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-300">
-            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=500" alt="Lens Specialist" class="w-full h-full object-cover" />
+            <img src="../assets/images/dp3.jpg" alt="Lens Specialist" class="w-full h-full object-contain" />
           </div>
           <h3 class="font-display text-xl uppercase tracking-wide">Thaddeus Cole</h3>
-          <span class="text-[10px] uppercase font-bold tracking-wider text-amber-600">Large Format Optical Specialist</span>
-          <p class="text-xs mt-2" style="color: var(--color-text-muted);">Expertise centers on dynamic lens spacing restoration elements and anti-fungal ultrasonic processing loops.</p>
+          <span class="text-[10px] uppercase font-bold tracking-wider text-amber-600">Vintage Lens Curator</span>
+          <p class="text-xs mt-2" style="color: var(--color-text-muted);">Expertise centers on examining vintage optical elements and certifying the performance of premium primes.</p>
         </div>
       </div>
     </section>
@@ -330,12 +337,11 @@
     <div class="lg:col-span-2">
       <h4 class="font-display uppercase text-sm tracking-wider mb-6 text-amber-600 dark:text-amber-500">Quick Links</h4>
       <ul class="flex flex-col gap-4 text-xs font-semibold">
-        <li><a href="../index.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)] hover:text-amber-600">Home</a></li>
-        <li><a href="./home2.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)] hover:text-amber-600">Home 2</a></li>
-        <li><a href="./about.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)] hover:text-amber-600">About Our Guild</a></li>
-        <li><a href="./blog.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)] hover:text-amber-600">The Silver Journal</a></li>
-        <li><a href="./services-products.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)] hover:text-amber-600">Our Services</a></li>
-        <li><a href="./contact.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)] hover:text-amber-600">Contact Desk</a></li>
+        <li><a href="../index.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)]">Home</a></li>
+        <li><a href="../index.html#appraisal-desk" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)]">Trade-In Appraisal</a></li>
+        <li><a href="./about.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)]">About Our Store</a></li>
+        <li><a href="./blog.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)]">The Silver Journal</a></li>
+        <li><a href="./contact.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)]">Contact Desk</a></li>
       </ul>
     </div>
 
