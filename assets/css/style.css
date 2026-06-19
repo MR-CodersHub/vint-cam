@@ -528,4 +528,22 @@ input::placeholder, textarea::placeholder {
 [data-theme="dark"] .stamp-certified {
   border-color: #34d399;
   color: #34d399;
+}
+
+/* ==========================================================================
+   VINTAGE CLASSIC MECHANICS — BORDER RADIUS OVERRIDES
+   ========================================================================== */
+
+/* Vintage cameras have precise, mechanical, slightly rounded or sharp corners.
+   We override Tailwind's oversized border-radius effects (xl, 2xl) to standardized, 
+   harmonious rounded-md (6px) or rounded-lg (8px) values for all content boxes, 
+   cards, inputs, and buttons to preserve professional vintage camera aesthetics. */
+.rounded-xl {
+  border-radius: 0.375rem !important; /* 6px */
+}
+.rounded-2xl {
+  border-radius: 0.375rem !important; /* 6px */
+}
+.rounded-3xl {
+  border-radius: 0.5rem !important; /* 8px */
 }

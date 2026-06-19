@@ -1,42 +1,47 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" data-theme="light">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vintage Camera, Lens & Film Photography Store — VINTCAM</title>
   <link rel="icon" type="image/png" href="./assets/images/brand-logo.png">
-  
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Staatliches&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Staatliches&family=Instrument+Serif:ital@0;1&display=swap"
+    rel="stylesheet">
+
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="font-ui m-0 p-0 antialiased">
 
-<main class="w-full min-h-screen transition-colors duration-300" style="background-color: var(--color-bg-canvas); color: var(--color-text-dark);">
-    
+  <main class="w-full min-h-screen transition-colors duration-300"
+    style="background-color: var(--color-bg-canvas); color: var(--color-text-dark);">
+
     <header class="sticky top-0 z-50 w-full transition-all duration-300 bg-[var(--color-bg-canvas)] border-b border-[var(--color-border)] shadow-sm">
-  <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
     <!-- Brand Logo -->
-    <a href="./index.html" class="hover:opacity-85 transition-opacity focus:outline-none focus:ring-2 focus:ring-amber-500 rounded px-1 flex items-center gap-3">
-      <img src="./assets/images/brand-logo.png" alt="VINTCAM" class="h-10 w-auto object-contain dark:invert transition-all duration-300" />
-      <span class="font-display text-2xl tracking-widest text-[var(--color-text-dark)] uppercase">VINTCAM</span>
+    <a href="./index.html" class="hover:opacity-85 transition-opacity focus:outline-none focus:ring-2 focus:ring-amber-500 rounded px-1 flex items-center gap-2 sm:gap-3">
+      <img src="./assets/images/brand-logo.png" alt="VINTCAM" class="h-7 sm:h-10 w-auto object-contain transition-all duration-300" />
+      <span class="font-display text-lg sm:text-2xl tracking-wider sm:tracking-widest text-[var(--color-text-dark)] uppercase">VINTCAM</span>
     </a>
     
     <!-- Desktop Navigation Links -->
-    <nav class="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wide" id="desktop-nav">
-      <a href="./index.html" class="nav-link relative py-1">Home</a>
-      <a href="pages/home2.html" class="nav-link relative py-1">Home 2</a>
-      <a href="pages/services-products.html" class="nav-link relative py-1">Catalog</a>
-      <a href="pages/about.html" class="nav-link relative py-1">About</a>
-      <a href="pages/blog.html" class="nav-link relative py-1">Blog</a>
-      <a href="pages/contact.html" class="nav-link relative py-1">Contact</a>
+    <nav class="hidden md:flex items-center gap-4 lg:gap-8 text-sm font-semibold tracking-wide" id="desktop-nav">
+      <a href="./index.html" class="nav-link relative py-1 whitespace-nowrap">Home</a>
+      <a href="pages/home2.html" class="nav-link relative py-1 whitespace-nowrap">Home 2</a>
+      <a href="pages/about.html" class="nav-link relative py-1 whitespace-nowrap">About</a>
+      <a href="pages/services-products.html" class="nav-link relative py-1 whitespace-nowrap">Catalog</a>
+      <a href="pages/blog.html" class="nav-link relative py-1 whitespace-nowrap">Blog</a>
+      <a href="pages/contact.html" class="nav-link relative py-1 whitespace-nowrap">Contact</a>
     </nav>
 
     <!-- Right-side Actions -->
-    <div class="flex items-center gap-6">
+    <div class="flex items-center gap-1.5 sm:gap-2 lg:gap-4">
       <!-- Shopping Cart Toggler Button -->
       <button onclick="toggleCartDrawer()" class="cart-btn p-2 rounded-full hover:bg-[var(--color-bg-card)] border border-transparent hover:border-[var(--color-border)] transition-all relative group flex items-center justify-center animate-cart-badge" aria-label="Open shopping cart">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[var(--color-text-dark)] transition-transform duration-300 group-hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -87,7 +92,7 @@
       <div>
         <div class="flex items-center justify-between mb-8 pb-4 border-b border-[var(--color-border)]">
           <a href="./index.html" class="flex items-center hover:opacity-85 transition-opacity focus:outline-none rounded px-1 gap-2.5">
-            <img src="./assets/images/brand-logo.png" alt="VINTCAM" class="h-8 w-auto object-contain dark:invert transition-all duration-300" />
+            <img src="./assets/images/brand-logo.png" alt="VINTCAM" class="h-8 w-auto object-contain transition-all duration-300" />
             <span class="font-display text-xl tracking-widest text-[var(--color-text-dark)] uppercase">VINTCAM</span>
           </a>
           
@@ -109,13 +114,13 @@
             <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">02.</span>
             <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Home 2</span>
           </a>
-          <a href="pages/services-products.html" onclick="toggleMobileMenu()" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
-            <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">03.</span>
-            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Catalog</span>
-          </a>
           <a href="pages/about.html" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
-            <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">04.</span>
+            <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">03.</span>
             <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">About</span>
+          </a>
+          <a href="pages/services-products.html" onclick="toggleMobileMenu()" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
+            <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">04.</span>
+            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Catalog</span>
           </a>
           <a href="pages/blog.html" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
             <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">05.</span>
@@ -182,61 +187,81 @@
         <p class="text-[11px] leading-relaxed" style="color: var(--color-text-muted);">
           * Logistics and insurance for sensitive chemical lots are calculated at checkout vault.
         </p>
-        <button onclick="checkoutCart()" class="w-full py-3.5 bg-black text-white dark:bg-white dark:text-black font-semibold text-xs tracking-wider uppercase rounded-xl hover:opacity-90 active:scale-98 transition-all flex items-center justify-center gap-2">
+        <button onclick="checkoutCart()" class="w-full py-3.5 bg-black text-white dark:bg-white dark:text-black font-semibold text-xs tracking-wider uppercase rounded-md hover:opacity-90 active:scale-98 transition-all flex items-center justify-center gap-2">
           Proceed to Secure Checkout &rarr;
         </button>
       </div>
 
     </div>
   </div>
-</header>    <!-- Store Hero Section -->
+</header> <!-- Store Hero Section -->
     <section class="grid grid-cols-1 lg:grid-cols-12 border-b" style="border-color: var(--color-border);">
       <!-- Hero Left: Text & CTA Actions -->
-      <div class="lg:col-span-7 p-8 sm:p-12 lg:p-16 flex flex-col justify-between relative min-h-[580px]" style="background-color: var(--color-bg-card);">
+      <div class="lg:col-span-7 p-8 sm:p-12 lg:p-16 flex flex-col justify-between relative min-h-[580px]"
+        style="background-color: var(--color-bg-card);">
         <div class="absolute top-8 left-8 frame-corner-tl"></div>
         <div class="absolute bottom-8 right-8 frame-corner-br"></div>
-        
+
         <div class="my-auto max-w-xl pl-4">
-          <span class="text-xs uppercase font-bold tracking-widest text-amber-600 dark:text-amber-500 mb-4 block">✦ Restored Analog Classics & Film Stockist</span>
+          <span class="text-xs uppercase font-bold tracking-widest text-amber-600 dark:text-amber-500 mb-4 block">✦
+            Restored Analog Classics & Film Stockist</span>
           <h1 class="font-display text-5xl sm:text-6xl md:text-7xl uppercase leading-[0.95] mb-6">
             Restored gear & <br>
             <span class="relative inline-block text-amber-600 dark:text-amber-500">cold-stored</span> <br>
             emulsions
           </h1>
           <p class="text-sm leading-relaxed mb-8" style="color: var(--color-text-muted);">
-            VINTCAM is a premier vintage camera store and film photography specialist. We source, overhaul, and warrant certified mechanical bodies, lenses, fresh and rare expired film stocks, and professional darkroom chemistry supplies.
+            VINTCAM is a premier vintage camera store and film photography specialist. We source, overhaul, and warrant
+            certified mechanical bodies, lenses, fresh and rare expired film stocks, and professional darkroom chemistry
+            supplies.
           </p>
-          
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 border-t border-dashed" style="border-color: var(--color-border);">
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 border-t border-dashed"
+            style="border-color: var(--color-border);">
             <div>
               <h3 class="font-display text-lg tracking-wider mb-1">Analog Retail Vault</h3>
-              <p class="text-xs leading-relaxed" style="color: var(--color-text-muted);">Fully disassembled, cleaned, and timing-calibrated mechanical bodies and vintage primes with a 6-month warranty.</p>
+              <p class="text-xs leading-relaxed" style="color: var(--color-text-muted);">Fully disassembled, cleaned,
+                and timing-calibrated mechanical bodies and vintage primes with a 6-month warranty.</p>
             </div>
             <div>
               <h3 class="font-display text-lg tracking-wider mb-1">Cold-Stored Emulsions</h3>
-              <p class="text-xs leading-relaxed" style="color: var(--color-text-muted);">Nitrogen-protected fridge lots cataloged strictly by batch expiration date windows and traditional darkroom chemistry.</p>
+              <p class="text-xs leading-relaxed" style="color: var(--color-text-muted);">Nitrogen-protected fridge lots
+                cataloged strictly by batch expiration date windows and traditional darkroom chemistry.</p>
             </div>
           </div>
-          
+
           <div class="flex flex-wrap items-center gap-4 mt-10">
-            <a href="#restored-cameras" class="px-6 py-3.5 bg-black text-white dark:bg-white dark:text-black font-semibold text-xs tracking-wider rounded-xl uppercase hover:opacity-90 active:scale-98 transition-all">Shop Restored Cameras</a>
-            <a href="#lens-inventory" class="px-5 py-3.5 border font-semibold text-xs tracking-wider rounded-xl uppercase flex items-center gap-2 transition-colors hover:bg-black/5 dark:hover:bg-white/5" style="border-color: var(--color-text-dark); color: var(--color-text-dark);">Browse Lenses</a>
-            <a href="#appraisal-desk" class="text-xs font-bold uppercase tracking-wider border-b border-amber-600 dark:border-amber-500 pb-1 text-amber-600 dark:text-amber-500 hover:opacity-85 transition-opacity">Value Your Gear (Trade-In) &rarr;</a>
+            <a href="#restored-cameras"
+              class="px-6 py-3.5 bg-black text-white dark:bg-white dark:text-black font-semibold text-xs tracking-wider rounded-xl uppercase hover:opacity-90 active:scale-98 transition-all">Shop
+              Restored Cameras</a>
+            <a href="#lens-inventory"
+              class="px-5 py-3.5 border font-semibold text-xs tracking-wider rounded-xl uppercase flex items-center gap-2 transition-colors hover:bg-black/5 dark:hover:bg-white/5"
+              style="border-color: var(--color-text-dark); color: var(--color-text-dark);">Browse Lenses</a>
+            <a href="#appraisal-desk"
+              class="text-xs font-bold uppercase tracking-wider border-b border-amber-600 dark:border-amber-500 pb-1 text-amber-600 dark:text-amber-500 hover:opacity-85 transition-opacity">Value
+              Your Gear (Trade-In) &rarr;</a>
           </div>
         </div>
       </div>
-      
+
       <!-- Hero Right: Premium Store Visuals -->
       <div class="lg:col-span-5 grid grid-rows-3 min-h-[580px]">
-        <div class="p-8 sm:p-12 flex flex-col justify-center border-b lg:border-b-0" style="border-color: var(--color-border);">
+        <div class="p-8 sm:p-12 flex flex-col justify-center border-b lg:border-b-0"
+          style="border-color: var(--color-border);">
           <span class="font-display text-xl text-amber-600 dark:text-amber-500">EST. NYC</span>
           <h2 class="font-display text-2xl tracking-wider uppercase mt-1">Certified Retail Vault</h2>
-          <p class="text-xs max-w-xs mt-2 leading-relaxed" style="color: var(--color-text-muted);">Every restored vintage camera body we catalog features a certified 6-month mechanical guarantee covering timing accuracy.</p>
+          <p class="text-xs max-w-xs mt-2 leading-relaxed" style="color: var(--color-text-muted);">Every restored
+            vintage camera body we catalog features a certified 6-month mechanical guarantee covering timing accuracy.
+          </p>
         </div>
         <div class="row-span-2 relative flex items-end justify-end overflow-hidden bg-neutral-900">
-          <img src="https://images.unsplash.com/photo-1510127034890-ba27508e9f1c?auto=format&fit=crop&q=80&w=800" alt="Vintage Camera Store Showcase Display" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-103" />
+          <img src="https://images.unsplash.com/photo-1510127034890-ba27508e9f1c?auto=format&fit=crop&q=80&w=800"
+            alt="Vintage Camera Store Showcase Display"
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-103" />
           <div class="absolute inset-0 bg-black/10 dark:bg-black/30 pointer-events-none"></div>
-          <div class="w-full absolute bottom-0 left-0 bg-white/95 dark:bg-black/95 backdrop-blur-sm py-4 px-6 flex items-center justify-around text-xs font-bold tracking-widest uppercase z-10 border-t" style="border-color: var(--color-border);">
+          <div
+            class="w-full absolute bottom-0 left-0 bg-white/95 dark:bg-black/95 backdrop-blur-sm py-4 px-6 flex items-center justify-around text-xs font-bold tracking-widest uppercase z-10 border-t"
+            style="border-color: var(--color-border);">
             <span>Leica</span><span>Hasselblad</span><span>Nikon</span><span>Rollei</span>
           </div>
         </div>
@@ -244,11 +269,13 @@
     </section>
 
     <!-- Restored Film Cameras Showcase -->
-    <section id="restored-cameras" class="p-8 sm:p-12 lg:p-16 border-b transition-colors duration-300" style="border-color: var(--color-border); background-color: var(--color-bg-canvas);">
+    <section id="restored-cameras" class="p-8 sm:p-12 lg:p-16 border-b transition-colors duration-300"
+      style="border-color: var(--color-border); background-color: var(--color-bg-canvas);">
       <div class="max-w-7xl mx-auto">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div>
-            <span class="text-xs uppercase font-bold tracking-widest text-amber-600 dark:text-amber-500">Restored Film Cameras</span>
+            <span class="text-xs uppercase font-bold tracking-widest text-amber-600 dark:text-amber-500">Restored Film
+              Cameras</span>
             <h2 class="font-display text-4xl sm:text-5xl uppercase mt-2">Certified Analog Bodies</h2>
           </div>
           <p class="text-xs max-w-sm leading-relaxed mt-4 md:mt-0" style="color: var(--color-text-muted);">
@@ -258,80 +285,114 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- Camera 1 -->
-          <div class="group relative flex flex-col justify-between p-4 border rounded-2xl transition-all hover:shadow-lg bg-[var(--color-bg-card)] cursor-pointer" style="border-color: var(--color-border);" onclick="openCalibrationReport('LCA-M6-TI')">
+          <div
+            class="group relative flex flex-col justify-between p-4 border rounded-2xl transition-all hover:shadow-lg bg-[var(--color-bg-card)] cursor-pointer"
+            style="border-color: var(--color-border);" onclick="openCalibrationReport('LCA-M6-TI')">
             <div class="w-full h-64 rounded-xl overflow-hidden mb-4 bg-neutral-100 relative viewfinder-frame">
-              <img src="./assets/images/cam1.jpg" alt="Leica M6 Rangefinder" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103" />
+              <img src="./assets/images/cam1.jpg" alt="Leica M6 Rangefinder"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103" />
               <!-- Viewfinder corners overlay -->
               <div class="viewfinder-corner vf-tl"></div>
               <div class="viewfinder-corner vf-tr"></div>
               <div class="viewfinder-corner vf-bl"></div>
               <div class="viewfinder-corner vf-br"></div>
               <div class="viewfinder-crosshair"></div>
-              <span class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-black text-white dark:bg-white dark:text-black z-10">Mint / Calibrated</span>
+              <span
+                class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-black text-white dark:bg-white dark:text-black z-10">Mint
+                / Calibrated</span>
             </div>
             <div>
               <div class="flex justify-between items-start mb-2">
                 <div>
-                  <span class="text-[9px] uppercase tracking-wider text-[var(--color-text-muted)] font-mono-log font-bold">1992 • Rangefinder</span>
+                  <span
+                    class="text-[9px] uppercase tracking-wider text-[var(--color-text-muted)] font-mono-log font-bold">1992
+                    • Rangefinder</span>
                   <h3 class="font-display text-xl tracking-wide uppercase mt-0.5">Leica M6 Titanium</h3>
                 </div>
                 <span class="font-bold text-sm text-[var(--color-text-dark)]">$3,100.00</span>
               </div>
               <div class="flex gap-2 mt-4" onclick="event.stopPropagation();">
-                <button onclick="openCalibrationReport('LCA-M6-TI')" class="flex-1 py-2 text-xs font-semibold border border-[var(--color-text-dark)] text-[var(--color-text-dark)] rounded-xl uppercase tracking-wider hover:bg-black/5 dark:hover:bg-white/5 transition-all">Inspect Spec</button>
-                <button onclick="addToCart('LCA-M6-TI', 'Leica M6 Titanium', 3100.00, 'Titanium finish mechanical rangefinder.', 'Leica'); animateAddButton(this)" class="px-4 py-2 text-xs font-semibold bg-black text-white dark:bg-white dark:text-black rounded-xl uppercase tracking-wider hover:opacity-90 transition-opacity">Acquire</button>
+                <button onclick="openCalibrationReport('LCA-M6-TI')"
+                  class="flex-1 py-2 text-xs font-semibold border border-[var(--color-text-dark)] text-[var(--color-text-dark)] rounded-xl uppercase tracking-wider hover:bg-black/5 dark:hover:bg-white/5 transition-all">Inspect
+                  Spec</button>
+                <button
+                  onclick="addToCart('LCA-M6-TI', 'Leica M6 Titanium', 3100.00, 'Titanium finish mechanical rangefinder.', 'Leica'); animateAddButton(this)"
+                  class="px-4 py-2 text-xs font-semibold bg-black text-white dark:bg-white dark:text-black rounded-xl uppercase tracking-wider hover:opacity-90 transition-opacity">Acquire</button>
               </div>
             </div>
           </div>
           <!-- Camera 2 -->
-          <div class="group relative flex flex-col justify-between p-4 border rounded-2xl transition-all hover:shadow-lg bg-[var(--color-bg-card)] cursor-pointer" style="border-color: var(--color-border);" onclick="openCalibrationReport('NIK-FM2-TI')">
+          <div
+            class="group relative flex flex-col justify-between p-4 border rounded-2xl transition-all hover:shadow-lg bg-[var(--color-bg-card)] cursor-pointer"
+            style="border-color: var(--color-border);" onclick="openCalibrationReport('NIK-FM2-TI')">
             <div class="w-full h-64 rounded-xl overflow-hidden mb-4 bg-neutral-100 relative viewfinder-frame">
-              <img src="./assets/images/cam2.jpg" alt="Nikon FM2 SLR" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103" />
+              <img src="./assets/images/cam2.jpg" alt="Nikon FM2 SLR"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103" />
               <!-- Viewfinder corners overlay -->
               <div class="viewfinder-corner vf-tl"></div>
               <div class="viewfinder-corner vf-tr"></div>
               <div class="viewfinder-corner vf-bl"></div>
               <div class="viewfinder-corner vf-br"></div>
               <div class="viewfinder-crosshair"></div>
-              <span class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-amber-600 text-white z-10">Excellent++ Grade</span>
+              <span
+                class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-amber-600 text-white z-10">Excellent++
+                Grade</span>
             </div>
             <div>
               <div class="flex justify-between items-start mb-2">
                 <div>
-                  <span class="text-[9px] uppercase tracking-wider text-[var(--color-text-muted)] font-mono-log font-bold">1984 • SLR</span>
+                  <span
+                    class="text-[9px] uppercase tracking-wider text-[var(--color-text-muted)] font-mono-log font-bold">1984
+                    • SLR</span>
                   <h3 class="font-display text-xl tracking-wide uppercase mt-0.5">Nikon FM2 Titanium</h3>
                 </div>
                 <span class="font-bold text-sm text-[var(--color-text-dark)]">$520.00</span>
               </div>
               <div class="flex gap-2 mt-4" onclick="event.stopPropagation();">
-                <button onclick="openCalibrationReport('NIK-FM2-TI')" class="flex-1 py-2 text-xs font-semibold border border-[var(--color-text-dark)] text-[var(--color-text-dark)] rounded-xl uppercase tracking-wider hover:bg-black/5 dark:hover:bg-white/5 transition-all">Inspect Spec</button>
-                <button onclick="addToCart('NIK-FM2-TI', 'Nikon FM2 Titanium', 520.00, 'Honeycomb shutter mechanical SLR.', 'Nikon'); animateAddButton(this)" class="px-4 py-2 text-xs font-semibold bg-black text-white dark:bg-white dark:text-black rounded-xl uppercase tracking-wider hover:opacity-90 transition-opacity">Acquire</button>
+                <button onclick="openCalibrationReport('NIK-FM2-TI')"
+                  class="flex-1 py-2 text-xs font-semibold border border-[var(--color-text-dark)] text-[var(--color-text-dark)] rounded-xl uppercase tracking-wider hover:bg-black/5 dark:hover:bg-white/5 transition-all">Inspect
+                  Spec</button>
+                <button
+                  onclick="addToCart('NIK-FM2-TI', 'Nikon FM2 Titanium', 520.00, 'Honeycomb shutter mechanical SLR.', 'Nikon'); animateAddButton(this)"
+                  class="px-4 py-2 text-xs font-semibold bg-black text-white dark:bg-white dark:text-black rounded-xl uppercase tracking-wider hover:opacity-90 transition-opacity">Acquire</button>
               </div>
             </div>
           </div>
           <!-- Camera 3 -->
-          <div class="group relative flex flex-col justify-between p-4 border rounded-2xl transition-all hover:shadow-lg bg-[var(--color-bg-card)] cursor-pointer" style="border-color: var(--color-border);" onclick="openCalibrationReport('ROL-TLR-28F')">
+          <div
+            class="group relative flex flex-col justify-between p-4 border rounded-2xl transition-all hover:shadow-lg bg-[var(--color-bg-card)] cursor-pointer"
+            style="border-color: var(--color-border);" onclick="openCalibrationReport('ROL-TLR-28F')">
             <div class="w-full h-64 rounded-xl overflow-hidden mb-4 bg-neutral-100 relative viewfinder-frame">
-              <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=600" alt="Rolleiflex 2.8F TLR" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103" />
+              <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=600"
+                alt="Rolleiflex 2.8F TLR"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103" />
               <!-- Viewfinder corners overlay -->
               <div class="viewfinder-corner vf-tl"></div>
               <div class="viewfinder-corner vf-tr"></div>
               <div class="viewfinder-corner vf-bl"></div>
               <div class="viewfinder-corner vf-br"></div>
               <div class="viewfinder-crosshair"></div>
-              <span class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-black text-white dark:bg-white dark:text-black z-10">Mint / Serviced</span>
+              <span
+                class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-black text-white dark:bg-white dark:text-black z-10">Mint
+                / Serviced</span>
             </div>
             <div>
               <div class="flex justify-between items-start mb-2">
                 <div>
-                  <span class="text-[9px] uppercase tracking-wider text-[var(--color-text-muted)] font-mono-log font-bold">1965 • Medium Format</span>
+                  <span
+                    class="text-[9px] uppercase tracking-wider text-[var(--color-text-muted)] font-mono-log font-bold">1965
+                    • Medium Format</span>
                   <h3 class="font-display text-xl tracking-wide uppercase mt-0.5">Rolleiflex 2.8F TLR</h3>
                 </div>
                 <span class="font-bold text-sm text-[var(--color-text-dark)]">$1,850.00</span>
               </div>
               <div class="flex gap-2 mt-4" onclick="event.stopPropagation();">
-                <button onclick="openCalibrationReport('ROL-TLR-28F')" class="flex-1 py-2 text-xs font-semibold border border-[var(--color-text-dark)] text-[var(--color-text-dark)] rounded-xl uppercase tracking-wider hover:bg-black/5 dark:hover:bg-white/5 transition-all">Inspect Spec</button>
-                <button onclick="addToCart('ROL-TLR-28F', 'Rolleiflex 2.8F TLR', 1850.00, 'Twin lens reflex featuring Carl Zeiss optics.', 'Rollei'); animateAddButton(this)" class="px-4 py-2 text-xs font-semibold bg-black text-white dark:bg-white dark:text-black rounded-xl uppercase tracking-wider hover:opacity-90 transition-opacity">Acquire</button>
+                <button onclick="openCalibrationReport('ROL-TLR-28F')"
+                  class="flex-1 py-2 text-xs font-semibold border border-[var(--color-text-dark)] text-[var(--color-text-dark)] rounded-xl uppercase tracking-wider hover:bg-black/5 dark:hover:bg-white/5 transition-all">Inspect
+                  Spec</button>
+                <button
+                  onclick="addToCart('ROL-TLR-28F', 'Rolleiflex 2.8F TLR', 1850.00, 'Twin lens reflex featuring Carl Zeiss optics.', 'Rollei'); animateAddButton(this)"
+                  class="px-4 py-2 text-xs font-semibold bg-black text-white dark:bg-white dark:text-black rounded-xl uppercase tracking-wider hover:opacity-90 transition-opacity">Acquire</button>
               </div>
             </div>
           </div>
@@ -340,94 +401,133 @@
     </section>
 
     <!-- Lens Inventory Showcase -->
-    <section id="lens-inventory" class="p-8 sm:p-12 lg:p-16 border-b transition-colors duration-300" style="border-color: var(--color-border); background-color: var(--color-bg-card);">
+    <section id="lens-inventory" class="p-8 sm:p-12 lg:p-16 border-b transition-colors duration-300"
+      style="border-color: var(--color-border); background-color: var(--color-bg-card);">
       <div class="max-w-7xl mx-auto">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div>
-            <span class="text-xs uppercase font-bold tracking-widest text-amber-600 dark:text-amber-500">Lens Inventory</span>
+            <span class="text-xs uppercase font-bold tracking-widest text-amber-600 dark:text-amber-500">Lens
+              Inventory</span>
             <h2 class="font-display text-4xl sm:text-5xl uppercase mt-2">Calibrated Prime Optics</h2>
           </div>
           <p class="text-xs max-w-sm leading-relaxed mt-4 md:mt-0" style="color: var(--color-text-muted);">
-            Fully serviced vintage primes. Diaphragm blades degreased and focus helicoids re-greased to ultra-smooth standards.
+            Fully serviced vintage primes. Diaphragm blades degreased and focus helicoids re-greased to ultra-smooth
+            standards.
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- Lens 1 -->
-          <div class="group relative flex flex-col justify-between p-4 border rounded-2xl transition-all hover:shadow-lg bg-[var(--color-bg-canvas)] cursor-pointer" style="border-color: var(--color-border);" onclick="openCalibrationReport('ZSS-PL50-14')">
+          <div
+            class="group relative flex flex-col justify-between p-4 border rounded-2xl transition-all hover:shadow-lg bg-[var(--color-bg-canvas)] cursor-pointer"
+            style="border-color: var(--color-border);" onclick="openCalibrationReport('ZSS-PL50-14')">
             <div class="w-full h-64 rounded-xl overflow-hidden mb-4 bg-neutral-100 relative viewfinder-frame">
-              <img src="https://images.unsplash.com/photo-1617005082133-548c4dd27f35?auto=format&fit=crop&q=80&w=500" alt="Carl Zeiss Planar 50mm" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103" />
+              <img src="https://images.unsplash.com/photo-1617005082133-548c4dd27f35?auto=format&fit=crop&q=80&w=500"
+                alt="Carl Zeiss Planar 50mm"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103" />
               <!-- Viewfinder corners overlay -->
               <div class="viewfinder-corner vf-tl"></div>
               <div class="viewfinder-corner vf-tr"></div>
               <div class="viewfinder-corner vf-bl"></div>
               <div class="viewfinder-corner vf-br"></div>
               <div class="viewfinder-crosshair"></div>
-              <span class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-black text-white dark:bg-white dark:text-black z-10">M42 Screw Mount</span>
+              <span
+                class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-black text-white dark:bg-white dark:text-black z-10">M42
+                Screw Mount</span>
             </div>
             <div>
               <div class="flex justify-between items-start mb-2">
                 <div>
-                  <span class="text-[9px] uppercase tracking-wider text-[var(--color-text-muted)] font-mono-log font-bold">2008 • Prime Lens</span>
+                  <span
+                    class="text-[9px] uppercase tracking-wider text-[var(--color-text-muted)] font-mono-log font-bold">2008
+                    • Prime Lens</span>
                   <h3 class="font-display text-xl tracking-wide uppercase mt-0.5">Zeiss Planar 50mm f/1.4 ZS</h3>
                 </div>
                 <span class="font-bold text-sm text-[var(--color-text-dark)]">$450.00</span>
               </div>
               <div class="flex gap-2 mt-4" onclick="event.stopPropagation();">
-                <button onclick="openCalibrationReport('ZSS-PL50-14')" class="flex-1 py-2 text-xs font-semibold border border-[var(--color-text-dark)] text-[var(--color-text-dark)] rounded-xl uppercase tracking-wider hover:bg-black/5 dark:hover:bg-white/5 transition-all">Inspect Spec</button>
-                <button onclick="addToCart('ZSS-PL50-14', 'Zeiss Planar 50mm f/1.4', 450.00, 'Fast portrait prime lens.', 'Zeiss'); animateAddButton(this)" class="px-4 py-2 text-xs font-semibold bg-black text-white dark:bg-white dark:text-black rounded-xl uppercase tracking-wider hover:opacity-90 transition-opacity">Acquire</button>
+                <button onclick="openCalibrationReport('ZSS-PL50-14')"
+                  class="flex-1 py-2 text-xs font-semibold border border-[var(--color-text-dark)] text-[var(--color-text-dark)] rounded-xl uppercase tracking-wider hover:bg-black/5 dark:hover:bg-white/5 transition-all">Inspect
+                  Spec</button>
+                <button
+                  onclick="addToCart('ZSS-PL50-14', 'Zeiss Planar 50mm f/1.4', 450.00, 'Fast portrait prime lens.', 'Zeiss'); animateAddButton(this)"
+                  class="px-4 py-2 text-xs font-semibold bg-black text-white dark:bg-white dark:text-black rounded-xl uppercase tracking-wider hover:opacity-90 transition-opacity">Acquire</button>
               </div>
             </div>
           </div>
           <!-- Lens 2 -->
-          <div class="group relative flex flex-col justify-between p-4 border rounded-2xl transition-all hover:shadow-lg bg-[var(--color-bg-canvas)] cursor-pointer" style="border-color: var(--color-border);" onclick="openCalibrationReport('LCA-SC35-20')">
+          <div
+            class="group relative flex flex-col justify-between p-4 border rounded-2xl transition-all hover:shadow-lg bg-[var(--color-bg-canvas)] cursor-pointer"
+            style="border-color: var(--color-border);" onclick="openCalibrationReport('LCA-SC35-20')">
             <div class="w-full h-64 rounded-xl overflow-hidden mb-4 bg-neutral-100 relative viewfinder-frame">
-              <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&q=80&w=500" alt="Leica Summicron-M 35mm" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103" />
+              <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&q=80&w=500"
+                alt="Leica Summicron-M 35mm"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103" />
               <!-- Viewfinder corners overlay -->
               <div class="viewfinder-corner vf-tl"></div>
               <div class="viewfinder-corner vf-tr"></div>
               <div class="viewfinder-corner vf-bl"></div>
               <div class="viewfinder-corner vf-br"></div>
               <div class="viewfinder-crosshair"></div>
-              <span class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-amber-600 text-white z-10">Leica M Mount</span>
+              <span
+                class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-amber-600 text-white z-10">Leica
+                M Mount</span>
             </div>
             <div>
               <div class="flex justify-between items-start mb-2">
                 <div>
-                  <span class="text-[9px] uppercase tracking-wider text-[var(--color-text-muted)] font-mono-log font-bold">1998 • Prime Lens</span>
+                  <span
+                    class="text-[9px] uppercase tracking-wider text-[var(--color-text-muted)] font-mono-log font-bold">1998
+                    • Prime Lens</span>
                   <h3 class="font-display text-xl tracking-wide uppercase mt-0.5">Summicron-M 35mm f/2 ASPH</h3>
                 </div>
                 <span class="font-bold text-sm text-[var(--color-text-dark)]">$2,150.00</span>
               </div>
               <div class="flex gap-2 mt-4" onclick="event.stopPropagation();">
-                <button onclick="openCalibrationReport('LCA-SC35-20')" class="flex-1 py-2 text-xs font-semibold border border-[var(--color-text-dark)] text-[var(--color-text-dark)] rounded-xl uppercase tracking-wider hover:bg-black/5 dark:hover:bg-white/5 transition-all">Inspect Spec</button>
-                <button onclick="addToCart('LCA-SC35-20', 'Summicron-M 35mm f/2', 2150.00, 'Ultra-sharp M mount street prime.', 'Leica'); animateAddButton(this)" class="px-4 py-2 text-xs font-semibold bg-black text-white dark:bg-white dark:text-black rounded-xl uppercase tracking-wider hover:opacity-90 transition-opacity">Acquire</button>
+                <button onclick="openCalibrationReport('LCA-SC35-20')"
+                  class="flex-1 py-2 text-xs font-semibold border border-[var(--color-text-dark)] text-[var(--color-text-dark)] rounded-xl uppercase tracking-wider hover:bg-black/5 dark:hover:bg-white/5 transition-all">Inspect
+                  Spec</button>
+                <button
+                  onclick="addToCart('LCA-SC35-20', 'Summicron-M 35mm f/2', 2150.00, 'Ultra-sharp M mount street prime.', 'Leica'); animateAddButton(this)"
+                  class="px-4 py-2 text-xs font-semibold bg-black text-white dark:bg-white dark:text-black rounded-xl uppercase tracking-wider hover:opacity-90 transition-opacity">Acquire</button>
               </div>
             </div>
           </div>
           <!-- Lens 3 -->
-          <div class="group relative flex flex-col justify-between p-4 border rounded-2xl transition-all hover:shadow-lg bg-[var(--color-bg-canvas)] cursor-pointer" style="border-color: var(--color-border);" onclick="openCalibrationReport('CAN-FD55-12')">
+          <div
+            class="group relative flex flex-col justify-between p-4 border rounded-2xl transition-all hover:shadow-lg bg-[var(--color-bg-canvas)] cursor-pointer"
+            style="border-color: var(--color-border);" onclick="openCalibrationReport('CAN-FD55-12')">
             <div class="w-full h-64 rounded-xl overflow-hidden mb-4 bg-neutral-100 relative viewfinder-frame">
-              <img src="https://images.unsplash.com/photo-1527443154391-507e9dc6c5cc?auto=format&fit=crop&q=80&w=500" alt="Canon FD 55mm" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103" />
+              <img src="https://images.unsplash.com/photo-1527443154391-507e9dc6c5cc?auto=format&fit=crop&q=80&w=500"
+                alt="Canon FD 55mm"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103" />
               <!-- Viewfinder corners overlay -->
               <div class="viewfinder-corner vf-tl"></div>
               <div class="viewfinder-corner vf-tr"></div>
               <div class="viewfinder-corner vf-bl"></div>
               <div class="viewfinder-corner vf-br"></div>
               <div class="viewfinder-crosshair"></div>
-              <span class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-black text-white dark:bg-white dark:text-black z-10">Canon FD Mount</span>
+              <span
+                class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-black text-white dark:bg-white dark:text-black z-10">Canon
+                FD Mount</span>
             </div>
             <div>
               <div class="flex justify-between items-start mb-2">
                 <div>
-                  <span class="text-[9px] uppercase tracking-wider text-[var(--color-text-muted)] font-mono-log font-bold">1975 • Prime Lens</span>
+                  <span
+                    class="text-[9px] uppercase tracking-wider text-[var(--color-text-muted)] font-mono-log font-bold">1975
+                    • Prime Lens</span>
                   <h3 class="font-display text-xl tracking-wide uppercase mt-0.5">Canon FD 55mm f/1.2 S.S.C.</h3>
                 </div>
                 <span class="font-bold text-sm text-[var(--color-text-dark)]">$380.00</span>
               </div>
               <div class="flex gap-2 mt-4" onclick="event.stopPropagation();">
-                <button onclick="openCalibrationReport('CAN-FD55-12')" class="flex-1 py-2 text-xs font-semibold border border-[var(--color-text-dark)] text-[var(--color-text-dark)] rounded-xl uppercase tracking-wider hover:bg-black/5 dark:hover:bg-white/5 transition-all">Inspect Spec</button>
-                <button onclick="addToCart('CAN-FD55-12', 'Canon FD 55mm f/1.2 S.S.C.', 380.00, 'Fast portrait lens with S.S.C. coating.', 'Canon'); animateAddButton(this)" class="px-4 py-2 text-xs font-semibold bg-black text-white dark:bg-white dark:text-black rounded-xl uppercase tracking-wider hover:opacity-90 transition-opacity">Acquire</button>
+                <button onclick="openCalibrationReport('CAN-FD55-12')"
+                  class="flex-1 py-2 text-xs font-semibold border border-[var(--color-text-dark)] text-[var(--color-text-dark)] rounded-xl uppercase tracking-wider hover:bg-black/5 dark:hover:bg-white/5 transition-all">Inspect
+                  Spec</button>
+                <button
+                  onclick="addToCart('CAN-FD55-12', 'Canon FD 55mm f/1.2 S.S.C.', 380.00, 'Fast portrait lens with S.S.C. coating.', 'Canon'); animateAddButton(this)"
+                  class="px-4 py-2 text-xs font-semibold bg-black text-white dark:bg-white dark:text-black rounded-xl uppercase tracking-wider hover:opacity-90 transition-opacity">Acquire</button>
               </div>
             </div>
           </div>
@@ -436,18 +536,24 @@
     </section>
 
     <!-- Film Fridge Registry: Film stock by expiration date -->
-    <section id="fridge" class="p-8 sm:p-12 lg:p-16 border-b transition-colors duration-300" style="border-color: var(--color-border); background-color: var(--color-bg-canvas);">
+    <section id="fridge" class="p-8 sm:p-12 lg:p-16 border-b transition-colors duration-300"
+      style="border-color: var(--color-border); background-color: var(--color-bg-canvas);">
       <div class="max-w-7xl mx-auto">
         <div class="mb-8 text-center md:text-left">
-          <span class="text-xs uppercase font-bold tracking-widest text-amber-600 dark:text-amber-500">Live Emulsion Stockist</span>
+          <span class="text-xs uppercase font-bold tracking-widest text-amber-600 dark:text-amber-500">Live Emulsion
+            Stockist</span>
           <h2 class="font-display text-3xl uppercase mt-1">Live Film Fridge Master Registry</h2>
-          <p class="text-xs" style="color: var(--color-text-muted);">Real-time monitoring of sensitive emulsions cataloged strictly by vintage expiration date windows.</p>
+          <p class="text-xs" style="color: var(--color-text-muted);">Real-time monitoring of sensitive emulsions
+            cataloged strictly by vintage expiration date windows.</p>
         </div>
-        
-        <div class="w-full overflow-x-auto border rounded-xl" style="border-color: var(--color-border); background-color: var(--color-bg-card);">
+
+        <div class="w-full overflow-x-auto border rounded-xl"
+          style="border-color: var(--color-border); background-color: var(--color-bg-card);">
           <table class="w-full text-left text-xs border-collapse">
             <thead>
-              <tr class="uppercase text-[10px] font-bold border-b tracking-wider bg-neutral-100/50 dark:bg-neutral-800/50" style="border-color: var(--color-border);">
+              <tr
+                class="uppercase text-[10px] font-bold border-b tracking-wider bg-neutral-100/50 dark:bg-neutral-800/50"
+                style="border-color: var(--color-border);">
                 <th class="p-4">Emulsion / Stock Name</th>
                 <th class="p-4">Format</th>
                 <th class="p-4">ISO Index</th>
@@ -462,7 +568,9 @@
                 <td class="p-4">120 Medium</td>
                 <td class="p-4">400 (IR)</td>
                 <td class="p-4 text-red-600 dark:text-red-400 font-bold">Oct 2011 (Expired)</td>
-                <td class="p-4"><span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 text-[10px] font-bold dark:bg-blue-950/40 dark:text-blue-400">Deep Frozen</span></td>
+                <td class="p-4"><span
+                    class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 text-[10px] font-bold dark:bg-blue-950/40 dark:text-blue-400">Deep
+                    Frozen</span></td>
                 <td class="p-4 text-right font-bold">$78.00</td>
               </tr>
               <tr>
@@ -470,7 +578,9 @@
                 <td class="p-4">35mm Roll</td>
                 <td class="p-4">400</td>
                 <td class="p-4">Dec 2027 (Fresh)</td>
-                <td class="p-4"><span class="px-2 py-0.5 rounded bg-green-100 text-green-800 text-[10px] font-bold dark:bg-green-950/40 dark:text-green-400">Cold Stored</span></td>
+                <td class="p-4"><span
+                    class="px-2 py-0.5 rounded bg-green-100 text-green-800 text-[10px] font-bold dark:bg-green-950/40 dark:text-green-400">Cold
+                    Stored</span></td>
                 <td class="p-4 text-right font-bold">$14.50</td>
               </tr>
               <tr>
@@ -478,7 +588,9 @@
                 <td class="p-4">35mm Roll</td>
                 <td class="p-4">3200</td>
                 <td class="p-4">Jul 2028 (Fresh)</td>
-                <td class="p-4"><span class="px-2 py-0.5 rounded bg-green-100 text-green-800 text-[10px] font-bold dark:bg-green-950/40 dark:text-green-400">Cold Stored</span></td>
+                <td class="p-4"><span
+                    class="px-2 py-0.5 rounded bg-green-100 text-green-800 text-[10px] font-bold dark:bg-green-950/40 dark:text-green-400">Cold
+                    Stored</span></td>
                 <td class="p-4 text-right font-bold">$16.20</td>
               </tr>
             </tbody>
@@ -488,57 +600,80 @@
     </section>
 
     <!-- Darkroom Supplies & Chemistry -->
-    <section id="darkroom" class="p-8 sm:p-12 lg:p-16 border-b transition-colors duration-300" style="border-color: var(--color-border); background-color: var(--color-bg-card);">
+    <section id="darkroom" class="p-8 sm:p-12 lg:p-16 border-b transition-colors duration-300"
+      style="border-color: var(--color-border); background-color: var(--color-bg-card);">
       <div class="max-w-7xl mx-auto">
         <div class="mb-10 text-center md:text-left">
-          <span class="text-xs uppercase font-bold tracking-widest text-amber-600 dark:text-amber-500">Darkroom Essentials</span>
+          <span class="text-xs uppercase font-bold tracking-widest text-amber-600 dark:text-amber-500">Darkroom
+            Essentials</span>
           <h2 class="font-display text-3xl uppercase tracking-wide">Chemicals & Darkroom Apparatus</h2>
-          <p class="text-xs mt-1" style="color: var(--color-text-muted);">All chemistry lots are batch-verified internally for stable development curves.</p>
+          <p class="text-xs mt-1" style="color: var(--color-text-muted);">All chemistry lots are batch-verified
+            internally for stable development curves.</p>
         </div>
-        
+
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="p-4 border rounded-xl flex flex-col justify-between" style="border-color: var(--color-border); background-color: var(--color-bg-canvas);">
+          <div class="p-4 border rounded-xl flex flex-col justify-between"
+            style="border-color: var(--color-border); background-color: var(--color-bg-canvas);">
             <div>
               <span class="text-[10px] font-mono tracking-tight text-amber-600 block mb-1">LOT-DEV404</span>
               <h3 class="font-semibold text-sm">Kodak D-76 Developer (1 Gal)</h3>
-              <p class="text-xs mt-1" style="color: var(--color-text-muted);">Classic powder mix offering full shadow detail tracking metrics.</p>
+              <p class="text-xs mt-1" style="color: var(--color-text-muted);">Classic powder mix offering full shadow
+                detail tracking metrics.</p>
             </div>
-            <div class="flex justify-between items-center mt-6 pt-3 border-t" style="border-color: var(--color-border);">
+            <div class="flex justify-between items-center mt-6 pt-3 border-t"
+              style="border-color: var(--color-border);">
               <span class="font-bold text-xs">$12.95</span>
-              <button onclick="addToCart('LOT-DEV404', 'Kodak D-76 Developer (1 Gal)', 12.95, 'Classic powder mix offering full shadow detail tracking metrics.', 'Kodak'); animateAddButton(this)" class="px-3 py-1.5 bg-black text-white dark:bg-white dark:text-black text-[10px] uppercase font-bold rounded-lg hover:opacity-80 transition-opacity">Add</button>
+              <button
+                onclick="addToCart('LOT-DEV404', 'Kodak D-76 Developer (1 Gal)', 12.95, 'Classic powder mix offering full shadow detail tracking metrics.', 'Kodak'); animateAddButton(this)"
+                class="px-3 py-1.5 bg-black text-white dark:bg-white dark:text-black text-[10px] uppercase font-bold rounded-lg hover:opacity-80 transition-opacity">Add</button>
             </div>
           </div>
-          <div class="p-4 border rounded-xl flex flex-col justify-between" style="border-color: var(--color-border); background-color: var(--color-bg-canvas);">
+          <div class="p-4 border rounded-xl flex flex-col justify-between"
+            style="border-color: var(--color-border); background-color: var(--color-bg-canvas);">
             <div>
               <span class="text-[10px] font-mono tracking-tight text-amber-600 block mb-1">LOT-FIX202</span>
               <h3 class="font-semibold text-sm">Ilford Rapid Fixer (500ml)</h3>
-              <p class="text-xs mt-1" style="color: var(--color-text-muted);">Non-hardening liquid concentrate fixer for films and papers.</p>
+              <p class="text-xs mt-1" style="color: var(--color-text-muted);">Non-hardening liquid concentrate fixer for
+                films and papers.</p>
             </div>
-            <div class="flex justify-between items-center mt-6 pt-3 border-t" style="border-color: var(--color-border);">
+            <div class="flex justify-between items-center mt-6 pt-3 border-t"
+              style="border-color: var(--color-border);">
               <span class="font-bold text-xs">$18.50</span>
-              <button onclick="addToCart('LOT-FIX202', 'Ilford Rapid Fixer (500ml)', 18.50, 'Non-hardening liquid concentrate fixer for films and papers.', 'Ilford'); animateAddButton(this)" class="px-3 py-1.5 bg-black text-white dark:bg-white dark:text-black text-[10px] uppercase font-bold rounded-lg hover:opacity-80 transition-opacity">Add</button>
+              <button
+                onclick="addToCart('LOT-FIX202', 'Ilford Rapid Fixer (500ml)', 18.50, 'Non-hardening liquid concentrate fixer for films and papers.', 'Ilford'); animateAddButton(this)"
+                class="px-3 py-1.5 bg-black text-white dark:bg-white dark:text-black text-[10px] uppercase font-bold rounded-lg hover:opacity-80 transition-opacity">Add</button>
             </div>
           </div>
-          <div class="p-4 border rounded-xl flex flex-col justify-between" style="border-color: var(--color-border); background-color: var(--color-bg-canvas);">
+          <div class="p-4 border rounded-xl flex flex-col justify-between"
+            style="border-color: var(--color-border); background-color: var(--color-bg-canvas);">
             <div>
               <span class="text-[10px] font-mono tracking-tight text-amber-600 block mb-1">LOT-TNK991</span>
               <h3 class="font-semibold text-sm">Paterson Universal Film Tank</h3>
-              <p class="text-xs mt-1" style="color: var(--color-text-muted);">Includes two adjustable auto-load reels for 35mm or 120 processing.</p>
+              <p class="text-xs mt-1" style="color: var(--color-text-muted);">Includes two adjustable auto-load reels
+                for 35mm or 120 processing.</p>
             </div>
-            <div class="flex justify-between items-center mt-6 pt-3 border-t" style="border-color: var(--color-border);">
+            <div class="flex justify-between items-center mt-6 pt-3 border-t"
+              style="border-color: var(--color-border);">
               <span class="font-bold text-xs">$42.00</span>
-              <button onclick="addToCart('LOT-TNK991', 'Paterson Universal Film Tank', 42.00, 'Includes two adjustable auto-load reels for 35mm or 120 processing.', 'Paterson'); animateAddButton(this)" class="px-3 py-1.5 bg-black text-white dark:bg-white dark:text-black text-[10px] uppercase font-bold rounded-lg hover:opacity-80 transition-opacity">Add</button>
+              <button
+                onclick="addToCart('LOT-TNK991', 'Paterson Universal Film Tank', 42.00, 'Includes two adjustable auto-load reels for 35mm or 120 processing.', 'Paterson'); animateAddButton(this)"
+                class="px-3 py-1.5 bg-black text-white dark:bg-white dark:text-black text-[10px] uppercase font-bold rounded-lg hover:opacity-80 transition-opacity">Add</button>
             </div>
           </div>
-          <div class="p-4 border rounded-xl flex flex-col justify-between" style="border-color: var(--color-border); background-color: var(--color-bg-canvas);">
+          <div class="p-4 border rounded-xl flex flex-col justify-between"
+            style="border-color: var(--color-border); background-color: var(--color-bg-canvas);">
             <div>
               <span class="text-[10px] font-mono tracking-tight text-amber-600 block mb-1">LOT-PPR771</span>
               <h3 class="font-semibold text-sm">Fomaspeed Variant Glossy (8x10)</h3>
-              <p class="text-xs mt-1" style="color: var(--color-text-muted);">Multi-grade resin coated black and white photographic printing paper.</p>
+              <p class="text-xs mt-1" style="color: var(--color-text-muted);">Multi-grade resin coated black and white
+                photographic printing paper.</p>
             </div>
-            <div class="flex justify-between items-center mt-6 pt-3 border-t" style="border-color: var(--color-border);">
+            <div class="flex justify-between items-center mt-6 pt-3 border-t"
+              style="border-color: var(--color-border);">
               <span class="font-bold text-xs">$35.00</span>
-              <button onclick="addToCart('LOT-PPR771', 'Fomaspeed Variant Glossy (8x10)', 35.00, 'Multi-grade resin coated black and white photographic printing paper.', 'Foma'); animateAddButton(this)" class="px-3 py-1.5 bg-black text-white dark:bg-white dark:text-black text-[10px] uppercase font-bold rounded-lg hover:opacity-80 transition-opacity">Add</button>
+              <button
+                onclick="addToCart('LOT-PPR771', 'Fomaspeed Variant Glossy (8x10)', 35.00, 'Multi-grade resin coated black and white photographic printing paper.', 'Foma'); animateAddButton(this)"
+                class="px-3 py-1.5 bg-black text-white dark:bg-white dark:text-black text-[10px] uppercase font-bold rounded-lg hover:opacity-80 transition-opacity">Add</button>
             </div>
           </div>
         </div>
@@ -546,24 +681,33 @@
     </section>
 
     <!-- Trade-In Program with Appraisal Form -->
-    <section id="appraisal-desk" class="p-8 sm:p-12 lg:p-16 border-b grid grid-cols-1 lg:grid-cols-12 gap-12 transition-colors duration-300" style="background-color: var(--color-bg-canvas); border-color: var(--color-border);">
+    <section id="appraisal-desk"
+      class="p-8 sm:p-12 lg:p-16 border-b grid grid-cols-1 lg:grid-cols-12 gap-12 transition-colors duration-300"
+      style="background-color: var(--color-bg-canvas); border-color: var(--color-border);">
       <div class="lg:col-span-5">
-        <span class="text-xs uppercase font-bold tracking-widest text-amber-600 dark:text-amber-500">Physical Trade-In Protocol</span>
+        <span class="text-xs uppercase font-bold tracking-widest text-amber-600 dark:text-amber-500">Physical Trade-In
+          Protocol</span>
         <h2 class="font-display text-4xl uppercase mt-2 mb-4">Instant Appraisal Evaluation Engine</h2>
         <p class="text-xs leading-relaxed mb-6" style="color: var(--color-text-muted);">
-          Ready to part with your heirloom cameras or upgrade your lenses? Supply the structural parameters via our instant appraisal portal interface. Our team will verify your metrics live upon target delivery tracking.
+          Ready to part with your heirloom cameras or upgrade your lenses? Supply the structural parameters via our
+          instant appraisal portal interface. Our team will verify your metrics live upon target delivery tracking.
         </p>
-        <div class="p-4 border rounded-xl bg-[var(--color-bg-card)] border-dashed" style="border-color: var(--color-border);">
+        <div class="p-4 border rounded-xl bg-[var(--color-bg-card)] border-dashed"
+          style="border-color: var(--color-border);">
           <h4 class="font-display uppercase text-sm mb-1">Guaranteed Matrix Range</h4>
-          <p class="text-[11px]" style="color: var(--color-text-muted);">Approved submissions receive an explicit, locked payout option valid for 14 operational days.</p>
+          <p class="text-[11px]" style="color: var(--color-text-muted);">Approved submissions receive an explicit,
+            locked payout option valid for 14 operational days.</p>
         </div>
       </div>
-      
+
       <div class="lg:col-span-7">
-        <form class="grid grid-cols-1 sm:grid-cols-2 gap-4" onsubmit="event.preventDefault(); alert('Evaluation submitted. Expected validation quote target window: 4 hours.');">
+        <form class="grid grid-cols-1 sm:grid-cols-2 gap-4"
+          onsubmit="event.preventDefault(); alert('Evaluation submitted. Expected validation quote target window: 4 hours.');">
           <div>
             <label class="block text-[10px] uppercase font-bold mb-2 tracking-wide">Brand Manufacture</label>
-            <select class="w-full p-3 bg-[var(--color-bg-card)] border rounded text-xs outline-none focus:border-black dark:focus:border-white" style="border-color: var(--color-border); color: var(--color-text-dark);">
+            <select
+              class="w-full p-3 bg-[var(--color-bg-card)] border rounded text-xs outline-none focus:border-black dark:focus:border-white"
+              style="border-color: var(--color-border); color: var(--color-text-dark);">
               <option>Leica / Minolta</option>
               <option>Hasselblad System</option>
               <option>Canon / Nikon SLR</option>
@@ -572,11 +716,16 @@
           </div>
           <div>
             <label class="block text-[10px] uppercase font-bold mb-2 tracking-wide">Model Designation</label>
-            <input type="text" placeholder="e.g. Rangefinder M6" required class="w-full p-3 bg-[var(--color-bg-card)] border rounded text-xs outline-none focus:border-black dark:focus:border-white" style="border-color: var(--color-border); color: var(--color-text-dark);" />
+            <input type="text" placeholder="e.g. Rangefinder M6" required
+              class="w-full p-3 bg-[var(--color-bg-card)] border rounded text-xs outline-none focus:border-black dark:focus:border-white"
+              style="border-color: var(--color-border); color: var(--color-text-dark);" />
           </div>
           <div class="sm:col-span-2">
-            <label class="block text-[10px] uppercase font-bold mb-2 tracking-wide">Optical / Mechanical Condition Profile</label>
-            <select class="w-full p-3 bg-[var(--color-bg-card)] border rounded text-xs outline-none focus:border-black dark:focus:border-white" style="border-color: var(--color-border); color: var(--color-text-dark);">
+            <label class="block text-[10px] uppercase font-bold mb-2 tracking-wide">Optical / Mechanical Condition
+              Profile</label>
+            <select
+              class="w-full p-3 bg-[var(--color-bg-card)] border rounded text-xs outline-none focus:border-black dark:focus:border-white"
+              style="border-color: var(--color-border); color: var(--color-text-dark);">
               <option>Mint (Flawless, fully operational mechanics)</option>
               <option>Excellent++ (Minor brassing exterior surfaces)</option>
               <option>Tested / User (Operational, requires seal rebuilds)</option>
@@ -584,11 +733,16 @@
             </select>
           </div>
           <div class="sm:col-span-2">
-            <label class="block text-[10px] uppercase font-bold mb-2 tracking-wide">Detailed Structural Defects / History</label>
-            <textarea rows="3" placeholder="Please outline any fungus, dust element parameters, or lens scratches..." class="w-full p-3 bg-[var(--color-bg-card)] border rounded text-xs outline-none focus:border-black dark:focus:border-white resize-none" style="border-color: var(--color-border); color: var(--color-text-dark);"></textarea>
+            <label class="block text-[10px] uppercase font-bold mb-2 tracking-wide">Detailed Structural Defects /
+              History</label>
+            <textarea rows="3" placeholder="Please outline any fungus, dust element parameters, or lens scratches..."
+              class="w-full p-3 bg-[var(--color-bg-card)] border rounded text-xs outline-none focus:border-black dark:focus:border-white resize-none"
+              style="border-color: var(--color-border); color: var(--color-text-dark);"></textarea>
           </div>
           <div class="sm:col-span-2 mt-2">
-            <button type="submit" class="w-full py-3.5 bg-black text-white dark:bg-white dark:text-black font-semibold text-xs tracking-wider uppercase rounded hover:opacity-90 active:scale-98 transition-all">Submit Appraisal Evaluation Profile</button>
+            <button type="submit"
+              class="w-full py-3.5 bg-black text-white dark:bg-white dark:text-black font-semibold text-xs tracking-wider uppercase rounded hover:opacity-90 active:scale-98 transition-all">Submit
+              Appraisal Evaluation Profile</button>
           </div>
         </form>
       </div>
@@ -597,40 +751,65 @@
     <footer class="bg-[var(--color-bg-card)] border-t border-[var(--color-border)] mt-auto transition-colors duration-300">
   <div class="max-w-7xl mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 md:gap-12">
     <!-- Brand Info Section -->
-    <div class="lg:col-span-4 flex flex-col justify-between gap-6">
+    <div class="lg:col-span-4 flex flex-col justify-start gap-5">
       <div>
          <!-- Brand Logo -->
     <a href="./index.html" class="hover:opacity-85 transition-opacity focus:outline-none focus:ring-2 focus:ring-amber-500 rounded px-1 flex items-center gap-3">
-      <img src="./assets/images/brand-logo.png" alt="VINTCAM" class="h-10 w-auto object-contain dark:invert transition-all duration-300" />
+      <img src="./assets/images/brand-logo.png" alt="VINTCAM" class="h-10 w-auto object-contain transition-all duration-300" />
       <span class="font-display text-2xl tracking-widest text-[var(--color-text-dark)] uppercase">VINTCAM</span>
     </a>
-        <p class="text-xs leading-relaxed max-w-sm text-[var(--color-text-muted)]">
+        <p class="text-xs leading-relaxed max-w-sm text-[var(--color-text-muted)] mt-3">
           Preserving design history and optomechanical excellence. We source, meticulously calibrate, and fully warrant master analog gear and cold-stored format emulsions for contemporary artists.
         </p>
       </div>
+      
+      <!-- Contact Info -->
+      <div class="flex flex-col gap-2.5 my-1">
+        <div class="flex items-center gap-2.5 text-xs text-[var(--color-text-muted)]">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-amber-600 dark:text-amber-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          <span>142 Mercer St, Soho, New York, NY 10012</span>
+        </div>
+        <div class="flex items-center gap-2.5 text-xs text-[var(--color-text-muted)]">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-amber-600 dark:text-amber-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          <a href="mailto:registry@vintcam.com" class="hover:text-amber-600 transition-colors">registry@vintcam.com</a>
+        </div>
+        <div class="flex items-center gap-2.5 text-xs text-[var(--color-text-muted)]">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-amber-600 dark:text-amber-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <a href="tel:+12125550199" class="hover:text-amber-600 transition-colors">+1 (212) 555-0199</a>
+        </div>
+      </div>
+
       <!-- Social Media Icons -->
       <div class="flex items-center gap-3">
+        <!-- Instagram -->
         <a href="#" class="social-icon-btn w-9 h-9 rounded-full border border-[var(--color-border)] text-[var(--color-text-muted)]" aria-label="Instagram">
-          <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9a3 3 0 100 6 3 3 0 000-6z" />
-            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 16.5A3 3 0 0019.5 7.5a3 3 0 000 9z" />
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9z" />
+          <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
           </svg>
         </a>
-        <a href="#" class="social-icon-btn w-9 h-9 rounded-full border border-[var(--color-border)] text-[var(--color-text-muted)]" aria-label="Twitter">
+        <!-- X / Twitter -->
+        <a href="#" class="social-icon-btn w-9 h-9 rounded-full border border-[var(--color-border)] text-[var(--color-text-muted)]" aria-label="X / Twitter">
           <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
             <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
           </svg>
         </a>
+        <!-- YouTube -->
         <a href="#" class="social-icon-btn w-9 h-9 rounded-full border border-[var(--color-border)] text-[var(--color-text-muted)]" aria-label="YouTube">
-          <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M14.75 9l-3.5 2.25V9l3.5 2.25z" />
-            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
           </svg>
         </a>
+        <!-- Pinterest -->
         <a href="#" class="social-icon-btn w-9 h-9 rounded-full border border-[var(--color-border)] text-[var(--color-text-muted)]" aria-label="Pinterest">
-          <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 2a10 10 0 1010 10A10 10 0 0012 2zm1.2 13.6c-.6.6-1.5.9-2.4.9s-1.8-.3-2.4-.9c-.6-.6-.9-1.5-.9-2.4h1.5c0 .6.2 1 .5 1.3.3.3.7.5 1.3.5s1-.2 1.3-.5c.3-.3.5-.7.5-1.3v-3.5h1.5v3.5c0 1-.3 1.8-.9 2.4z" />
+          <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/>
           </svg>
         </a>
       </div>
@@ -666,8 +845,8 @@
         Get instant notifications directly to your workbench when cold-stored format stock drops or rare master cameras enter our NYC vault.
       </p>
       <form class="flex gap-2" onsubmit="event.preventDefault(); alert('Subscribed to the inner circle dispatch successfully!');">
-        <input type="email" placeholder="Your operating email" required class="flex-1 px-4 py-3 bg-[var(--color-bg-canvas)] border border-[var(--color-border)] rounded-xl text-xs outline-none focus:border-[var(--color-text-dark)] transition-colors text-[var(--color-text-dark)]" />
-        <button type="submit" class="px-5 py-3 bg-[var(--color-text-dark)] text-[var(--color-bg-canvas)] text-xs font-bold uppercase tracking-wider rounded-xl hover:opacity-90 transition-all">Subscribe</button>
+        <input type="email" placeholder="Your operating email" required class="flex-1 px-4 py-3 bg-[var(--color-bg-canvas)] border border-[var(--color-border)] rounded-md text-xs outline-none focus:border-[var(--color-text-dark)] transition-colors text-[var(--color-text-dark)]" />
+        <button type="submit" class="px-5 py-3 bg-[var(--color-text-dark)] text-[var(--color-bg-canvas)] text-xs font-bold uppercase tracking-wider rounded-md hover:opacity-90 transition-all">Subscribe</button>
       </form>
     </div>
   </div>
@@ -684,4 +863,5 @@
 
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>
