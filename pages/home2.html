@@ -28,7 +28,7 @@
     <!-- Desktop Navigation Links -->
     <nav class="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wide" id="desktop-nav">
       <a href="../index.html" class="nav-link relative py-1">Home</a>
-      <a href="./home2.html" class="nav-link relative py-1">Store</a>
+      <a href="./home2.html" class="nav-link relative py-1">Home 2</a>
       <a href="./services-products.html" class="nav-link relative py-1">Catalog</a>
       <a href="./about.html" class="nav-link relative py-1">About</a>
       <a href="./blog.html" class="nav-link relative py-1">Blog</a>
@@ -58,9 +58,7 @@
  
       <!-- RTL Layout Switcher Button -->
       <button onclick="toggleRTL()" class="rtl-btn p-2 rounded-full hover:bg-[var(--color-bg-card)] border border-transparent hover:border-[var(--color-border)] transition-all relative group flex items-center justify-center" aria-label="Toggle layout direction">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[var(--color-text-dark)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M3 10h18M3 15h12M3 20h18" />
-        </svg>
+        <span class="text-[10px] font-bold tracking-wider leading-none text-[var(--color-text-dark)] px-0.5">RTL</span>
       </button>
  
       <!-- Hamburger Menu Button (Mobile) -->
@@ -109,7 +107,7 @@
           </a>
           <a href="./home2.html" onclick="toggleMobileMenu()" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
             <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">02.</span>
-            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Store</span>
+            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Home 2</span>
           </a>
           <a href="./services-products.html" onclick="toggleMobileMenu()" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
             <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">03.</span>
@@ -195,311 +193,1013 @@
 
     <section class="p-8 sm:p-12 lg:p-16 border-b grid grid-cols-1 lg:grid-cols-12 gap-8 items-center" style="background-color: var(--color-bg-card); border-color: var(--color-border);">
       <div class="lg:col-span-7">
-        <span class="text-xs uppercase font-bold tracking-widest text-amber-600 px-2 py-1 rounded bg-amber-500/10">Niche Operational Depot</span>
-        <h1 class="font-display text-4xl sm:text-5xl md:text-6xl uppercase tracking-wide leading-none mt-4 mb-6">
-          The Cold-Stored <br>Film Inventory & Appraisal Depot
+        <span class="text-xs uppercase font-bold tracking-widest text-amber-600 px-2 py-1 rounded bg-amber-500/10">Niche Operational Depot</span>        <h1 class="font-display text-4xl sm:text-5xl md:text-6xl uppercase tracking-wide leading-none mt-4 mb-6">
+          The Optomechanical <br>Diagnostics & Calibration Depot
         </h1>
         <p class="text-sm max-w-xl leading-relaxed mb-8" style="color: var(--color-text-muted);">
-          Welcome to the operational core. This dashboard handles professional batch lot monitoring, deep sub-zero emulation logs, and live physical gear intake evaluation protocols.
+          Welcome to the operational core. This dashboard handles live shutter timing accuracy tests, dynamic oscilloscope readings, and precision analog gear calibrations.
         </p>
         <div class="flex flex-wrap gap-4">
-          <a href="#fridge" class="px-6 py-3 bg-amber-600 text-white font-semibold text-xs tracking-wider uppercase rounded hover:bg-amber-700 transition-colors">Access Film Vault</a>
-          <a href="#appraisal-desk" class="px-6 py-3 border font-semibold text-xs tracking-wider uppercase rounded hover:bg-black/5 transition-colors" style="border-color: var(--color-text-dark);">Initialize Trade-In</a>
+          <a href="#calibration-bench" class="px-6 py-3 bg-amber-600 text-white font-semibold text-xs tracking-wider uppercase rounded hover:bg-amber-700 transition-colors">Open Shutter Bench</a>
+          <a href="services-products.html" class="px-6 py-3 border font-semibold text-xs tracking-wider uppercase rounded hover:bg-black/5 transition-colors" style="border-color: var(--color-text-dark); color: var(--color-text-dark);">Access Gear Vault</a>
         </div>
       </div>
       <div class="lg:col-span-5 grid grid-cols-2 gap-4">
         <div class="p-6 border rounded-2xl text-center" style="border-color: var(--color-border);">
-          <span class="font-display text-3xl block text-amber-600">-18°C</span>
-          <span class="text-[10px] uppercase font-bold tracking-wider" style="color: var(--color-text-muted);">Vault Temperature</span>
+          <span class="font-display text-3xl block text-amber-600">1/4000s</span>
+          <span class="text-[10px] uppercase font-bold tracking-wider" style="color: var(--color-text-muted);">Max Bench Precision</span>
         </div>
         <div class="p-6 border rounded-2xl text-center" style="border-color: var(--color-border);">
-          <span class="font-display text-3xl block">1,840</span>
-          <span class="text-[10px] uppercase font-bold tracking-wider" style="color: var(--color-text-muted);">Tested Framework Batches</span>
+          <span class="font-display text-3xl block">0.02ms</span>
+          <span class="text-[10px] uppercase font-bold tracking-wider" style="color: var(--color-text-muted);">Optical Tolerance Limit</span>
         </div>
       </div>
     </section>
 
-    <section id="fridge" class="p-8 sm:p-12 lg:p-16 border-b" style="border-color: var(--color-border);">
-      <div class="mb-8">
-        <h2 class="font-display text-3xl uppercase">Live Film Fridge Master Registry</h2>
-        <p class="text-xs" style="color: var(--color-text-muted);">Real-time monitoring of sensitive emulsions cataloged strictly by vintage expiration date windows.</p>
-      </div>
-      
-      <div class="w-full overflow-x-auto border rounded-xl" style="border-color: var(--color-border); background-color: var(--color-bg-card);">
-        <table class="w-full text-left text-xs border-collapse">
-          <thead>
-            <tr class="uppercase text-[10px] font-bold border-b tracking-wider bg-neutral-100/50 dark:bg-neutral-800/50" style="border-color: var(--color-border);">
-              <th class="p-4">Emulsion / Stock Name</th>
-              <th class="p-4">Format</th>
-              <th class="p-4">ISO Index</th>
-              <th class="p-4">Batch Expiration</th>
-              <th class="p-4">Storage State</th>
-              <th class="p-4 text-right">Unit Pricing</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y" style="border-color: var(--color-border);">
-            <tr>
-              <td class="p-4 font-semibold">Kodak Aerochrome III (Rare)</td>
-              <td class="p-4">120 Medium</td>
-              <td class="p-4">400 (IR)</td>
-              <td class="p-4 text-red-600 dark:text-red-400 font-bold">Oct 2011 (Expired)</td>
-              <td class="p-4"><span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 text-[10px] font-bold">Deep Frozen</span></td>
-              <td class="p-4 text-right font-bold">$78.00</td>
-            </tr>
-            <tr>
-              <td class="p-4 font-semibold">Fujifilm Superia X-TRA</td>
-              <td class="p-4">35mm Roll</td>
-              <td class="p-4">400</td>
-              <td class="p-4">Dec 2027 (Fresh)</td>
-              <td class="p-4"><span class="px-2 py-0.5 rounded bg-green-100 text-green-800 text-[10px] font-bold">Cold Stored</span></td>
-              <td class="p-4 text-right font-bold">$14.50</td>
-            </tr>
-            <tr>
-              <td class="p-4 font-semibold">Ilford Delta 3200 Professional</td>
-              <td class="p-4">35mm Roll</td>
-              <td class="p-4">3200</td>
-              <td class="p-4">Jul 2028 (Fresh)</td>
-              <td class="p-4"><span class="px-2 py-0.5 rounded bg-green-100 text-green-800 text-[10px] font-bold">Cold Stored</span></td>
-              <td class="p-4 text-right font-bold">$16.20</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- Restored Film Cameras Showcase -->
-    <section id="restored-cameras" class="p-8 sm:p-12 lg:p-16 border-b transition-colors duration-300" style="border-color: var(--color-border); background-color: var(--color-bg-card);">
+    <!-- Interactive Shutter timing Calibration Bench (Unique Section for home2.html) -->
+    <section id="calibration-bench" class="p-8 sm:p-12 lg:p-16 border-b transition-colors duration-300" style="border-color: var(--color-border); background-color: var(--color-bg-canvas);">
       <div class="max-w-7xl mx-auto">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div>
-            <span class="text-xs uppercase font-bold tracking-widest text-amber-600 dark:text-amber-500">Restored Film Cameras</span>
-            <h2 class="font-display text-4xl sm:text-5xl uppercase mt-2">Certified Analog Bodies</h2>
+            <span class="text-xs uppercase font-bold tracking-widest text-amber-600 dark:text-amber-500">Optomechanical Diagnostics</span>
+            <h2 class="font-display text-4xl sm:text-5xl uppercase mt-2">Shutter Timing Calibration Bench</h2>
           </div>
           <p class="text-xs max-w-sm leading-relaxed mt-4 md:mt-0" style="color: var(--color-text-muted);">
-            Each restored analog body is completely dismantled, cleaned, calibrated, and carries a 6-month warranty.
+            Simulate testing shutter timing accuracy on master vintage analog camera systems from our NYC calibration lab.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Camera 1 -->
-          <div class="group relative flex flex-col justify-between p-4 border rounded-2xl transition-all hover:shadow-lg bg-[var(--color-bg-canvas)]" style="border-color: var(--color-border);">
-            <div class="w-full h-64 rounded-xl overflow-hidden mb-4 bg-neutral-100 relative">
-              <img src="https://images.unsplash.com/photo-1560264245-1dbfb9782b8b?auto=format&fit=crop&q=80&w=600" alt="Leica M6 Rangefinder" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103" />
-              <span class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-black text-white dark:bg-white dark:text-black">Mint / Calibrated</span>
-            </div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          <!-- Control Panel -->
+          <div class="lg:col-span-5 p-6 border rounded-2xl flex flex-col justify-between" style="background-color: var(--color-bg-card); border-color: var(--color-border);">
             <div>
-              <div class="flex justify-between items-start mb-2">
-                <h3 class="font-display text-xl tracking-wide uppercase text-[var(--color-text-dark)]">Leica M6 Titanium</h3>
-                <span class="font-bold text-sm text-[var(--color-text-dark)]">$3,100.00</span>
+              <h3 class="font-display text-xl uppercase tracking-wider mb-4 pb-2 border-b text-[var(--color-text-dark)]" style="border-color: var(--color-border);">Bench Control Panel</h3>
+              
+              <div class="mb-6">
+                <label class="block text-[10px] uppercase font-bold mb-2 tracking-wider text-[var(--color-text-muted)]">Select Camera System</label>
+                <select id="bench-camera" class="w-full p-3 bg-[var(--color-bg-canvas)] border rounded-xl text-xs outline-none focus:border-[var(--color-text-dark)] cursor-pointer text-[var(--color-text-dark)]" style="border-color: var(--color-border);" onchange="updateBenchSpecs()">
+                  <option value="LCA-M6-TI">Leica M6 Titanium</option>
+                  <option value="NIK-FM2-TI">Nikon FM2 Titanium</option>
+                  <option value="HAS-500CM">Hasselblad 500C/M Planar 80mm</option>
+                  <option value="LCA-M4-CH">Leica M4 Chrome Chassis</option>
+                  <option value="NIK-F3-HP">Nikon F3 HP SLR Body</option>
+                  <option value="ROL-TLR-28F">Rolleiflex 2.8F TLR</option>
+                </select>
               </div>
-              <p class="text-xs mb-4" style="color: var(--color-text-muted);">Titanium finish edition. Internal light meter fully balanced to modern 1.5v battery parameters.</p>
-              <button onclick="addToCart('LCA-M6-TI', 'Leica M6 Titanium', 3100.00, 'Titanium finish mechanical rangefinder.', 'Leica'); animateAddButton(this)" class="w-full py-2.5 text-xs font-semibold bg-black text-white dark:bg-white dark:text-black rounded-xl uppercase tracking-wider hover:opacity-90 transition-opacity">Acquire Model</button>
+
+              <div class="mb-8">
+                <label class="block text-[10px] uppercase font-bold mb-2 tracking-wider text-[var(--color-text-muted)]">Set Target Shutter Speed</label>
+                <div class="grid grid-cols-3 gap-2" id="bench-speeds-container">
+                  <!-- Dynamically populated based on chosen camera -->
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <button onclick="runBenchDiagnostic()" id="bench-trigger-btn" class="w-full py-4 bg-amber-600 text-white font-bold text-xs tracking-wider uppercase rounded-xl hover:bg-amber-700 active:scale-98 transition-all flex items-center justify-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse inline-block mr-1"></span>
+                Fire Calibration Cycle
+              </button>
             </div>
           </div>
-          <!-- Camera 2 -->
-          <div class="group relative flex flex-col justify-between p-4 border rounded-2xl transition-all hover:shadow-lg bg-[var(--color-bg-canvas)]" style="border-color: var(--color-border);">
-            <div class="w-full h-64 rounded-xl overflow-hidden mb-4 bg-neutral-100 relative">
-              <img src="https://images.unsplash.com/photo-1495707902641-75cac588d2e9?auto=format&fit=crop&q=80&w=600" alt="Nikon FM2 SLR" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103" />
-              <span class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-amber-600 text-white">Excellent++ Grade</span>
+
+          <!-- Oscilloscope & Stats -->
+          <div class="lg:col-span-7 p-6 border rounded-2xl flex flex-col justify-between bg-stone-950 text-emerald-400 border-stone-800 relative overflow-hidden min-h-[420px]">
+            <div class="absolute inset-0 bg-radial-grid opacity-[0.03] pointer-events-none"></div>
+            
+            <!-- Header -->
+            <div class="flex justify-between items-center pb-2 border-b border-emerald-900/50 z-10">
+              <span class="font-mono text-[10px] uppercase font-bold tracking-wider">✦ Live Oscilloscope Output</span>
+              <span class="font-mono text-[9px] text-emerald-500" id="bench-status-badge">Standby // System Ready</span>
             </div>
-            <div>
-              <div class="flex justify-between items-start mb-2">
-                <h3 class="font-display text-xl tracking-wide uppercase text-[var(--color-text-dark)]">Nikon FM2 Titanium</h3>
-                <span class="font-bold text-sm text-[var(--color-text-dark)]">$520.00</span>
+
+            <!-- Oscilloscope Waveform Display -->
+            <div class="h-44 my-4 border border-emerald-950 bg-black/60 rounded-xl relative flex items-center justify-center overflow-hidden z-10">
+              <!-- Waveform SVG -->
+              <svg class="w-full h-full" id="oscilloscope-svg" style="width: 100%; height: 100%;">
+                <!-- Grid Lines -->
+                <defs>
+                  <pattern id="oscilloscope-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+                    <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(16, 185, 129, 0.07)" stroke-width="1"/>
+                  </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#oscilloscope-grid)" />
+                <line x1="0" y1="50%" x2="100%" y2="50%" stroke="rgba(16, 185, 129, 0.15)" stroke-width="1.5" />
+                <!-- Pulse Wave Path -->
+                <path id="pulse-path" d="M 0,88 L 400,88" stroke="#10b981" stroke-width="2.5" fill="none" />
+              </svg>
+              <div id="bench-scanline" class="absolute top-0 bottom-0 left-0 w-[2px] bg-emerald-400 shadow-[0_0_10px_#10b981] opacity-0 pointer-events-none"></div>
+            </div>
+
+            <!-- Data Readout Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 bg-black/40 border border-emerald-950 rounded-xl z-10 font-mono text-[11px]">
+              <div>
+                <span class="block text-[8px] uppercase text-emerald-600 font-bold mb-0.5">Target Speed</span>
+                <span class="text-md font-bold text-emerald-300" id="bench-readout-target">1/1000s</span>
               </div>
-              <p class="text-xs mb-4" style="color: var(--color-text-muted);">Honeycomb pattern vertical shutter. Calibrated to true 1/4000s speed index tolerance.</p>
-              <button onclick="addToCart('NIK-FM2-TI', 'Nikon FM2 Titanium', 520.00, 'Honeycomb shutter mechanical SLR.', 'Nikon'); animateAddButton(this)" class="w-full py-2.5 text-xs font-semibold bg-black text-white dark:bg-white dark:text-black rounded-xl uppercase tracking-wider hover:opacity-90 transition-opacity">Acquire Model</button>
-            </div>
-          </div>
-          <!-- Camera 3 -->
-          <div class="group relative flex flex-col justify-between p-4 border rounded-2xl transition-all hover:shadow-lg bg-[var(--color-bg-canvas)]" style="border-color: var(--color-border);">
-            <div class="w-full h-64 rounded-xl overflow-hidden mb-4 bg-neutral-100 relative">
-              <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=600" alt="Rolleiflex 2.8F TLR" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103" />
-              <span class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-black text-white dark:bg-white dark:text-black">Mint / Serviced</span>
-            </div>
-            <div>
-              <div class="flex justify-between items-start mb-2">
-                <h3 class="font-display text-xl tracking-wide uppercase text-[var(--color-text-dark)]">Rolleiflex 2.8F TLR</h3>
-                <span class="font-bold text-sm text-[var(--color-text-dark)]">$1,850.00</span>
+              <div>
+                <span class="block text-[8px] uppercase text-emerald-600 font-bold mb-0.5">Measured</span>
+                <span class="text-md font-bold text-emerald-300" id="bench-readout-measured">--</span>
               </div>
-              <p class="text-xs mb-4" style="color: var(--color-text-muted);">Twin-lens reflex classic featuring Carl Zeiss Planar 80mm f/2.8 lens and a bright screen update.</p>
-              <button onclick="addToCart('ROL-TLR-28F', 'Rolleiflex 2.8F TLR', 1850.00, 'Twin lens reflex featuring Carl Zeiss optics.', 'Rollei'); animateAddButton(this)" class="w-full py-2.5 text-xs font-semibold bg-black text-white dark:bg-white dark:text-black rounded-xl uppercase tracking-wider hover:opacity-90 transition-opacity">Acquire Model</button>
+              <div>
+                <span class="block text-[8px] uppercase text-emerald-600 font-bold mb-0.5">Deviation</span>
+                <span class="text-md font-bold text-emerald-300" id="bench-readout-deviation">--</span>
+              </div>
+              <div>
+                <span class="block text-[8px] uppercase text-emerald-600 font-bold mb-0.5">Verdict</span>
+                <span class="text-md font-bold text-emerald-300" id="bench-readout-verdict">--</span>
+              </div>
             </div>
+
+            <!-- History Log Table -->
+            <div class="mt-4 pt-4 border-t border-emerald-900/50 z-10">
+              <span class="font-mono text-[9px] uppercase font-bold tracking-wider text-emerald-500 block mb-2">✦ Calibration Run Log</span>
+              <div class="max-h-[90px] overflow-y-auto pr-1">
+                <table class="w-full text-left text-[10px] font-mono text-emerald-500/80">
+                  <thead>
+                    <tr class="border-b border-emerald-950 uppercase text-[8px]">
+                      <th class="pb-1">Camera</th>
+                      <th class="pb-1 text-center">Target</th>
+                      <th class="pb-1 text-center">Actual</th>
+                      <th class="pb-1 text-center">Dev</th>
+                      <th class="pb-1 text-right">Verdict</th>
+                    </tr>
+                  </thead>
+                  <tbody id="bench-log-rows">
+                    <tr>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Lens Inventory Showcase -->
-    <section id="lens-inventory" class="p-8 sm:p-12 lg:p-16 border-b transition-colors duration-300" style="border-color: var(--color-border); background-color: var(--color-bg-canvas);">
+    <!-- Section 3: Lens Collimation & MTF Bench -->
+    <section id="lens-collimation" class="p-8 sm:p-12 lg:p-16 border-b transition-colors duration-300" style="border-color: var(--color-border); background-color: var(--color-bg-card);">
       <div class="max-w-7xl mx-auto">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div>
-            <span class="text-xs uppercase font-bold tracking-widest text-amber-600 dark:text-amber-500">Lens Inventory</span>
-            <h2 class="font-display text-4xl sm:text-5xl uppercase mt-2">Calibrated Prime Optics</h2>
+            <span class="text-xs uppercase font-bold tracking-widest text-amber-600 dark:text-amber-500">Optical Alignment</span>
+            <h2 class="font-display text-4xl sm:text-5xl uppercase mt-2">Lens Collimation & MTF Bench</h2>
           </div>
           <p class="text-xs max-w-sm leading-relaxed mt-4 md:mt-0" style="color: var(--color-text-muted);">
-            Fully serviced vintage primes. Diaphragm blades degreased and focus helicoids re-greased to ultra-smooth standards.
+            Test and lock optical alignment. Adjust the helicoid slider to align lens elements and maximize MTF resolution curves.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Lens 1 -->
-          <div class="group relative flex flex-col justify-between p-4 border rounded-2xl transition-all hover:shadow-lg bg-[var(--color-bg-card)]" style="border-color: var(--color-border);">
-            <div class="w-full h-64 rounded-xl overflow-hidden mb-4 bg-neutral-100 relative">
-              <img src="https://images.unsplash.com/photo-1617005082133-548c4dd27f35?auto=format&fit=crop&q=80&w=500" alt="Carl Zeiss Planar 50mm" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103" />
-              <span class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-black text-white dark:bg-white dark:text-black">M42 Screw Mount</span>
-            </div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          <!-- Control Panel -->
+          <div class="lg:col-span-5 p-6 border rounded-2xl flex flex-col justify-between" style="background-color: var(--color-bg-canvas); border-color: var(--color-border);">
             <div>
-              <div class="flex justify-between items-start mb-2">
-                <h3 class="font-display text-xl tracking-wide uppercase text-[var(--color-text-dark)]">Zeiss Planar 50mm f/1.4 ZS</h3>
-                <span class="font-bold text-sm text-[var(--color-text-dark)]">$450.00</span>
+              <h3 class="font-display text-xl uppercase tracking-wider mb-4 pb-2 border-b text-[var(--color-text-dark)]" style="border-color: var(--color-border);">Collimator Panel</h3>
+              
+              <div class="mb-6">
+                <label class="block text-[10px] uppercase font-bold mb-2 tracking-wider text-[var(--color-text-muted)]">Select Optical Assembly</label>
+                <select id="collimator-lens" class="w-full p-3 bg-[var(--color-bg-card)] border rounded-xl text-xs outline-none focus:border-[var(--color-text-dark)] cursor-pointer text-[var(--color-text-dark)]" style="border-color: var(--color-border);" onchange="updateLensCollimation()">
+                  <option value="LCA-SC35-20">Leica Summicron-M 35mm f/2 ASPH</option>
+                  <option value="ZSS-PL50-14">Zeiss Planar 50mm f/1.4 ZS</option>
+                  <option value="CAN-FD55-12">Canon FD 55mm f/1.2 S.S.C.</option>
+                </select>
               </div>
-              <p class="text-xs mb-4" style="color: var(--color-text-muted);">Superb portrait resolving power. Smooth helicoid focusing ring with zero play or backlash.</p>
-              <button onclick="addToCart('ZSS-PL50-14', 'Zeiss Planar 50mm f/1.4', 450.00, 'Fast portrait prime lens.', 'Zeiss'); animateAddButton(this)" class="w-full py-2.5 text-xs font-semibold bg-black text-white dark:bg-white dark:text-black rounded-xl uppercase tracking-wider hover:opacity-90 transition-opacity">Acquire Lens</button>
+
+              <div class="mb-8">
+                <label class="block text-[10px] uppercase font-bold mb-2 tracking-wider text-[var(--color-text-muted)] flex justify-between">
+                  <span>Helicoid Focus Alignment</span>
+                  <span id="collimator-align-val" class="font-mono text-amber-600 dark:text-amber-500 font-bold font-semibold">30%</span>
+                </label>
+                <input type="range" id="collimator-slider" min="0" max="100" value="30" class="w-full h-1 bg-[var(--color-border)] rounded-lg appearance-none cursor-pointer accent-amber-600" oninput="onCollimatorSliderChange()">
+                <div class="flex justify-between text-[9px] text-[var(--color-text-muted)] mt-1 font-mono">
+                  <span>Inf (0%)</span>
+                  <span>Macro (100%)</span>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <button onclick="lockCollimation()" id="collimator-lock-btn" class="w-full py-4 bg-amber-600 text-white font-bold text-xs tracking-wider uppercase rounded-xl hover:bg-amber-700 active:scale-98 transition-all flex items-center justify-center gap-2">
+                Lock Collimation State
+              </button>
             </div>
           </div>
-          <!-- Lens 2 -->
-          <div class="group relative flex flex-col justify-between p-4 border rounded-2xl transition-all hover:shadow-lg bg-[var(--color-bg-card)]" style="border-color: var(--color-border);">
-            <div class="w-full h-64 rounded-xl overflow-hidden mb-4 bg-neutral-100 relative">
-              <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&q=80&w=500" alt="Leica Summicron-M 35mm" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103" />
-              <span class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-amber-600 text-white">Leica M Mount</span>
+
+          <!-- Laser Bench & MTF Analyzer -->
+          <div class="lg:col-span-7 p-6 border rounded-2xl flex flex-col justify-between bg-stone-950 text-emerald-400 border-stone-800 relative overflow-hidden min-h-[420px]">
+            <div class="absolute inset-0 bg-radial-grid opacity-[0.03] pointer-events-none"></div>
+            
+            <div class="flex justify-between items-center pb-2 border-b border-emerald-900/50 z-10">
+              <span class="font-mono text-[10px] uppercase font-bold tracking-wider">✦ Laser Collimator Monitor</span>
+              <span class="font-mono text-[9px] text-emerald-500" id="collimator-status">Laser Active // Monitoring</span>
             </div>
-            <div>
-              <div class="flex justify-between items-start mb-2">
-                <h3 class="font-display text-xl tracking-wide uppercase text-[var(--color-text-dark)]">Summicron-M 35mm f/2 ASPH</h3>
-                <span class="font-bold text-sm text-[var(--color-text-dark)]">$2,150.00</span>
+
+            <!-- Optical Path Simulation SVG -->
+            <div class="h-40 my-3 border border-emerald-950 bg-black/60 rounded-xl relative flex items-center justify-center overflow-hidden z-10">
+              <svg class="w-full h-full" id="collimator-svg" style="width: 100%; height: 100%;">
+                <rect width="100%" height="100%" fill="url(#oscilloscope-grid)" />
+                <!-- Dynamic Laser Lines -->
+                <path id="laser-ray-1" d="M 0,30 L 150,50 L 300,90" stroke="rgba(239, 68, 68, 0.7)" stroke-width="1.5" fill="none" />
+                <path id="laser-ray-2" d="M 0,90 L 150,90 L 300,90" stroke="rgba(239, 68, 68, 0.7)" stroke-width="1.5" fill="none" />
+                <path id="laser-ray-3" d="M 0,150 L 150,130 L 300,90" stroke="rgba(239, 68, 68, 0.7)" stroke-width="1.5" fill="none" />
+                <!-- Focal plane target -->
+                <line x1="300" y1="20" x2="300" y2="160" stroke="#10b981" stroke-width="2" stroke-dasharray="3 3" />
+                <text x="290" y="15" fill="#10b981" font-size="8" font-family="monospace" text-anchor="end">FOCAL SENSOR</text>
+                <!-- Lens Elements -->
+                <path d="M 140,40 Q 150,90 140,140" fill="rgba(16, 185, 129, 0.1)" stroke="#10b981" stroke-width="1.5" />
+                <path d="M 160,40 Q 150,90 160,140" fill="rgba(16, 185, 129, 0.1)" stroke="#10b981" stroke-width="1.5" />
+              </svg>
+            </div>
+
+            <!-- MTF Response Chart -->
+            <div class="h-32 mb-3 border border-emerald-950 bg-black/60 rounded-xl relative flex items-center justify-center overflow-hidden z-10">
+              <svg class="w-full h-full" id="mtf-svg" style="width: 100%; height: 100%;">
+                <!-- MTF Grid -->
+                <line x1="0" y1="90" x2="100%" y2="90" stroke="rgba(16, 185, 129, 0.15)" stroke-width="1" />
+                <text x="5" y="12" fill="rgba(16, 185, 129, 0.6)" font-size="8" font-family="monospace">MTF Resolution Index</text>
+                <!-- Sagittal MTF line -->
+                <path id="mtf-sagittal" d="M 0,100 Q 150,100 300,100" stroke="#10b981" stroke-width="2.5" fill="none" />
+                <!-- Radial MTF line -->
+                <path id="mtf-radial" d="M 0,100 Q 150,100 300,100" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4 2" fill="none" />
+              </svg>
+            </div>
+
+            <!-- Data Readout Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 bg-black/40 border border-emerald-950 rounded-xl z-10 font-mono text-[11px]">
+              <div>
+                <span class="block text-[8px] uppercase text-emerald-600 font-bold mb-0.5">Focus State</span>
+                <span class="text-md font-bold text-emerald-300" id="collimator-readout-focus">30%</span>
               </div>
-              <p class="text-xs mb-4" style="color: var(--color-text-muted);">Pristine glass, zero haze or micro-scratches. Includes original rectangular metal hood.</p>
-              <button onclick="addToCart('LCA-SC35-20', 'Summicron-M 35mm f/2', 2150.00, 'Ultra-sharp M mount street prime.', 'Leica'); animateAddButton(this)" class="w-full py-2.5 text-xs font-semibold bg-black text-white dark:bg-white dark:text-black rounded-xl uppercase tracking-wider hover:opacity-90 transition-opacity">Acquire Lens</button>
-            </div>
-          </div>
-          <!-- Lens 3 -->
-          <div class="group relative flex flex-col justify-between p-4 border rounded-2xl transition-all hover:shadow-lg bg-[var(--color-bg-card)]" style="border-color: var(--color-border);">
-            <div class="w-full h-64 rounded-xl overflow-hidden mb-4 bg-neutral-100 relative">
-              <img src="https://images.unsplash.com/photo-1527443154391-507e9dc6c5cc?auto=format&fit=crop&q=80&w=500" alt="Canon FD 55mm" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103" />
-              <span class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-black text-white dark:bg-white dark:text-black">Canon FD Mount</span>
-            </div>
-            <div>
-              <div class="flex justify-between items-start mb-2">
-                <h3 class="font-display text-xl tracking-wide uppercase text-[var(--color-text-dark)]">Canon FD 55mm f/1.2 S.S.C.</h3>
-                <span class="font-bold text-sm text-[var(--color-text-dark)]">$380.00</span>
+              <div>
+                <span class="block text-[8px] uppercase text-emerald-600 font-bold mb-0.5">Aberration Index</span>
+                <span class="text-md font-bold text-emerald-300" id="collimator-readout-aberration">High</span>
               </div>
-              <p class="text-xs mb-4" style="color: var(--color-text-muted);">Vintage fast glass. Famous for signature bokeh. Diaphragm blades snappy and bone-dry.</p>
-              <button onclick="addToCart('CAN-FD55-12', 'Canon FD 55mm f/1.2 S.S.C.', 380.00, 'Fast portrait lens with S.S.C. coating.', 'Canon'); animateAddButton(this)" class="w-full py-2.5 text-xs font-semibold bg-black text-white dark:bg-white dark:text-black rounded-xl uppercase tracking-wider hover:opacity-90 transition-opacity">Acquire Lens</button>
+              <div>
+                <span class="block text-[8px] uppercase text-emerald-600 font-bold mb-0.5">Peak MTF</span>
+                <span class="text-md font-bold text-emerald-300" id="collimator-readout-mtf">0.45</span>
+              </div>
+              <div>
+                <span class="block text-[8px] uppercase text-emerald-600 font-bold mb-0.5">Calibration</span>
+                <span class="text-md font-bold text-emerald-300 text-red-500 animate-pulse" id="collimator-readout-verdict">DESYNCED</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Chemicals & Darkroom Apparatus -->
-    <section id="darkroom" class="p-8 sm:p-12 lg:p-16 border-b transition-colors duration-300" style="border-color: var(--color-border); background-color: var(--color-bg-card);">
+    <!-- Section 4: Cold Emulsion Degradation Analytics -->
+    <section id="emulsion-analytics" class="p-8 sm:p-12 lg:p-16 border-b transition-colors duration-300" style="border-color: var(--color-border); background-color: var(--color-bg-canvas);">
       <div class="max-w-7xl mx-auto">
-        <div class="mb-10 text-center md:text-left">
-          <span class="text-xs uppercase font-bold tracking-widest text-amber-600 dark:text-amber-500">Darkroom Essentials</span>
-          <h2 class="font-display text-3xl uppercase tracking-wide">Chemicals & Darkroom Apparatus</h2>
-          <p class="text-xs mt-1" style="color: var(--color-text-muted);">All chemistry lots are batch-verified internally for stable development curves.</p>
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+          <div>
+            <span class="text-xs uppercase font-bold tracking-widest text-amber-600 dark:text-amber-500">Chemical Stability</span>
+            <h2 class="font-display text-4xl sm:text-5xl uppercase mt-2">Cold Emulsion Degradation Analytics</h2>
+          </div>
+          <p class="text-xs max-w-sm leading-relaxed mt-4 md:mt-0" style="color: var(--color-text-muted);">
+            Simulate degradation rates of vintage silver halide emulsions. Adjust chamber temperature and relative humidity to plot decay indexes.
+          </p>
         </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          <!-- Control Panel -->
+          <div class="lg:col-span-5 p-6 border rounded-2xl flex flex-col justify-between" style="background-color: var(--color-bg-card); border-color: var(--color-border);">
+            <div>
+              <h3 class="font-display text-xl uppercase tracking-wider mb-4 pb-2 border-b text-[var(--color-text-dark)]" style="border-color: var(--color-border);">Environmental Chambers</h3>
+              
+              <div class="mb-6">
+                <label class="block text-[10px] uppercase font-bold mb-2 tracking-wider text-[var(--color-text-muted)]">Select Emulsion Batch</label>
+                <select id="chamber-film" class="w-full p-3 bg-[var(--color-bg-canvas)] border rounded-xl text-xs outline-none focus:border-[var(--color-text-dark)] cursor-pointer text-[var(--color-text-dark)]" style="border-color: var(--color-border);" onchange="updateEmulsionDegradation()">
+                  <option value="AEROCHROME">Kodak Aerochrome III (Infrared)</option>
+                  <option value="VELVIA">Fujichrome Velvia 50</option>
+                  <option value="DELTA">Ilford Delta 3200 Professional</option>
+                </select>
+              </div>
+
+              <div class="mb-6">
+                <label class="block text-[10px] uppercase font-bold mb-2 tracking-wider text-[var(--color-text-muted)] flex justify-between">
+                  <span>Chamber Temperature</span>
+                  <span id="chamber-temp-val" class="font-mono text-amber-600 dark:text-amber-500 font-bold">20°C</span>
+                </label>
+                <input type="range" id="chamber-temp-slider" min="-15" max="40" value="20" class="w-full h-1 bg-[var(--color-border)] rounded-lg appearance-none cursor-pointer accent-amber-600" oninput="onChamberParamsChange()">
+                <div class="flex justify-between text-[9px] text-[var(--color-text-muted)] mt-1 font-mono">
+                  <span>Nitrogen Frozen (-15°C)</span>
+                  <span>Ambient (40°C)</span>
+                </div>
+              </div>
+
+              <div class="mb-8">
+                <label class="block text-[10px] uppercase font-bold mb-2 tracking-wider text-[var(--color-text-muted)] flex justify-between">
+                  <span>Chamber Relative Humidity (RH)</span>
+                  <span id="chamber-hum-val" class="font-mono text-amber-600 dark:text-amber-500 font-bold">50%</span>
+                </label>
+                <input type="range" id="chamber-hum-slider" min="5" max="90" value="50" class="w-full h-1 bg-[var(--color-border)] rounded-lg appearance-none cursor-pointer accent-amber-600" oninput="onChamberParamsChange()">
+                <div class="flex justify-between text-[9px] text-[var(--color-text-muted)] mt-1 font-mono">
+                  <span>Dehumidified (5% RH)</span>
+                  <span>Muggy (90% RH)</span>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="p-4 border rounded-xl bg-amber-500/5 border-dashed border-amber-600/30 text-[11px] leading-relaxed text-[var(--color-text-muted)]">
+                <strong class="text-amber-600 dark:text-amber-500 block mb-1">Calibration Notice:</strong>
+                Sub-zero storage slows grain degradation rate up to 98% relative to ambient baseline storage settings.
+              </div>
+            </div>
+          </div>
+
+          <!-- Degradation CRT Monitor -->
+          <div class="lg:col-span-7 p-6 border rounded-2xl flex flex-col justify-between bg-stone-950 text-amber-500 border-stone-800 relative overflow-hidden min-h-[420px]">
+            <div class="absolute inset-0 bg-radial-grid opacity-[0.03] pointer-events-none"></div>
+            
+            <div class="flex justify-between items-center pb-2 border-b border-amber-900/50 z-10">
+              <span class="font-mono text-[10px] uppercase font-bold tracking-wider">✦ Emulsion Decay Spectrum</span>
+              <span class="font-mono text-[9px] text-amber-500" id="chamber-status">Chamber Online</span>
+            </div>
+
+            <!-- Decay Simulation Curve -->
+            <div class="h-44 my-4 border border-amber-950 bg-black/60 rounded-xl relative flex items-center justify-center overflow-hidden z-10">
+              <svg class="w-full h-full" id="degradation-svg" style="width: 100%; height: 100%;">
+                <rect width="100%" height="100%" fill="url(#oscilloscope-grid)" />
+                <line x1="0" y1="10" x2="100%" y2="10" stroke="rgba(245, 158, 11, 0.15)" stroke-width="1" />
+                <text x="5" y="12" fill="rgba(245, 158, 11, 0.6)" font-size="8" font-family="monospace">10-Year Dye Density Curve</text>
+                <!-- Dynamic Decay Curve Path -->
+                <path id="degradation-curve" d="M 0,30 Q 150,50 300,120" stroke="#f59e0b" stroke-width="2.5" fill="none" />
+              </svg>
+            </div>
+
+            <!-- Data Readout Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 bg-black/40 border border-amber-950 rounded-xl z-10 font-mono text-[11px]">
+              <div>
+                <span class="block text-[8px] uppercase text-amber-600 font-bold mb-0.5">Aging Speed Index</span>
+                <span class="text-md font-bold text-amber-300" id="chamber-readout-age">1.5x</span>
+              </div>
+              <div>
+                <span class="block text-[8px] uppercase text-amber-600 font-bold mb-0.5">Base Fog Density</span>
+                <span class="text-md font-bold text-amber-300" id="chamber-readout-fog">0.12 D</span>
+              </div>
+              <div>
+                <span class="block text-[8px] uppercase text-amber-600 font-bold mb-0.5">Silver Grain Halide</span>
+                <span class="text-md font-bold text-amber-300" id="chamber-readout-halide">STABLE</span>
+              </div>
+              <div>
+                <span class="block text-[8px] uppercase text-amber-600 font-bold mb-0.5">Stability Verdict</span>
+                <span class="text-md font-bold text-amber-300 text-green-500 font-semibold" id="chamber-readout-verdict">OPTIMAL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Diagnostic Request & Vault Submission -->
+    <section id="diagnostic-booking" class="p-8 sm:p-12 lg:p-16 border-b transition-colors duration-300" style="border-color: var(--color-border); background-color: var(--color-bg-card);">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+          <div>
+            <span class="text-xs uppercase font-bold tracking-widest text-amber-600 dark:text-amber-500">Service Registration</span>
+            <h2 class="font-display text-4xl sm:text-5xl uppercase mt-2">Diagnostic Request & Vault Submission</h2>
+          </div>
+          <p class="text-xs max-w-sm leading-relaxed mt-4 md:mt-0" style="color: var(--color-text-muted);">
+            Book custom laboratory diagnostics. Check symptoms and estimate calibration costs instantly to generate your physical submission bench docket.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <!-- Submission Form -->
+          <div class="lg:col-span-6 p-6 border rounded-2xl" style="background-color: var(--color-bg-canvas); border-color: var(--color-border);">
+            <h3 class="font-display text-xl uppercase tracking-wider mb-6 pb-2 border-b text-[var(--color-text-dark)]" style="border-color: var(--color-border);">Appraisal Desk Submission Profile</h3>
+            
+            <form id="diagnostic-form" onsubmit="generateBenchDocket(event)">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                <div>
+                  <label class="block text-[10px] uppercase font-bold mb-2 tracking-wider text-[var(--color-text-muted)]">Camera Model</label>
+                  <select id="book-camera-model" class="w-full p-3 bg-[var(--color-bg-card)] border rounded-xl text-xs outline-none focus:border-[var(--color-text-dark)] cursor-pointer text-[var(--color-text-dark)]" style="border-color: var(--color-border);">
+                    <option value="Leica M6">Leica M6 Rangefinder</option>
+                    <option value="Nikon FM2">Nikon FM2 SLR</option>
+                    <option value="Hasselblad 500C/M">Hasselblad 500C/M</option>
+                    <option value="Rolleiflex 2.8F">Rolleiflex 2.8F TLR</option>
+                    <option value="Other">Other Mechanical Classic</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-[10px] uppercase font-bold mb-2 tracking-wider text-[var(--color-text-muted)]">Serial Log / Identifier</label>
+                  <input type="text" id="book-serial" placeholder="e.g. SN-492010" required class="w-full p-3 bg-[var(--color-bg-card)] border rounded-xl text-xs outline-none focus:border-[var(--color-text-dark)] text-[var(--color-text-dark)]" style="border-color: var(--color-border);" />
+                </div>
+              </div>
+
+              <div class="mb-6">
+                <label class="block text-[10px] uppercase font-bold mb-2 tracking-wider text-[var(--color-text-muted)]">Select Target Diagnostic Diagnostics</label>
+                <div class="flex flex-col gap-2.5">
+                  <label class="flex items-center gap-3 p-3 border rounded-xl bg-[var(--color-bg-card)] cursor-pointer hover:bg-black/5 dark:hover:bg-white/5 transition-colors" style="border-color: var(--color-border);">
+                    <input type="checkbox" id="symp-shutter" value="85" class="w-4 h-4 rounded accent-amber-600" onchange="calculateBookingPrice()">
+                    <div class="ml-2">
+                      <span class="block text-xs font-semibold text-[var(--color-text-dark)]">Slow Shutter Speed Calibration (+$85.00)</span>
+                      <span class="block text-[9px] text-[var(--color-text-muted)]">Recalibrate escape mechanisms and gear shafts back to standard tolerances.</span>
+                    </div>
+                  </label>
+                  <label class="flex items-center gap-3 p-3 border rounded-xl bg-[var(--color-bg-card)] cursor-pointer hover:bg-black/5 dark:hover:bg-white/5 transition-colors" style="border-color: var(--color-border);">
+                    <input type="checkbox" id="symp-finder" value="110" class="w-4 h-4 rounded accent-amber-600" onchange="calculateBookingPrice()">
+                    <div class="ml-2">
+                      <span class="block text-xs font-semibold text-[var(--color-text-dark)]">Viewfinder Optical Haze & Fungus Extraction (+$110.00)</span>
+                      <span class="block text-[9px] text-[var(--color-text-muted)]">Ultrasonic cleaning of prism mirrors and beam-splitters.</span>
+                    </div>
+                  </label>
+                  <label class="flex items-center gap-3 p-3 border rounded-xl bg-[var(--color-bg-card)] cursor-pointer hover:bg-black/5 dark:hover:bg-white/5 transition-colors" style="border-color: var(--color-border);">
+                    <input type="checkbox" id="symp-focus" value="75" class="w-4 h-4 rounded accent-amber-600" onchange="calculateBookingPrice()">
+                    <div class="ml-2">
+                      <span class="block text-xs font-semibold text-[var(--color-text-dark)]">Rangefinder Alignment & Sync (+$75.00)</span>
+                      <span class="block text-[9px] text-[var(--color-text-muted)]">Align infinity focus metrics and vertical image split alignment.</span>
+                    </div>
+                  </label>
+                  <label class="flex items-center gap-3 p-3 border rounded-xl bg-[var(--color-bg-card)] cursor-pointer hover:bg-black/5 dark:hover:bg-white/5 transition-colors" style="border-color: var(--color-border);">
+                    <input type="checkbox" id="symp-leaks" value="45" class="w-4 h-4 rounded accent-amber-600" onchange="calculateBookingPrice()">
+                    <div class="ml-2">
+                      <span class="block text-xs font-semibold text-[var(--color-text-dark)]">Chamber Light Seals & Baffle Overhaul (+$45.00)</span>
+                      <span class="block text-[9px] text-[var(--color-text-muted)]">Remove degrading foam and apply premium light-tight neoprene seals.</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Estimated Price Readout -->
+              <div class="flex justify-between items-center p-4 border rounded-xl bg-amber-500/5 mb-6" style="border-color: var(--color-border);">
+                <div>
+                  <span class="block text-[9px] uppercase font-bold text-[var(--color-text-muted)]">Estimated Lab Cost</span>
+                  <span class="text-xs text-[var(--color-text-muted)]">(Base Bench Fee $120.00 Included)</span>
+                </div>
+                <span id="booking-price-readout" class="font-display text-2xl text-amber-600 dark:text-amber-500">$120.00</span>
+              </div>
+
+              <button type="submit" class="w-full py-4 bg-amber-600 text-white font-bold text-xs tracking-wider uppercase rounded-xl hover:bg-amber-700 active:scale-98 transition-all flex items-center justify-center gap-2">
+                Generate Bench Submission Docket &rarr;
+              </button>
+            </form>
+          </div>
+
+          <!-- Bench Docket Preview -->
+          <div class="lg:col-span-6 p-6 border rounded-2xl relative transition-colors duration-300" style="background-color: var(--color-bg-canvas); border-color: var(--color-border);">
+            <h3 class="font-display text-xl uppercase tracking-wider mb-6 pb-2 border-b text-[var(--color-text-dark)]" style="border-color: var(--color-border);">Generated Bench Docket</h3>
+            
+            <div id="docket-empty-state" class="py-24 text-center border-2 border-dashed rounded-xl flex flex-col items-center justify-center px-4" style="border-color: var(--color-border);">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-[var(--color-text-muted)] mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              <p class="text-xs font-semibold text-[var(--color-text-dark)]">No active booking generated</p>
+              <p class="text-[10px] max-w-xs mt-1 text-[var(--color-text-muted)]">Complete the calibration form on the left to output your official, print-ready bench log card.</p>
+            </div>
+
+            <!-- Dynamic Docket Details Card (Hidden by default) -->
+            <div id="docket-active-card" class="hidden p-6 border-2 border-dashed border-neutral-400 dark:border-neutral-700 rounded-xl font-mono text-xs text-[var(--color-text-dark)] bg-amber-50/50 dark:bg-stone-900/40 relative overflow-hidden">
+              <!-- Dotted tear off line -->
+              <div class="absolute top-4 right-4 flex items-center gap-1.5 opacity-60">
+                <span class="text-[9px] uppercase font-bold">Lab tag</span>
+                <span class="w-1.5 h-1.5 rounded-full bg-red-600 animate-pulse"></span>
+              </div>
+              
+              <div class="text-center pb-4 border-b border-dashed border-neutral-300 dark:border-neutral-800 mb-4">
+                <h4 class="font-display text-lg uppercase tracking-widest text-amber-600 dark:text-amber-500">✦ VINTCAM BENCH DOCKET ✦</h4>
+                <p class="text-[9px] text-[var(--color-text-muted)] mt-0.5">Optomechanical Testing & Calibration Division, NYC</p>
+              </div>
+
+              <div class="space-y-2 mb-6">
+                <div class="flex justify-between">
+                  <span class="text-[var(--color-text-muted)]">Docket ID:</span>
+                  <span class="font-bold text-amber-600 dark:text-amber-500" id="doc-id-val">#VN-2026-9284</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-[var(--color-text-muted)]">Assigned System:</span>
+                  <span id="doc-model-val" class="font-bold">Leica M6</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-[var(--color-text-muted)]">Hardware Log SN:</span>
+                  <span id="doc-serial-val" class="font-bold">SN-942048</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-[var(--color-text-muted)]">Submission Date:</span>
+                  <span id="doc-date-val">2026-06-19</span>
+                </div>
+                <div class="border-t border-dashed border-neutral-300 dark:border-neutral-800 my-2 pt-2">
+                  <span class="text-[10px] font-bold uppercase tracking-wider block mb-1 text-[var(--color-text-muted)]">Registered Diagnostics:</span>
+                  <ul id="doc-symptoms-list" class="list-disc pl-4 text-[11px] space-y-1">
+                    <!-- Dynamic Checklist -->
+                  </ul>
+                </div>
+                <div class="flex justify-between border-t border-dashed border-neutral-300 dark:border-neutral-800 pt-2 font-bold text-sm">
+                  <span>Total Due (Bench Locked):</span>
+                  <span id="doc-total-val" class="text-amber-600 dark:text-amber-500">$120.00</span>
+                </div>
+              </div>
+
+              <!-- Barcode Display -->
+              <div class="flex flex-col items-center justify-center p-3 bg-white dark:bg-stone-950 rounded-xl border border-neutral-300 dark:border-neutral-800">
+                <!-- Retro bar block lines using SVG -->
+                <svg id="docket-barcode" class="w-full h-10 px-2" viewBox="0 0 100 40" preserveAspectRatio="none">
+                  <rect x="2" y="5" width="2" height="30" fill="currentColor"/>
+                  <rect x="6" y="5" width="1" height="30" fill="currentColor"/>
+                  <rect x="9" y="5" width="4" height="30" fill="currentColor"/>
+                  <rect x="15" y="5" width="2" height="30" fill="currentColor"/>
+                  <rect x="18" y="5" width="1" height="30" fill="currentColor"/>
+                  <rect x="21" y="5" width="3" height="30" fill="currentColor"/>
+                  <rect x="26" y="5" width="1" height="30" fill="currentColor"/>
+                  <rect x="29" y="5" width="2" height="30" fill="currentColor"/>
+                  <rect x="33" y="5" width="4" height="30" fill="currentColor"/>
+                  <rect x="39" y="5" width="1" height="30" fill="currentColor"/>
+                  <rect x="42" y="5" width="2" height="30" fill="currentColor"/>
+                  <rect x="46" y="5" width="3" height="30" fill="currentColor"/>
+                  <rect x="51" y="5" width="1" height="30" fill="currentColor"/>
+                  <rect x="54" y="5" width="4" height="30" fill="currentColor"/>
+                  <rect x="60" y="5" width="2" height="30" fill="currentColor"/>
+                  <rect x="64" y="5" width="1" height="30" fill="currentColor"/>
+                  <rect x="67" y="5" width="3" height="30" fill="currentColor"/>
+                  <rect x="72" y="5" width="1" height="30" fill="currentColor"/>
+                  <rect x="75" y="5" width="4" height="30" fill="currentColor"/>
+                  <rect x="81" y="5" width="2" height="30" fill="currentColor"/>
+                  <rect x="85" y="5" width="1" height="30" fill="currentColor"/>
+                  <rect x="88" y="5" width="3" height="30" fill="currentColor"/>
+                  <rect x="93" y="5" width="1" height="30" fill="currentColor"/>
+                  <rect x="96" y="5" width="2" height="30" fill="currentColor"/>
+                </svg>
+                <span class="text-[9px] uppercase tracking-widest text-[var(--color-text-muted)] mt-1.5 font-mono" id="doc-barcode-text">CODE-128A // *VN-2026-9284*</span>
+              </div>
+
+              <!-- Print/Download buttons -->
+              <div class="mt-4 flex gap-2">
+                <button onclick="window.print()" class="flex-1 py-2 bg-black text-white dark:bg-white dark:text-black font-semibold text-[10px] uppercase tracking-wider rounded-lg hover:opacity-90 transition-opacity">Print Lab Sheet</button>
+                <button type="button" onclick="resetDocket()" class="px-4 py-2 border border-neutral-300 dark:border-neutral-800 rounded-lg text-[10px] uppercase font-bold hover:bg-black/5 dark:hover:bg-white/5 transition-colors text-[var(--color-text-dark)]">Reset</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Dynamic Calibration Bench Controller
+      const BENCH_SPEEDS = {
+        'LCA-M6-TI': ['1/1000s', '1/500s', '1/250s', '1/125s', '1/60s', '1s'],
+        'NIK-FM2-TI': ['1/4000s', '1/2000s', '1/1000s', '1/500s', '1/125s', '1s'],
+        'HAS-500CM': ['1/500s', '1/250s', '1/125s', '1/60s', '1/30s', '1s'],
+        'LCA-M4-CH': ['1/1000s', '1/500s', '1/250s', '1/125s', '1/60s', '1s'],
+        'NIK-F3-HP': ['1/2000s', '1/1000s', '1/500s', '1/125s', '1/60s', '1s'],
+        'ROL-TLR-28F': ['1/500s', '1/250s', '1/125s', '1/60s', '1/30s', '1s']
+      };
+
+      const BENCH_CAMERAS = {
+        'LCA-M6-TI': 'Leica M6 Titanium',
+        'NIK-FM2-TI': 'Nikon FM2 Titanium',
+        'HAS-500CM': 'Hasselblad 500C/M',
+        'LCA-M4-CH': 'Leica M4 Chrome',
+        'NIK-F3-HP': 'Nikon F3 HP',
+        'ROL-TLR-28F': 'Rolleiflex 2.8F'
+      };
+
+      let activeBenchTarget = '';
+
+      function updateBenchSpecs() {
+        const camSelect = document.getElementById('bench-camera');
+        const container = document.getElementById('bench-speeds-container');
+        if (!camSelect || !container) return;
+
+        const gearId = camSelect.value;
+        const speeds = BENCH_SPEEDS[gearId] || [];
+
+        container.innerHTML = '';
+        speeds.forEach((speed, idx) => {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.textContent = speed;
+          btn.className = `bench-speed-btn py-2 text-xs font-semibold border rounded-lg hover:bg-black/5 dark:hover:bg-white/5 text-[var(--color-text-dark)] transition-all ${idx === 0 ? 'active border-amber-600 bg-amber-500/10' : 'border-[var(--color-border)]'}`;
+          if (idx === 0) {
+            activeBenchTarget = speed;
+          }
+          btn.onclick = () => selectBenchSpeed(btn, speed);
+          container.appendChild(btn);
+        });
         
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="p-4 border rounded-xl flex flex-col justify-between bg-[var(--color-bg-canvas)]" style="border-color: var(--color-border);">
-            <div>
-              <span class="text-[10px] font-mono tracking-tight text-amber-600 block mb-1">LOT-DEV404</span>
-              <h3 class="font-semibold text-sm text-[var(--color-text-dark)]">Kodak D-76 Developer (1 Gal)</h3>
-              <p class="text-xs mt-1" style="color: var(--color-text-muted);">Classic powder mix offering full shadow detail tracking metrics.</p>
-            </div>
-            <div class="flex justify-between items-center mt-6 pt-3 border-t" style="border-color: var(--color-border);">
-              <span class="font-bold text-xs">$12.95</span>
-              <button onclick="addToCart('LOT-DEV404', 'Kodak D-76 Developer (1 Gal)', 12.95, 'Classic powder mix offering full shadow detail tracking metrics.', 'Kodak'); animateAddButton(this)" class="px-3 py-1.5 bg-black text-white dark:bg-white dark:text-black text-[10px] uppercase font-bold rounded-lg hover:opacity-80 transition-opacity">Add</button>
-            </div>
-          </div>
-          <div class="p-4 border rounded-xl flex flex-col justify-between bg-[var(--color-bg-canvas)]" style="border-color: var(--color-border);">
-            <div>
-              <span class="text-[10px] font-mono tracking-tight text-amber-600 block mb-1">LOT-FIX202</span>
-              <h3 class="font-semibold text-sm text-[var(--color-text-dark)]">Ilford Rapid Fixer (500ml)</h3>
-              <p class="text-xs mt-1" style="color: var(--color-text-muted);">Non-hardening liquid concentrate fixer for films and papers.</p>
-            </div>
-            <div class="flex justify-between items-center mt-6 pt-3 border-t" style="border-color: var(--color-border);">
-              <span class="font-bold text-xs">$18.50</span>
-              <button onclick="addToCart('LOT-FIX202', 'Ilford Rapid Fixer (500ml)', 18.50, 'Non-hardening liquid concentrate fixer for films and papers.', 'Ilford'); animateAddButton(this)" class="px-3 py-1.5 bg-black text-white dark:bg-white dark:text-black text-[10px] uppercase font-bold rounded-lg hover:opacity-80 transition-opacity">Add</button>
-            </div>
-          </div>
-          <div class="p-4 border rounded-xl flex flex-col justify-between bg-[var(--color-bg-canvas)]" style="border-color: var(--color-border);">
-            <div>
-              <span class="text-[10px] font-mono tracking-tight text-amber-600 block mb-1">LOT-TNK991</span>
-              <h3 class="font-semibold text-sm text-[var(--color-text-dark)]">Paterson Universal Film Tank</h3>
-              <p class="text-xs mt-1" style="color: var(--color-text-muted);">Includes two adjustable auto-load reels for 35mm or 120 processing.</p>
-            </div>
-            <div class="flex justify-between items-center mt-6 pt-3 border-t" style="border-color: var(--color-border);">
-              <span class="font-bold text-xs">$42.00</span>
-              <button onclick="addToCart('LOT-TNK991', 'Paterson Universal Film Tank', 42.00, 'Includes two adjustable auto-load reels for 35mm or 120 processing.', 'Paterson'); animateAddButton(this)" class="px-3 py-1.5 bg-black text-white dark:bg-white dark:text-black text-[10px] uppercase font-bold rounded-lg hover:opacity-80 transition-opacity">Add</button>
-            </div>
-          </div>
-          <div class="p-4 border rounded-xl flex flex-col justify-between bg-[var(--color-bg-canvas)]" style="border-color: var(--color-border);">
-            <div>
-              <span class="text-[10px] font-mono tracking-tight text-amber-600 block mb-1">LOT-PPR771</span>
-              <h3 class="font-semibold text-sm text-[var(--color-text-dark)]">Fomaspeed Variant Glossy (8x10)</h3>
-              <p class="text-xs mt-1" style="color: var(--color-text-muted);">Multi-grade resin coated black and white photographic printing paper.</p>
-            </div>
-            <div class="flex justify-between items-center mt-6 pt-3 border-t" style="border-color: var(--color-border);">
-              <span class="font-bold text-xs">$35.00</span>
-              <button onclick="addToCart('LOT-PPR771', 'Fomaspeed Variant Glossy (8x10)', 35.00, 'Multi-grade resin coated black and white photographic printing paper.', 'Foma'); animateAddButton(this)" class="px-3 py-1.5 bg-black text-white dark:bg-white dark:text-black text-[10px] uppercase font-bold rounded-lg hover:opacity-80 transition-opacity">Add</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        document.getElementById('bench-readout-target').textContent = activeBenchTarget;
+      }
 
-    <!-- Trade-In Appraisal Form Section -->
-    <section id="appraisal-desk" class="p-8 sm:p-12 lg:p-16 border-b grid grid-cols-1 lg:grid-cols-12 gap-12 transition-colors duration-300" style="background-color: var(--color-bg-canvas); border-color: var(--color-border);">
-      <div class="lg:col-span-5">
-        <span class="text-xs uppercase font-bold tracking-widest text-amber-600 dark:text-amber-500">Physical Trade-In Protocol</span>
-        <h2 class="font-display text-4xl uppercase mt-2 mb-4">Instant Appraisal Evaluation Engine</h2>
-        <p class="text-xs leading-relaxed mb-6" style="color: var(--color-text-muted);">
-          Ready to part with your heirloom cameras or upgrade your lenses? Supply the structural parameters via our instant appraisal portal interface. Our team will verify your metrics live upon target delivery tracking.
-        </p>
-        <div class="p-4 border rounded-xl bg-[var(--color-bg-card)] border-dashed" style="border-color: var(--color-border);">
-          <h4 class="font-display uppercase text-sm mb-1">Guaranteed Matrix Range</h4>
-          <p class="text-[11px]" style="color: var(--color-text-muted);">Approved submissions receive an explicit, locked payout option valid for 14 operational days.</p>
-        </div>
-      </div>
-      
-      <div class="lg:col-span-7">
-        <form class="grid grid-cols-1 sm:grid-cols-2 gap-4" onsubmit="event.preventDefault(); alert('Evaluation submitted. Expected validation quote target window: 4 hours.');">
-          <div>
-            <label class="block text-[10px] uppercase font-bold mb-2 tracking-wide">Brand Manufacture</label>
-            <select class="w-full p-3 bg-[var(--color-bg-card)] border rounded text-xs outline-none focus:border-black dark:focus:border-white" style="border-color: var(--color-border); color: var(--color-text-dark);">
-              <option>Leica / Minolta</option>
-              <option>Hasselblad System</option>
-              <option>Canon / Nikon SLR</option>
-              <option>Other Rare Formats</option>
-            </select>
-          </div>
-          <div>
-            <label class="block text-[10px] uppercase font-bold mb-2 tracking-wide">Model Designation</label>
-            <input type="text" placeholder="e.g. Rangefinder M6" required class="w-full p-3 bg-[var(--color-bg-card)] border rounded text-xs outline-none focus:border-black dark:focus:border-white" style="border-color: var(--color-border); color: var(--color-text-dark);" />
-          </div>
-          <div class="sm:col-span-2">
-            <label class="block text-[10px] uppercase font-bold mb-2 tracking-wide">Optical / Mechanical Condition Profile</label>
-            <select class="w-full p-3 bg-[var(--color-bg-card)] border rounded text-xs outline-none focus:border-black dark:focus:border-white" style="border-color: var(--color-border); color: var(--color-text-dark);">
-              <option>Mint (Flawless, fully operational mechanics)</option>
-              <option>Excellent++ (Minor brassing exterior surfaces)</option>
-              <option>Tested / User (Operational, requires seal rebuilds)</option>
-              <option>Spares / Non-Functional (Seized shutter curtains)</option>
-            </select>
-          </div>
-          <div class="sm:col-span-2">
-            <label class="block text-[10px] uppercase font-bold mb-2 tracking-wide">Detailed Structural Defects / History</label>
-            <textarea rows="3" placeholder="Please outline any fungus, dust element parameters, or lens scratches..." class="w-full p-3 bg-[var(--color-bg-card)] border rounded text-xs outline-none focus:border-black dark:focus:border-white resize-none" style="border-color: var(--color-border); color: var(--color-text-dark);"></textarea>
-          </div>
-          <div class="sm:col-span-2 mt-2">
-            <button type="submit" class="w-full py-3.5 bg-black text-white dark:bg-white dark:text-black font-semibold text-xs tracking-wider uppercase rounded hover:opacity-90 active:scale-98 transition-all">Submit Appraisal Evaluation Profile</button>
-          </div>
-        </form>
-      </div>
-    </section>
+      function selectBenchSpeed(clickedBtn, speed) {
+        document.querySelectorAll('.bench-speed-btn').forEach(btn => {
+          btn.classList.remove('active', 'border-amber-600', 'bg-amber-500/10');
+          btn.classList.add('border-[var(--color-border)]');
+        });
+        clickedBtn.classList.add('active', 'border-amber-600', 'bg-amber-500/10');
+        clickedBtn.classList.remove('border-[var(--color-border)]');
+        activeBenchTarget = speed;
+        document.getElementById('bench-readout-target').textContent = speed;
+      }
 
+      function runBenchDiagnostic() {
+        const triggerBtn = document.getElementById('bench-trigger-btn');
+        const statusBadge = document.getElementById('bench-status-badge');
+        const scanline = document.getElementById('bench-scanline');
+        const pulsePath = document.getElementById('pulse-path');
+        const camSelect = document.getElementById('bench-camera');
+        
+        if (!triggerBtn || triggerBtn.disabled || !activeBenchTarget || !camSelect) return;
+
+        // Set UI loading state
+        triggerBtn.disabled = true;
+        statusBadge.textContent = 'Executing test cycle...';
+        statusBadge.classList.add('text-amber-500', 'animate-pulse');
+        statusBadge.classList.remove('text-emerald-500');
+
+        // Run animation
+        scanline.style.left = '0%';
+        scanline.style.opacity = '1';
+        
+        // Run animation scanline
+        let start = null;
+        const duration = 1200;
+
+        // Calculate a random realistic deviation
+        const deviationVal = (Math.random() * 8 - 4).toFixed(1);
+        const deviationStr = (deviationVal >= 0 ? '+' : '') + deviationVal + '%';
+
+        // Parse speed target values
+        let numericSpeed = 1000;
+        if (activeBenchTarget.endsWith('s')) {
+          const parts = activeBenchTarget.slice(0, -1).split('/');
+          if (parts.length === 2) {
+            numericSpeed = parseInt(parts[1], 10);
+          } else {
+            numericSpeed = parseFloat(parts[0]);
+          }
+        }
+        
+        let measuredStr = '';
+        if (activeBenchTarget === '1s') {
+          const actualVal = (1 + (parseFloat(deviationVal) / 100)).toFixed(2);
+          measuredStr = actualVal + 's';
+        } else {
+          const actualVal = Math.round(numericSpeed / (1 + (parseFloat(deviationVal) / 100)));
+          measuredStr = `1/${actualVal}s`;
+        }
+
+        const verdict = parseFloat(deviationVal).toFixed(1) === '0.0' ? 'PERFECT' : Math.abs(parseFloat(deviationVal)) <= 2.5 ? 'PASS' : 'CAL_WARN';
+
+        // Generate dynamic oscilloscope pulse wave
+        const svgWidth = document.getElementById('oscilloscope-svg').clientWidth || 400;
+        const svgHeight = document.getElementById('oscilloscope-svg').clientHeight || 176;
+        const centerY = svgHeight / 2;
+        const pulseWidth = (numericSpeed === 1) ? 200 : Math.max(10, 150 - Math.log(numericSpeed) * 15);
+        const startX = (svgWidth - pulseWidth) / 2;
+        const endX = startX + pulseWidth;
+        
+        const dPath = `M 0,${centerY} L ${startX},${centerY} L ${startX},${centerY - 50} L ${endX},${centerY - 50} L ${endX},${centerY} L ${svgWidth},${centerY}`;
+        pulsePath.setAttribute('d', `M 0,${centerY} L ${svgWidth},${centerY}`); // reset first
+
+        function step(timestamp) {
+          if (!start) start = timestamp;
+          const progress = timestamp - start;
+          const percent = Math.min(progress / duration, 1);
+          scanline.style.left = (percent * 100) + '%';
+          
+          const currentX = percent * svgWidth;
+          if (currentX >= startX) {
+            pulsePath.setAttribute('d', dPath);
+          }
+
+          if (progress < duration) {
+            window.requestAnimationFrame(step);
+          } else {
+            // Complete
+            scanline.style.opacity = '0';
+            triggerBtn.disabled = false;
+            statusBadge.textContent = 'Diagnostic complete // Idle';
+            statusBadge.classList.remove('text-amber-500', 'animate-pulse');
+            statusBadge.classList.add('text-emerald-500');
+
+            // Update readouts
+            document.getElementById('bench-readout-measured').textContent = measuredStr;
+            document.getElementById('bench-readout-deviation').textContent = deviationStr;
+            
+            const deviationEl = document.getElementById('bench-readout-deviation');
+            deviationEl.className = 'text-md font-bold ' + (deviationVal.startsWith('-') ? 'text-blue-400' : deviationVal === '0.0' ? 'text-emerald-400' : 'text-amber-400');
+            
+            const verdictEl = document.getElementById('bench-readout-verdict');
+            verdictEl.textContent = verdict === 'PERFECT' ? '100% SPEC' : verdict === 'PASS' ? 'SPEC PASS' : 'OUT_TOL WARNING';
+            verdictEl.className = 'text-md font-bold ' + (verdict === 'CAL_WARN' ? 'text-red-500 animate-pulse' : 'text-emerald-400');
+
+            // Add to log
+            const logBody = document.getElementById('bench-log-rows');
+            const emptyRow = logBody.querySelector('td[colspan]');
+            if (emptyRow) {
+              logBody.innerHTML = '';
+            }
+
+            const newRow = document.createElement('tr');
+            newRow.className = 'border-b border-emerald-950/40 hover:bg-emerald-900/10 transition-colors';
+            newRow.innerHTML = `
+              <td class="py-1 text-emerald-300">${BENCH_CAMERAS[camSelect.value]}</td>
+              <td class="py-1 text-center font-bold">${activeBenchTarget}</td>
+              <td class="py-1 text-center text-emerald-300">${measuredStr}</td>
+              <td class="py-1 text-center font-bold ${deviationVal.startsWith('-') ? 'text-blue-400' : deviationVal === '0.0' ? 'text-emerald-400' : 'text-amber-400'}">${deviationStr}</td>
+              <td class="py-1 text-right font-bold ${verdict === 'CAL_WARN' ? 'text-red-400' : 'text-emerald-400'}">${verdict === 'CAL_WARN' ? 'WARN (CLA)' : 'OK'}</td>
+            `;
+            logBody.insertBefore(newRow, logBody.firstChild);
+          }
+        }
+        
+        window.requestAnimationFrame(step);
+      }
+
+      // ==========================================
+      // Section 3: Lens Collimation Controller
+      // ==========================================
+      const LENS_COLLIMATION_BASES = {
+        'LCA-SC35-20': { name: 'Leica Summicron-M 35mm f/2 ASPH', optimal: 50 },
+        'ZSS-PL50-14': { name: 'Zeiss Planar 50mm f/1.4 ZS', optimal: 50 },
+        'CAN-FD55-12': { name: 'Canon FD 55mm f/1.2 S.S.C.', optimal: 50 }
+      };
+
+      function updateLensCollimation() {
+        onCollimatorSliderChange();
+      }
+
+      function onCollimatorSliderChange() {
+        const slider = document.getElementById('collimator-slider');
+        const alignValEl = document.getElementById('collimator-align-val');
+        const lensSelect = document.getElementById('collimator-lens');
+        
+        if (!slider || !alignValEl || !lensSelect) return;
+        
+        const alignment = parseInt(slider.value, 10);
+        alignValEl.textContent = alignment + '%';
+
+        // Update readouts
+        document.getElementById('collimator-readout-focus').textContent = alignment + '%';
+
+        // Calculate optical path laser divergence/convergence
+        // target focal sensor X is at 300, target Y is at 90.
+        // Lens center is at X=150, Y=90.
+        // Input rays start at X=0, Ys=[30, 90, 150].
+        // At alignment = 50%, they intersect exactly at (300, 90).
+        // If alignment != 50%, intersection point X shifts: intersectX = 150 + (alignment * 3)
+        const intersectX = 150 + (alignment * 3);
+        const intersectY = 90;
+        
+        // Ray 1: (0, 30) -> (150, 50) -> focal sensor plane (300, Y_end)
+        // Ray 3: (0, 150) -> (150, 130) -> focal sensor plane (300, Y_end)
+        // Find line equation: Y = m*X + c
+        // Ray 1 passes through (150, 50) and (intersectX, intersectY)
+        // Slope m = (90 - 50) / (intersectX - 150)
+        let ray1_endY = 90;
+        let ray3_endY = 90;
+        if (intersectX !== 150) {
+          const m1 = (intersectY - 50) / (intersectX - 150);
+          ray1_endY = 50 + m1 * (300 - 150);
+          const m3 = (intersectY - 130) / (intersectX - 150);
+          ray3_endY = 130 + m3 * (300 - 150);
+        }
+
+        // Clip end Ys to reasonable visual limits
+        ray1_endY = Math.max(10, Math.min(170, ray1_endY));
+        ray3_endY = Math.max(10, Math.min(170, ray3_endY));
+
+        const ray1 = document.getElementById('laser-ray-1');
+        const ray2 = document.getElementById('laser-ray-2');
+        const ray3 = document.getElementById('laser-ray-3');
+        if (ray1) ray1.setAttribute('d', `M 0,30 L 150,50 L 300,${ray1_endY}`);
+        if (ray2) ray2.setAttribute('d', `M 0,90 L 150,90 L 300,90`);
+        if (ray3) ray3.setAttribute('d', `M 0,150 L 150,130 L 300,${ray3_endY}`);
+
+        // Update MTF resolution paths in #mtf-svg
+        // MTF peaks at alignment = 50%.
+        const error = Math.abs(50 - alignment);
+        const peakMtf = Math.max(0.1, 0.92 - (error / 80)).toFixed(2);
+        
+        // Dynamic curves: draw a bell curve in MTF monitor
+        // Sagittal curve: Starts at 90, falls down to MTF rating
+        const sPath = `M 0,90 Q 150,${10 + (error * 1.5)} 300,90`;
+        const rPath = `M 0,90 Q 150,${20 + (error * 1.3)} 300,90`;
+        
+        const sagittalEl = document.getElementById('mtf-sagittal');
+        const radialEl = document.getElementById('mtf-radial');
+        if (sagittalEl) sagittalEl.setAttribute('d', sPath);
+        if (radialEl) radialEl.setAttribute('d', rPath);
+
+        // Readout numbers
+        const aberrationVal = (error * 0.15).toFixed(2);
+        const aberrationText = error === 0 ? 'Zero (Optimal)' : error <= 8 ? 'Low' : error <= 20 ? 'Medium' : 'High';
+        document.getElementById('collimator-readout-aberration').textContent = aberrationText + ` (${aberrationVal}λ)`;
+        
+        document.getElementById('collimator-readout-mtf').textContent = peakMtf;
+
+        const verdictEl = document.getElementById('collimator-readout-verdict');
+        if (error === 0) {
+          verdictEl.textContent = 'COLLIMATED';
+          verdictEl.className = 'text-md font-bold text-emerald-400';
+        } else if (error <= 5) {
+          verdictEl.textContent = 'SPEC PASS';
+          verdictEl.className = 'text-md font-bold text-emerald-500';
+        } else {
+          verdictEl.textContent = 'ALIGN_ERR';
+          verdictEl.className = 'text-md font-bold text-red-500 animate-pulse';
+        }
+      }
+
+      function lockCollimation() {
+        const slider = document.getElementById('collimator-slider');
+        if (!slider) return;
+        const alignment = parseInt(slider.value, 10);
+        const error = Math.abs(50 - alignment);
+        if (error <= 5) {
+          alert('Collimation Lock Successful! Lens element assembly is within optical spec limits.');
+        } else {
+          alert('Collimation Lock Denied: Lens element alignment error exceeds maximum operational tolerances. Please adjust focus back to spec baseline.');
+        }
+      }
+
+      // ==========================================
+      // Section 4: Emulsion Degradation Controller
+      // ==========================================
+      function updateEmulsionDegradation() {
+        onChamberParamsChange();
+      }
+
+      function onChamberParamsChange() {
+        const tempSlider = document.getElementById('chamber-temp-slider');
+        const humSlider = document.getElementById('chamber-hum-slider');
+        const tempValEl = document.getElementById('chamber-temp-val');
+        const humValEl = document.getElementById('chamber-hum-val');
+        
+        if (!tempSlider || !humSlider || !tempValEl || !humValEl) return;
+
+        const temp = parseInt(tempSlider.value, 10);
+        const humidity = parseInt(humSlider.value, 10);
+        
+        tempValEl.textContent = temp + '°C';
+        humValEl.textContent = humidity + '%';
+
+        // Arrenhius chemical degradation approximation
+        // Base rate at 5°C
+        const tempCoeff = Math.pow(2.2, (temp - 5) / 10);
+        const humCoeff = 0.3 + (humidity / 50);
+        const agingRate = Math.max(0.01, tempCoeff * humCoeff);
+
+        const ageReadout = document.getElementById('chamber-readout-age');
+        ageReadout.textContent = agingRate.toFixed(2) + 'x';
+        
+        const fogReadout = document.getElementById('chamber-readout-fog');
+        const baseFog = (0.05 + 0.08 * agingRate).toFixed(2);
+        fogReadout.textContent = baseFog + ' D';
+
+        // Grain stability
+        const halideReadout = document.getElementById('chamber-readout-halide');
+        if (temp <= -10) {
+          halideReadout.textContent = 'CRYSTALLIZED';
+          halideReadout.className = 'text-md font-bold text-blue-400';
+        } else if (temp <= 8) {
+          halideReadout.textContent = 'STABLE';
+          halideReadout.className = 'text-md font-bold text-emerald-400';
+        } else if (temp <= 25) {
+          halideReadout.textContent = 'DEGRADATION';
+          halideReadout.className = 'text-md font-bold text-amber-400';
+        } else {
+          halideReadout.textContent = 'CLUMPING';
+          halideReadout.className = 'text-md font-bold text-red-500 animate-pulse';
+        }
+
+        const verdictReadout = document.getElementById('chamber-readout-verdict');
+        if (temp <= -10 && humidity <= 40) {
+          verdictReadout.textContent = 'DEEP FROZEN (99yr)';
+          verdictReadout.className = 'text-md font-bold text-blue-400';
+        } else if (temp <= 8 && humidity <= 50) {
+          verdictReadout.textContent = 'SAFE COLDROOM';
+          verdictReadout.className = 'text-md font-bold text-emerald-400';
+        } else if (agingRate <= 3) {
+          verdictReadout.textContent = 'SLOW DECAY';
+          verdictReadout.className = 'text-md font-bold text-amber-500';
+        } else {
+          verdictReadout.textContent = 'CRITICAL FOG';
+          verdictReadout.className = 'text-md font-bold text-red-600 animate-pulse';
+        }
+
+        // Draw decay curve in SVG #degradation-curve
+        // As agingRate increases, the curve drops down to zero faster
+        // Q control point shifts down based on decay rate
+        const curveControlY = Math.min(170, 30 + (agingRate * 25));
+        const curveEndY = Math.min(170, 40 + (agingRate * 35));
+        const curvePath = `M 0,30 Q 150,${curveControlY} 300,${curveEndY}`;
+        
+        const curveEl = document.getElementById('degradation-curve');
+        if (curveEl) curveEl.setAttribute('d', curvePath);
+      }
+
+      // ==========================================
+      // Section 5: Diagnostic Request & Booking
+      // ==========================================
+      let estimatedLabTotal = 120.00;
+
+      function calculateBookingPrice() {
+        const sympShutter = document.getElementById('symp-shutter');
+        const sympFinder = document.getElementById('symp-finder');
+        const sympFocus = document.getElementById('symp-focus');
+        const sympLeaks = document.getElementById('symp-leaks');
+        const priceReadout = document.getElementById('booking-price-readout');
+        
+        if (!priceReadout) return;
+
+        let total = 120.00; // base fee
+        if (sympShutter && sympShutter.checked) total += parseFloat(sympShutter.value);
+        if (sympFinder && sympFinder.checked) total += parseFloat(sympFinder.value);
+        if (sympFocus && sympFocus.checked) total += parseFloat(sympFocus.value);
+        if (sympLeaks && sympLeaks.checked) total += parseFloat(sympLeaks.value);
+
+        estimatedLabTotal = total;
+        priceReadout.textContent = '$' + total.toFixed(2);
+      }
+
+      function generateBenchDocket(event) {
+        event.preventDefault();
+
+        const modelSelect = document.getElementById('book-camera-model');
+        const serialInput = document.getElementById('book-serial');
+        
+        if (!modelSelect || !serialInput) return;
+
+        const model = modelSelect.value;
+        const serial = serialInput.value.trim();
+
+        if (!serial) {
+          alert('Please enter a valid serial log or camera serial number.');
+          return;
+        }
+
+        // Gather symptoms list
+        const sympShutter = document.getElementById('symp-shutter');
+        const sympFinder = document.getElementById('symp-finder');
+        const sympFocus = document.getElementById('symp-focus');
+        const sympLeaks = document.getElementById('symp-leaks');
+        
+        const symptoms = [];
+        if (sympShutter && sympShutter.checked) symptoms.push('Slow Shutter Speed Calibration');
+        if (sympFinder && sympFinder.checked) symptoms.push('Viewfinder Optical Haze Extraction');
+        if (sympFocus && sympFocus.checked) symptoms.push('Rangefinder Alignment & Sync');
+        if (sympLeaks && sympLeaks.checked) symptoms.push('Chamber Light Seals Overhaul');
+
+        if (symptoms.length === 0) {
+          symptoms.push('Standard Bench Diagnostic Overhaul');
+        }
+
+        // Generate unique docket details
+        const randomID = 'VN-2026-' + Math.floor(1000 + Math.random() * 9000);
+        const today = new Date().toISOString().split('T')[0];
+
+        // Update active docket fields
+        document.getElementById('doc-id-val').textContent = '#' + randomID;
+        document.getElementById('doc-model-val').textContent = model;
+        document.getElementById('doc-serial-val').textContent = serial;
+        document.getElementById('doc-date-val').textContent = today;
+        document.getElementById('doc-total-val').textContent = '$' + estimatedLabTotal.toFixed(2);
+        
+        const listContainer = document.getElementById('doc-symptoms-list');
+        if (listContainer) {
+          listContainer.innerHTML = '';
+          symptoms.forEach(symp => {
+            const li = document.createElement('li');
+            li.textContent = symp;
+            listContainer.appendChild(li);
+          });
+        }
+
+        // Barcode text label update
+        document.getElementById('doc-barcode-text').textContent = `CODE-128A // *${randomID}*`;
+
+        // Switch visible states
+        const emptyState = document.getElementById('docket-empty-state');
+        const activeCard = document.getElementById('docket-active-card');
+        
+        if (emptyState) emptyState.classList.add('hidden');
+        if (activeCard) activeCard.classList.remove('hidden');
+
+        alert('Optomechanical Submission Docket #' + randomID + ' Generated Successfully!');
+      }
+
+      function resetDocket() {
+        // Clear inputs and checkboxes
+        document.getElementById('book-serial').value = '';
+        document.getElementById('symp-shutter').checked = false;
+        document.getElementById('symp-finder').checked = false;
+        document.getElementById('symp-focus').checked = false;
+        document.getElementById('symp-leaks').checked = false;
+
+        calculateBookingPrice();
+
+        // Switch visible states back
+        const emptyState = document.getElementById('docket-empty-state');
+        const activeCard = document.getElementById('docket-active-card');
+        
+        if (emptyState) emptyState.classList.remove('hidden');
+        if (activeCard) activeCard.classList.add('hidden');
+      }
+
+      // Initialize bench on window load
+      window.addEventListener('load', () => {
+        updateBenchSpecs();
+        updateLensCollimation();
+        updateEmulsionDegradation();
+      });
+    </script>
     <footer class="bg-[var(--color-bg-card)] border-t border-[var(--color-border)] mt-auto transition-colors duration-300">
   <div class="max-w-7xl mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 md:gap-12">
     <!-- Brand Info Section -->
@@ -547,6 +1247,7 @@
       <h4 class="font-display uppercase text-sm tracking-wider mb-6 text-amber-600 dark:text-amber-500">Quick Links</h4>
       <ul class="flex flex-col gap-4 text-xs font-semibold">
         <li><a href="../index.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)]">Home</a></li>
+        <li><a href="./home2.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)]">Home 2</a></li>
         <li><a href="../index.html#appraisal-desk" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)]">Trade-In Appraisal</a></li>
         <li><a href="./about.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)]">About Our Store</a></li>
         <li><a href="./blog.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)]">The Silver Journal</a></li>

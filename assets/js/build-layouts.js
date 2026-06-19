@@ -16,7 +16,7 @@ const HEADER_TEMPLATE = `
     <!-- Desktop Navigation Links -->
     <nav class="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wide" id="desktop-nav">
       <a href="ROOT_PATHindex.html" class="nav-link relative py-1">Home</a>
-      <a href="PAGES_PATHhome2.html" class="nav-link relative py-1">Store</a>
+      <a href="PAGES_PATHhome2.html" class="nav-link relative py-1">Home 2</a>
       <a href="PAGES_PATHservices-products.html" class="nav-link relative py-1">Catalog</a>
       <a href="PAGES_PATHabout.html" class="nav-link relative py-1">About</a>
       <a href="PAGES_PATHblog.html" class="nav-link relative py-1">Blog</a>
@@ -46,9 +46,7 @@ const HEADER_TEMPLATE = `
  
       <!-- RTL Layout Switcher Button -->
       <button onclick="toggleRTL()" class="rtl-btn p-2 rounded-full hover:bg-[var(--color-bg-card)] border border-transparent hover:border-[var(--color-border)] transition-all relative group flex items-center justify-center" aria-label="Toggle layout direction">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[var(--color-text-dark)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M3 10h18M3 15h12M3 20h18" />
-        </svg>
+        <span class="text-[10px] font-bold tracking-wider leading-none text-[var(--color-text-dark)] px-0.5">RTL</span>
       </button>
  
       <!-- Hamburger Menu Button (Mobile) -->
@@ -97,7 +95,7 @@ const HEADER_TEMPLATE = `
           </a>
           <a href="PAGES_PATHhome2.html" onclick="toggleMobileMenu()" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
             <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">02.</span>
-            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Store</span>
+            <span class="font-display text-3xl uppercase tracking-widest text-[var(--color-text-dark)] transition-colors group-hover:text-amber-600 dark:group-hover:text-amber-500">Home 2</span>
           </a>
           <a href="PAGES_PATHservices-products.html" onclick="toggleMobileMenu()" class="group flex items-baseline py-1 border-b border-dashed border-[var(--color-border)]/50 pb-2">
             <span class="font-serif-ital text-amber-600 dark:text-amber-500 text-sm w-8 mr-2 tracking-normal transition-transform duration-300 group-hover:translate-x-1">03.</span>
@@ -230,6 +228,7 @@ const FOOTER_TEMPLATE = `
       <h4 class="font-display uppercase text-sm tracking-wider mb-6 text-amber-600 dark:text-amber-500">Quick Links</h4>
       <ul class="flex flex-col gap-4 text-xs font-semibold">
         <li><a href="ROOT_PATHindex.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)]">Home</a></li>
+        <li><a href="PAGES_PATHhome2.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)]">Home 2</a></li>
         <li><a href="ROOT_PATHindex.html#appraisal-desk" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)]">Trade-In Appraisal</a></li>
         <li><a href="PAGES_PATHabout.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)]">About Our Store</a></li>
         <li><a href="PAGES_PATHblog.html" class="hover:text-amber-600 hover:pl-1 transition-all duration-300 text-[var(--color-text-muted)]">The Silver Journal</a></li>
